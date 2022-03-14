@@ -148,6 +148,72 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
+  moveAction:
+    m_Name: Move
+    m_Type: 0
+    m_ExpectedControlType: Vector2
+    m_Id: d2085eb4-c52a-4358-a537-91dac5e65bae
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 2D Vector
+      m_Id: cc5f7eae-1a93-4d7a-8d68-911301c024c4
+      m_Path: 2DVector
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 4
+    - m_Name: up
+      m_Id: 8d17e3f5-ebfe-4b2f-bd56-8ff0fd638713
+      m_Path: <Keyboard>/w
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: down
+      m_Id: bd5e2143-a48b-404b-9663-59a709e155cc
+      m_Path: <Keyboard>/s
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: left
+      m_Id: 4a471bf4-7989-4ae7-8f2b-c1b6e9dd824c
+      m_Path: <Keyboard>/a
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    - m_Name: right
+      m_Id: f2be059d-6723-4396-a145-0e11d542b2f5
+      m_Path: <Keyboard>/d
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Move
+      m_Flags: 8
+    m_Flags: 0
+  jumpAction:
+    m_Name: Jump
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 4ca5abba-024a-4712-8ce3-74cd87820f83
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 015b5492-7672-4f9e-9a16-cc0fd28f6082
+      m_Path: <Keyboard>/space
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Jump
+      m_Flags: 0
+    m_Flags: 0
   controller: {fileID: 2205569993557986911}
   groundCheck: {fileID: 2205569994412432078}
   groundDistance: 0.5
@@ -682,7 +748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c11d0093a68f7344b367ca39781be15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 5
+  mouseSensitivity: 0.5
   playerBody: {fileID: 2205569993557986910}
   playerTorso: {fileID: 2205569993859628278}
   head: {fileID: 6629700655863718555}

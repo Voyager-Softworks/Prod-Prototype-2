@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MouseLook : MonoBehaviour
 {
@@ -56,16 +57,24 @@ public class MouseLook : MonoBehaviour
         if (player.GetComponent<PlayerMovement>().isLocalPlayer)
         {
 
-            if (Input.GetKeyDown(KeyCode.Tab))
+            if (Keyboard.current.tabKey.wasPressedThisFrame)
             {
-                Cursor.lockState = (Cursor.lockState == CursorLockMode.None ? CursorLockMode.Locked : CursorLockMode.None);
+                if (Cursor.lockState == CursorLockMode.Locked)
+                {
+                    Cursor.lockState = CursorLockMode.None;
+                }
+                else
+                {
+                    Cursor.lockState = CursorLockMode.Locked;
+                }
             }
 
             if (Cursor.lockState == CursorLockMode.Locked)
             {
                 Cursor.visible = false;
-                float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
-                float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
+                Vector2 mouseInput = Mouse.current.delta.ReadValue();
+                float mouseX = mouseInput.x * mouseSensitivity;
+                float mouseY = mouseInput.y * mouseSensitivity;
 
                 xRoation -= mouseY;
                 xRoation = Mathf.Clamp(xRoation, -90f, 90f);

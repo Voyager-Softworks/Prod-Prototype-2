@@ -21,10 +21,8 @@ public class HitscanShoot : NetworkBehaviour
 
         if (!isLocalPlayer) return;
 
-        if (Mouse.current.leftButton.isPressed)
+        if (Mouse.current.leftButton.wasPressedThisFrame)
         {
-            GetComponent<PlayerMovement>().velocity.y = 1.0f;
-
             Debug.Log("Pew!");
 
             RaycastHit hit;

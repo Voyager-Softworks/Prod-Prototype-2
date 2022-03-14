@@ -2,12 +2,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 /// <summary>
 /// Simple player movement script
 /// </summary>
 public class PlayerMovement : NetworkBehaviour
 {
+    public InputAction moveAction;
+    public InputAction jumpAction;
+
     public CharacterController controller;
     public Transform groundCheck;
     public float groundDistance;
@@ -21,19 +25,25 @@ public class PlayerMovement : NetworkBehaviour
     public Vector3 velocity;
     bool isGrounded;
 
+    private void Start() {
+        controller = GetComponent<CharacterController>();
+        moveAction.Enable();
+        jumpAction.Enable();
+    }
+
     // Update is called once per frame
     void Update()
     {
         //only if local player
         if (isLocalPlayer)
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                Application.Quit();
+            // if (Input.GetKeyDown(KeyCode.Escape))
+            // {
+            //     Application.Quit();
 
-                connectionToServer.Disconnect();
-                connectionToClient.Disconnect();
-            }
+            //     connectionToServer.Disconnect();
+            //     connectionToClient.Disconnect();
+            // }
 
             isGrounded = false;
 
@@ -55,14 +65,15 @@ public class PlayerMovement : NetworkBehaviour
                 velocity.y = -2f;
             }
 
-            float x = Input.GetAxis("Horizontal");
-            float z = Input.GetAxis("Vertical");
+            Vector2 moveInput = moveAction.ReadValue<Vector2>();
+            float x = moveInput.x;
+            float z = moveInput.y;
 
             Vector3 move = Vector3.ClampMagnitude((transform.right * x) + (transform.forward * z), 1.0f);
 
             controller.Move(move * Time.deltaTime * moveSpeed);
 
-            if (Input.GetButtonDown("Jump") && isGrounded)
+            if (jumpAction.ReadValue<float>() > 0 && isGrounded)
             {
                 velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
             }
