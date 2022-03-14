@@ -7,11 +7,12 @@ using UnityEngine.InputSystem;
 public class HitscanShoot : NetworkBehaviour
 {
     public GameObject _playerRoot;
+    Equipment equip;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        equip = GetComponent<Equipment>();
     }
 
     // Update is called once per frame
@@ -23,6 +24,8 @@ public class HitscanShoot : NetworkBehaviour
 
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
+            if(equip.currentWeapon == null) return;
+            equip.SetTrigger(new string[]{"s"});
             Debug.Log("Pew!");
 
             RaycastHit hit;
@@ -32,9 +35,9 @@ public class HitscanShoot : NetworkBehaviour
             {
                 Debug.Log("Hit: " + hit.transform.name);
 
-                if (hit.transform.tag == "Player")
+                if (hit.transform.tag == "Player" && hit.distance < equip.currentWeapon.range)
                 {
-                    hit.transform.root.GetComponent<PlayerHealth>().TakeDamage(10);
+                    hit.transform.root.GetComponent<PlayerHealth>().TakeDamage(equip.currentWeapon.damage);
                 }
             }
         }

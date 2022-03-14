@@ -15,3 +15,8 @@ MonoBehaviour:
   weaponPrefabFirstPerson: {fileID: 7019818225011646399, guid: efc980b56962e31b7a283e87be519826, type: 3}
   weaponPrefabThirdPerson: {fileID: 8945022629576293633, guid: d51ebf9c433a724099ef9d58618a234c, type: 3}
   weaponDropPrefab: {fileID: 6200753133096948438, guid: 3eff4119edc27767bb57dda3ac4eba8c, type: 3}
+  weaponName: block
+  fireDelay: 0
+  automatic: 0
+  damage: 10
+  range: 100
