@@ -12,9 +12,9 @@ public class Interact : NetworkBehaviour
 
     void Start()
     {
-        interactAction.performed += ctx => OnInteract();
+        interactAction.performed += ctx => { if(isLocalPlayer)OnInteract(); };
         interactAction.Enable();
-        dropItemAction.performed += ctx => OnDropItem();
+        dropItemAction.performed += ctx => {if(isLocalPlayer)OnDropItem();};
         dropItemAction.Enable();
     }
 
@@ -26,6 +26,7 @@ public class Interact : NetworkBehaviour
         dropItemAction.Disable();
     }
 
+    [Command]
     void OnInteract()
     {
         
@@ -41,7 +42,7 @@ public class Interact : NetworkBehaviour
                     GetComponent<Equipment>().EquipWeapon(interactable.weaponData);
                     if(interactable.destroyOnInteract)
                     {
-                        Destroy(interactable.gameObject);
+                        NetworkServer.Destroy(interactable.gameObject);
                     }
                 }
                 else if(interactable.interactionType == Interactible.InteractionType.Use)

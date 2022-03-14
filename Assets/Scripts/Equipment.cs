@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Equipment : NetworkBehaviour
 {
-    [SyncVar]
+    [SyncVar (hook = "OnChangeWeapon")]
     public WeaponData currentWeapon;
     public Animator firstPersonAnimator;
     public Animator thirdPersonAnimator;
@@ -40,10 +40,23 @@ public class Equipment : NetworkBehaviour
             thirdPerson.SetActive(true);
         }
     }
-    
-    public void SetTrigger(string[] args)
+
+    void OnChangeWeapon(WeaponData oldValue, WeaponData newValue)
     {
-        string paramStr = currentWeapon.weaponName.ToUpper();
+        if(currentWeapon != null)
+        {
+            SetTrigger(new string[] {"p"}, currentWeapon);
+        }
+        else
+        {
+            SetTrigger(new string[] {"d"}, oldValue);
+        }
+    }
+    
+    [Command]
+    public void SetTrigger(string[] args, WeaponData dat)
+    {
+        string paramStr = dat.weaponName.ToUpper();
         if(ArgsContain(args, "r"))
         {
             paramStr += "_RELOAD";
@@ -92,6 +105,12 @@ public class Equipment : NetworkBehaviour
         }
 
 
+        RpcSetTrigger(paramStr);
+    }
+
+    [ClientRpc]
+    void RpcSetTrigger(string paramStr)
+    {
         if(isLocalPlayer)
         {
             firstPersonAnimator.SetTrigger(paramStr);
@@ -114,24 +133,24 @@ public class Equipment : NetworkBehaviour
 
         currentWeapon = weapon;
 
-        SetTrigger(new string[] { "p" });
+        
     }
 
     
-
+    [Command]
     public void DropWeapon()
     {
         if (currentWeapon != null)
         {
-            if (isLocalPlayer)
-            {
+            
                 if (currentWeapon.weaponDropPrefab != null)
                 {
                     GameObject weaponDrop = Instantiate(currentWeapon.weaponDropPrefab, firstPersonWeaponAnchor.position, firstPersonWeaponAnchor.rotation);
                     weaponDrop.GetComponent<Rigidbody>().velocity = transform.forward * 1;
+                    NetworkServer.Spawn(weaponDrop);
                 }
-            }
-            SetTrigger(new string[] { "d" });
+            
+            
             currentWeapon = null;
             Destroy(currentWeaponObject);
             currentWeaponObject = null;

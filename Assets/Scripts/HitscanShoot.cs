@@ -25,7 +25,7 @@ public class HitscanShoot : NetworkBehaviour
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             if(equip.currentWeapon == null) return;
-            equip.SetTrigger(new string[]{"s"});
+            equip.SetTrigger(new string[]{"s"}, equip.currentWeapon);
             Debug.Log("Pew!");
 
             RaycastHit hit;
