@@ -2011,6 +2011,8 @@ MonoBehaviour:
   currentWeapon: {fileID: 0}
   firstPersonAnimator: {fileID: 8747575321516111108}
   thirdPersonAnimator: {fileID: 3974518198271730119}
+  firstPerson: {fileID: 3259035760289969494}
+  thirdPerson: {fileID: 7620186072972910063}
   currentWeaponObject: {fileID: 0}
   firstPersonWeaponAnchor: {fileID: 4253133681401300465}
 --- !u!1 &2205569993732024471
@@ -2063,7 +2065,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2205569993732024471}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -6233,7 +6235,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6629700655863718555}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
