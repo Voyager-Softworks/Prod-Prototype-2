@@ -34,9 +34,15 @@ public class HitscanShoot : NetworkBehaviour
 
                 if (hit.transform.tag == "Player")
                 {
-                    hit.transform.root.GetComponent<PlayerHealth>().TakeDamage(10);
+                    CmdSendDamge(hit.transform.root.gameObject, 10);
                 }
             }
         }
+    }
+
+    [Command]
+    public void CmdSendDamge(GameObject player, int damage)
+    {
+        if (player && player.GetComponent<PlayerHealth>()) player.GetComponent<PlayerHealth>().TakeDamage(damage);
     }
 }
