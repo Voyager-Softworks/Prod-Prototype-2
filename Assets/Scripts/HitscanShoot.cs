@@ -2,6 +2,7 @@ using Mirror;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class HitscanShoot : NetworkBehaviour
 {
@@ -20,14 +21,14 @@ public class HitscanShoot : NetworkBehaviour
 
         if (!isLocalPlayer) return;
 
-        if (Input.GetMouseButtonDown(0))
+        if (Mouse.current.leftButton.isPressed)
         {
             GetComponent<PlayerMovement>().velocity.y = 1.0f;
 
             Debug.Log("Pew!");
 
             RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
 
             if (Physics.Raycast(ray, out hit))
             {
