@@ -18,11 +18,7 @@ public class MouseLook : MonoBehaviour
 
     private void OnLevelWasLoaded(int level)
     {
-        GameObject mc = GameObject.Find("MenuCamera");
-        if (mc)
-        {
-            mc.SetActive(false);
-        }
+
     }
 
     // Start is called before the first frame update
@@ -40,14 +36,6 @@ public class MouseLook : MonoBehaviour
         }
 
         Cursor.lockState = CursorLockMode.Locked;
-
-        //If loaded in, disable menu camera
-        GameObject mc = GameObject.Find("MenuCamera");
-
-        if (mc)
-        {
-            mc.SetActive(false);
-        }
     }
 
     // Update is called once per frame

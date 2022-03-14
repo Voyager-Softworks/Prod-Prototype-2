@@ -37,9 +37,15 @@ public class HitscanShoot : NetworkBehaviour
 
                 if (hit.transform.tag == "Player" && hit.distance < equip.currentWeapon.range)
                 {
-                    hit.transform.root.GetComponent<PlayerHealth>().TakeDamage(equip.currentWeapon.damage);
+                    CmdSendDamge(hit.transform.root.gameObject, equip.currentWeapon.damage);
                 }
             }
         }
+    }
+
+    [Command]
+    public void CmdSendDamge(GameObject player, int damage)
+    {
+        if (player && player.GetComponent<PlayerHealth>()) player.GetComponent<PlayerHealth>().TakeDamage(damage);
     }
 }

@@ -124,7 +124,7 @@ public class Equipment : NetworkBehaviour
 
     public void EquipWeapon(WeaponData weapon)
     {
-        if (currentWeapon != null)
+        if (currentWeapon != null && isLocalPlayer)
         {
             DropWeapon();
         }
