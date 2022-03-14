@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6200753133096948435}
   - component: {fileID: 6200753133096948436}
   - component: {fileID: 6200753133096948437}
+  - component: {fileID: 8607770623425033145}
+  - component: {fileID: 8058572010086660551}
   m_Layer: 0
   m_Name: TestWeaponDrop
   m_TagString: Untagged
@@ -95,3 +97,40 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8607770623425033145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6200753133096948438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b91ecbcc199f4492b9a91e820070131, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneId: 0
+  serverOnly: 0
+  visible: 0
+  m_AssetId: 3eff4119edc27767bb57dda3ac4eba8c
+  hasSpawned: 0
+--- !u!114 &8058572010086660551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6200753133096948438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5379da713068c0b6bb7cd45a5462767, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  interactionType: 1
+  weaponData: {fileID: 11400000, guid: afc018dbe698c35bb9bfe7594ba3e362, type: 2}
+  onInteract:
+    m_PersistentCalls:
+      m_Calls: []
+  destroyOnInteract: 1

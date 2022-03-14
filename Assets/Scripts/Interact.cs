@@ -41,7 +41,7 @@ public class Interact : NetworkBehaviour
                 }
                 else if(interactable.interactionType == Interactible.InteractionType.Use)
                 {
-                    interactable.Use();
+                    
                 }
                 
             }
