@@ -7,26 +7,31 @@ using UnityEngine.InputSystem;
 public class Interact : NetworkBehaviour
 {
     public InputAction interactAction;
+    public InputAction dropItemAction;
+    public Transform camTransform;
 
     void Start()
     {
         interactAction.performed += ctx => OnInteract();
+        interactAction.Enable();
+        dropItemAction.performed += ctx => OnDropItem();
+        dropItemAction.Enable();
     }
 
     void OnDestroy()
     {
         interactAction.performed -= ctx => OnInteract();
+        interactAction.Disable();
+        dropItemAction.performed -= ctx => OnDropItem();
+        dropItemAction.Disable();
     }
 
     void OnInteract()
     {
-        if (interactAction.ReadValue<float>() == 0)
-        {
-            return;
-        }
+        
 
         RaycastHit hit;
-        if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.forward, out hit, 2))
+        if (Physics.Raycast(camTransform.position, camTransform.forward, out hit, 2))
         {
             Interactible interactable = hit.transform.GetComponent<Interactible>();
             if (interactable != null)
@@ -46,5 +51,10 @@ public class Interact : NetworkBehaviour
                 
             }
         }
+    }
+
+    void OnDropItem()
+    {
+        GetComponent<Equipment>().DropWeapon();
     }
 }

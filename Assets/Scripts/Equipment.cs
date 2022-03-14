@@ -27,7 +27,7 @@ public class Equipment : NetworkBehaviour
         {
             if (weapon.weaponPrefabFirstPerson != null)
             {
-                currentWeaponObject = Instantiate(weapon.weaponPrefabFirstPerson, transform.position, transform.rotation);
+                currentWeaponObject = Instantiate(weapon.weaponPrefabFirstPerson, firstPersonWeaponAnchor.position, firstPersonWeaponAnchor.rotation);
                 currentWeaponObject.transform.SetParent(firstPersonWeaponAnchor);
             }
         }
@@ -41,7 +41,7 @@ public class Equipment : NetworkBehaviour
             {
                 if (currentWeapon.weaponDropPrefab != null)
                 {
-                    GameObject weaponDrop = Instantiate(currentWeapon.weaponDropPrefab, transform.position, transform.rotation);
+                    GameObject weaponDrop = Instantiate(currentWeapon.weaponDropPrefab, firstPersonWeaponAnchor.position, firstPersonWeaponAnchor.rotation);
                     weaponDrop.GetComponent<Rigidbody>().velocity = transform.forward * 5;
                 }
             }
