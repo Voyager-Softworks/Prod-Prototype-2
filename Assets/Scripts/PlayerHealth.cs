@@ -161,6 +161,7 @@ public class PlayerHealth : NetworkBehaviour
     private void RpcDie()
     {
         isDead = true;
+        currentHealth = 0;
         
         if (isLocalPlayer && _menuCamera) {
             _menuCamera.Enable();
@@ -202,6 +203,7 @@ public class PlayerHealth : NetworkBehaviour
     private void RpcRespawn()
     {
         isDead = false;
+        currentHealth = maxHealth;
 
         GetComponentInChildren<PlayerMovement>().enabled = true;
         GetComponentInChildren<HitscanShoot>().enabled = true;
