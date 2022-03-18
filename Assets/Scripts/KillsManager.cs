@@ -18,7 +18,7 @@ public class KillsManager : NetworkBehaviour
 
     public NetworkManager _networkManager;
 
-    //[SyncVar(hook = "OnChangePlayers")]
+    [SyncVar(hook = "OnChangePlayers")]
     public List<Player> players = new List<Player>();
 
     public PlayerCanvas _clientPlayerCanvas;
@@ -69,8 +69,8 @@ public class KillsManager : NetworkBehaviour
     }
 
 
-
-    public void AddPlayer(NetworkIdentity player)
+    [ClientRpc]
+    public void RpcAddPlayer(NetworkIdentity player)
     {
         Player p = new Player();
         p.name = player.name;
@@ -81,7 +81,8 @@ public class KillsManager : NetworkBehaviour
         players.Add(p);
     }
 
-    public void RemovePlayer(NetworkIdentity player)
+    [ClientRpc]
+    public void RpcRemovePlayer(NetworkIdentity player)
     {
         for (int i = 0; i < players.Count; i++)
         {

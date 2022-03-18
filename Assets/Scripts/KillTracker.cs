@@ -37,7 +37,7 @@ public class KillTracker : NetworkBehaviour
 
         if (_killsManager)
         {
-            _killsManager.AddPlayer(GetComponent<NetworkIdentity>());
+            _killsManager.RpcAddPlayer(GetComponent<NetworkIdentity>());
         }
     }
 }
