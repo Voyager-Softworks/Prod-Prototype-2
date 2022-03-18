@@ -18,7 +18,6 @@ public class KillsManager : NetworkBehaviour
 
     public NetworkManager _networkManager;
 
-    [SyncVar(hook = "OnChangePlayers")]
     public List<Player> players = new List<Player>();
 
     public PlayerCanvas _clientPlayerCanvas;
@@ -47,11 +46,9 @@ public class KillsManager : NetworkBehaviour
     [ClientRpc]
     private void RpcUpdateUI()
     {
-        Debug.Log("RpcUpdateUI");
-
         if (_clientPlayerCanvas != null)
         {
-
+            
         }
     }
 
@@ -68,6 +65,14 @@ public class KillsManager : NetworkBehaviour
         }
     }
 
+    [ClientRpc]
+    private void RpcUpdateList(List<Player> _players)
+    {
+        Debug.Log("UpdateList");
+
+        players = _players;
+    }
+
 
     [ClientRpc]
     public void RpcAddPlayer(NetworkIdentity player)
@@ -79,6 +84,11 @@ public class KillsManager : NetworkBehaviour
         p.score = 0;
         p._player = player;
         players.Add(p);
+
+        if (isServer)
+        {
+            RpcUpdateList(players);
+        }
     }
 
     [ClientRpc]
@@ -92,10 +102,5 @@ public class KillsManager : NetworkBehaviour
                 return;
             }
         }
-    }
-
-    public void OnChangePlayers(List<Player> oldPlayers, List<Player> newPlayers)
-    {
-        players = newPlayers;
     }
 }
