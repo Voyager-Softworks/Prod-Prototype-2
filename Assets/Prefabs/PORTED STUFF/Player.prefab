@@ -1716,7 +1716,6 @@ Transform:
   m_Children:
   - {fileID: 2205569993748284139}
   - {fileID: 2205569993732024468}
-  - {fileID: 2770201324125466604}
   - {fileID: 7100917056217646933}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1905,16 +1904,37 @@ MonoBehaviour:
       m_Action: Jump
       m_Flags: 0
     m_Flags: 0
+  slideAction:
+    m_Name: Slide
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 454d288c-2def-4081-93d9-aea9e532a7e5
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 13fde32d-e559-4515-8222-c49aa5e8a8d7
+      m_Path: <Keyboard>/ctrl
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Slide
+      m_Flags: 0
+    m_Flags: 0
   controller: {fileID: 2205569993557986911}
   groundCheck: {fileID: 2205569994412432078}
   groundDistance: 0.5
   groundMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  moveSpeed: 8
+  moveSpeed: 13
   jumpHeight: 2
+  initialSlideSpeed: 26
+  maxSlideDuration: 1
+  slideTimer: 0
   gravity: -19.62
   velocity: {x: 0, y: 0, z: 0}
+  cameraTransform: {fileID: 2205569994440830870}
 --- !u!114 &7215557956273298196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2331,6 +2351,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4253133681401300465}
+  - {fileID: 2770201324125466604}
   m_Father: {fileID: 2205569993859628278}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3278,13 +3299,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3259035760289969494}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.783, z: -0.134}
+  m_LocalPosition: {x: 0, y: -1.652, z: 0.035}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5819815021631312891}
   - {fileID: 5513573487137479738}
-  m_Father: {fileID: 2205569993557986910}
-  m_RootOrder: 2
+  m_Father: {fileID: 2205569994440830870}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &8747575321516111108
 Animator:
@@ -7202,7 +7223,7 @@ Transform:
   - {fileID: 1458638447338863426}
   - {fileID: 611953821750031491}
   m_Father: {fileID: 2205569993557986910}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &3974518198271730119
 Animator:
