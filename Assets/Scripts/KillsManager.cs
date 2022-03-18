@@ -18,19 +18,57 @@ public class KillsManager : NetworkBehaviour
 
     public NetworkManager _networkManager;
 
+    //[SyncVar(hook = "OnChangePlayers")]
     public List<Player> players = new List<Player>();
+
+    public PlayerCanvas _clientPlayerCanvas;
 
     // Start is called before the first frame update
     void Start()
     {
-        _networkManager = GameObject.Find("NetworkManager").GetComponent<NetworkManager>();
+        if (_networkManager == null)
+        {
+            GameObject _networkManagerObject = GameObject.Find("NetworkManager");
+            if (_networkManagerObject != null) _networkManager = _networkManagerObject.GetComponent<NetworkManager>();
+        }
+
+        if (_clientPlayerCanvas == null)
+        {
+            _clientPlayerCanvas = GameObject.FindObjectOfType<PlayerCanvas>();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        UpdateUI();
     }
+
+    [ClientRpc]
+    private void RpcUpdateUI()
+    {
+        Debug.Log("RpcUpdateUI");
+
+        if (_clientPlayerCanvas != null)
+        {
+
+        }
+    }
+
+    [Command]
+    private void CmdUpdateUI()
+    {
+        RpcUpdateUI();
+    }
+
+    public void UpdateUI(){
+        if (isServer)
+        {
+            RpcUpdateUI();
+        }
+    }
+
+
 
     public void AddPlayer(NetworkIdentity player)
     {
@@ -53,5 +91,10 @@ public class KillsManager : NetworkBehaviour
                 return;
             }
         }
+    }
+
+    public void OnChangePlayers(List<Player> oldPlayers, List<Player> newPlayers)
+    {
+        players = newPlayers;
     }
 }

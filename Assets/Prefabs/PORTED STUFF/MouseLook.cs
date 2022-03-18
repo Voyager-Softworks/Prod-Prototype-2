@@ -10,7 +10,7 @@ public class MouseLook : MonoBehaviour
     public Transform playerBody;
     public Transform playerTorso;
     public GameObject head;
-    public GameObject playerCanvas;
+    public PlayerCanvas playerCanvas;
 
     public GameObject player;
 
@@ -32,7 +32,7 @@ public class MouseLook : MonoBehaviour
         else
         {
             gameObject.SetActive(false);
-            playerCanvas.SetActive(false);
+            playerCanvas.gameObject.SetActive(false);
         }
 
         Cursor.lockState = CursorLockMode.Locked;
