@@ -20,19 +20,62 @@ public class KillsManager : NetworkBehaviour
 
     public List<Player> players = new List<Player>();
 
+    public PlayerCanvas _clientPlayerCanvas;
+
     // Start is called before the first frame update
     void Start()
     {
-        _networkManager = GameObject.Find("NetworkManager").GetComponent<NetworkManager>();
+        if (_networkManager == null)
+        {
+            GameObject _networkManagerObject = GameObject.Find("NetworkManager");
+            if (_networkManagerObject != null) _networkManager = _networkManagerObject.GetComponent<NetworkManager>();
+        }
+
+        if (_clientPlayerCanvas == null)
+        {
+            _clientPlayerCanvas = GameObject.FindObjectOfType<PlayerCanvas>();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        UpdateUI();
     }
 
-    public void AddPlayer(NetworkIdentity player)
+    [ClientRpc]
+    private void RpcUpdateUI()
+    {
+        if (_clientPlayerCanvas != null)
+        {
+            
+        }
+    }
+
+    [Command]
+    private void CmdUpdateUI()
+    {
+        RpcUpdateUI();
+    }
+
+    public void UpdateUI(){
+        if (isServer)
+        {
+            RpcUpdateUI();
+        }
+    }
+
+    [ClientRpc]
+    private void RpcUpdateList(List<Player> _players)
+    {
+        Debug.Log("UpdateList");
+
+        players = _players;
+    }
+
+
+    [ClientRpc]
+    public void RpcAddPlayer(NetworkIdentity player)
     {
         Player p = new Player();
         p.name = player.name;
@@ -41,9 +84,15 @@ public class KillsManager : NetworkBehaviour
         p.score = 0;
         p._player = player;
         players.Add(p);
+
+        if (isServer)
+        {
+            RpcUpdateList(players);
+        }
     }
 
-    public void RemovePlayer(NetworkIdentity player)
+    [ClientRpc]
+    public void RpcRemovePlayer(NetworkIdentity player)
     {
         for (int i = 0; i < players.Count; i++)
         {

@@ -147,7 +147,7 @@ public class PlayerHealth : NetworkBehaviour
             CmdTakeDamage(_damage);
         }
         else{
-            Debug.LogError("somfing wrong here");
+            Debug.LogWarning("Something isnt quite right!");
         }
     }
 
@@ -183,7 +183,7 @@ public class PlayerHealth : NetworkBehaviour
         }
         else
         {
-            Debug.LogError("somfing wrong here");
+            Debug.LogWarning("Something isnt quite right!");
         }
     }
 
@@ -224,7 +224,7 @@ public class PlayerHealth : NetworkBehaviour
         }
         else
         {
-            Debug.LogError("somfing wrong here");
+            Debug.LogWarning("Something isnt quite right!");
         }
     }
 
@@ -262,13 +262,13 @@ public class PlayerHealth : NetworkBehaviour
         {
             RpcRespawn();
         }
-        else if (hasAuthority)
+        else if (isClient)
         {
             CmdRespawn();
         }
         else
         {
-            Debug.LogError("somfing wrong here");
+            Debug.LogWarning("Something isnt quite right!");
         }
     }
 }
