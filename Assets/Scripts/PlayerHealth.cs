@@ -4,9 +4,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using System;
 
 public class PlayerHealth : NetworkBehaviour
 {
+    [Serializable]
+    public struct Damage {     
+        public int m_damageAmount;
+        public string m_damageName;
+        public float m_time;
+        public float m_range;
+        public Vector3 m_force;
+        public Vector3 m_origin;
+        public Vector3 m_direction;
+        public Vector3 m_hitPoint;
+        public Vector3 m_hitNormal;
+        public NetworkIdentity m_originNetId;
+
+        public Damage(int _damageAmount = 0, string _damageName = "", float _time = 0, float _range = 0, Vector3 _force = new Vector3(), Vector3 _origin = new Vector3(), Vector3 _direction = new Vector3(), Vector3 _hitPoint = new Vector3(), Vector3 _hitNormal = new Vector3(), NetworkIdentity _originNetId = null) {
+            m_damageAmount = _damageAmount;
+            m_damageName = _damageName;
+            m_time = _time;
+            m_range = _range;
+            m_force = _force;
+            m_origin = _origin;
+            m_direction = _direction;
+            m_hitPoint = _hitPoint;
+            m_hitNormal = _hitNormal;
+            m_originNetId = _originNetId;
+        }
+    }
+
     [SyncVar(hook = "OnChangeHealth")]
     [SerializeField] int currentHealth = 100;
     [SerializeField] int maxHealth = 100;
@@ -20,6 +48,8 @@ public class PlayerHealth : NetworkBehaviour
     public GameObject bodyObject;
     public GameObject fpBodyObject;
     public GameObject tpBodyObject;
+
+    public List<Damage> damageLog = new List<Damage>();
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +81,7 @@ public class PlayerHealth : NetworkBehaviour
 
         if (Keyboard.current.f3Key.wasPressedThisFrame)
         {
-            TakeDamage(10);
+            TakeDamage(new Damage(10, "Self"));
         }
 
         if (Keyboard.current.f4Key.wasPressedThisFrame)
@@ -89,11 +119,13 @@ public class PlayerHealth : NetworkBehaviour
     
     //DAMAGE FUNCTIONS
     [ClientRpc]
-    private void RpcTakeDamage(int damage)
+    private void RpcTakeDamage(Damage _damage)
     {
         if (isDead) return;
 
-        currentHealth -= damage;
+        damageLog.Add(_damage);
+
+        currentHealth -= _damage.m_damageAmount;
 
         if (currentHealth <= 0)
         {
@@ -102,17 +134,17 @@ public class PlayerHealth : NetworkBehaviour
     }
 
     [Command]
-    private void CmdTakeDamage(int damage)
+    private void CmdTakeDamage(Damage _damage)
     {
-        RpcTakeDamage(damage);
+        RpcTakeDamage(_damage);
     }
 
-    public void TakeDamage(int amount){
+    public void TakeDamage(Damage _damage){
         if (isServer) {
-            RpcTakeDamage(amount);
+            RpcTakeDamage(_damage);
         }
         else if (hasAuthority) {
-            CmdTakeDamage(amount);
+            CmdTakeDamage(_damage);
         }
         else{
             Debug.LogError("somfing wrong here");
