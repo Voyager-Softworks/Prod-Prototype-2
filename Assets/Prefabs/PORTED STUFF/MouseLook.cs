@@ -13,6 +13,7 @@ public class MouseLook : MonoBehaviour
     public PlayerCanvas playerCanvas;
 
     public bool lockMouse = false;
+    Vector2 mouseInput;
 
     public GameObject player;
 
@@ -60,7 +61,7 @@ public class MouseLook : MonoBehaviour
                 Cursor.visible = false;
                 if(!lockMouse)
                 {
-                    Vector2 mouseInput = Mouse.current.delta.ReadValue();
+                    mouseInput = Vector2.Lerp(mouseInput, Mouse.current.delta.ReadValue(), Time.deltaTime * 40.0f);
                     float mouseX = mouseInput.x * mouseSensitivity;
                     float mouseY = mouseInput.y * mouseSensitivity;
 

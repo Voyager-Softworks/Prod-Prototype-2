@@ -1718,6 +1718,7 @@ MonoBehaviour:
     m_Flags: 0
   controller: {fileID: 2205569993557986911}
   groundCheck: {fileID: 2205569994412432078}
+  body: {fileID: 2205569993732024468}
   groundDistance: 0.5
   groundMask:
     serializedVersion: 2
@@ -2307,7 +2308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSensitivity: 0.5
-  playerBody: {fileID: 2205569993557986910}
+  playerBody: {fileID: 2205569993732024468}
   playerTorso: {fileID: 2205569993859628278}
   head: {fileID: 6629700655863718555}
   playerCanvas: {fileID: 2219873909995883181}
@@ -2937,7 +2938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2205569994440830870}
-  speed: 100
+  speed: 150
 --- !u!1 &3409045388824280881
 GameObject:
   m_ObjectHideFlags: 0

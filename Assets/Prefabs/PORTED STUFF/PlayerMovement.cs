@@ -15,6 +15,7 @@ public class PlayerMovement : NetworkBehaviour
 
     public CharacterController controller;
     public Transform groundCheck;
+    public Transform body;
     public float groundDistance;
     public LayerMask groundMask;
 
@@ -79,7 +80,7 @@ public class PlayerMovement : NetworkBehaviour
             float x = moveInput.x;
             float z = moveInput.y;
 
-            Vector3 move = Vector3.ClampMagnitude((transform.right * x) + (transform.forward * z), 1.0f);
+            Vector3 move = Vector3.ClampMagnitude((body.right * x) + (body.forward * z), 1.0f);
             
             if(slideAction.ReadValue<float>() > 0.0f)
             {
