@@ -6,7 +6,6 @@ using UnityEngine;
 public class WeaponData : ScriptableObject
 {
     public GameObject weaponPrefabFirstPerson;
-    public GameObject weaponPrefabThirdPerson;
     public GameObject weaponDropPrefab;
 
     public string weaponName;
@@ -18,6 +17,14 @@ public class WeaponData : ScriptableObject
     public int damage = 10;
 
     public float range = 100.0f;
+
+    public float accuracyJitter = 0.0f;
+
+    public int clipSize;
+
+    public Flourish flourish;
+
+    
 
     
 }

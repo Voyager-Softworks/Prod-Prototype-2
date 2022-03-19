@@ -130,7 +130,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0.1
   interactionType: 1
-  weaponData: {fileID: 11400000, guid: afc018dbe698c35bb9bfe7594ba3e362, type: 2}
+  weaponData: {fileID: 11400000, guid: ac4ed885cc27835e78d04fd5d0b27709, type: 2}
   onInteract:
     m_PersistentCalls:
       m_Calls: []

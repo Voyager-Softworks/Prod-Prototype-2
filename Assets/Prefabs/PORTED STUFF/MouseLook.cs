@@ -12,6 +12,8 @@ public class MouseLook : MonoBehaviour
     public GameObject head;
     public PlayerCanvas playerCanvas;
 
+    public bool lockMouse = false;
+
     public GameObject player;
 
     float xRoation;
@@ -59,17 +61,21 @@ public class MouseLook : MonoBehaviour
 
             if (Cursor.lockState == CursorLockMode.Locked)
             {
+                
                 Cursor.visible = false;
-                Vector2 mouseInput = Mouse.current.delta.ReadValue();
-                float mouseX = mouseInput.x * mouseSensitivity;
-                float mouseY = mouseInput.y * mouseSensitivity;
+                if(!lockMouse)
+                {
+                    Vector2 mouseInput = Mouse.current.delta.ReadValue();
+                    float mouseX = mouseInput.x * mouseSensitivity;
+                    float mouseY = mouseInput.y * mouseSensitivity;
 
-                xRoation -= mouseY;
-                xRoation = Mathf.Clamp(xRoation, -90f, 90f);
+                    xRoation -= mouseY;
+                    xRoation = Mathf.Clamp(xRoation, -90f, 90f);
 
-                playerTorso.transform.localRotation = Quaternion.Euler(xRoation, 0f, 0f);
+                    playerTorso.transform.localRotation = Quaternion.Euler(xRoation, 0f, 0f);
 
-                playerBody.Rotate(playerBody.up * mouseX);
+                    playerBody.Rotate(playerBody.up * mouseX);
+                }
             }
             else
             {

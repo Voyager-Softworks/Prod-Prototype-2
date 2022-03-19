@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3193ad3e97ce42c1098eac0601333f7f, type: 3}
-  m_Name: TestWepData
+  m_Name: AssaultRifle_WD
   m_EditorClassIdentifier: 
-  weaponPrefabFirstPerson: {fileID: 6800412154814635610, guid: 02ef11b2361bbde1cba718d3f9c30845, type: 3}
+  weaponPrefabFirstPerson: {fileID: 8273122148400739408, guid: 7fa6bfbe1f96fcd6bb214a8281241049, type: 3}
   weaponDropPrefab: {fileID: 6200753133096948438, guid: 3eff4119edc27767bb57dda3ac4eba8c, type: 3}
-  weaponName: block
-  fireDelay: 0
-  automatic: 0
+  weaponName: AssaultRifle
+  fireDelay: 0.1
+  automatic: 1
   damage: 10
   range: 100
-  accuracyJitter: 0
-  clipSize: 0
-  flourish: {fileID: 11400000, guid: 1e849c17f46ce30289a6b0b82ee0aaf9, type: 2}
+  accuracyJitter: 1
+  clipSize: 30
+  flourish: {fileID: 11400000, guid: 8fc3f93cae5191fcdb6f54ca509a1b45, type: 2}
