@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.InputSystem;
+using Mirror;
 
 
-public class FlourishHandler : MonoBehaviour
+public class FlourishHandler : NetworkBehaviour
 {
     public GameObject flourishIndicator;
     public Animator reloadAnimator;
@@ -35,6 +36,7 @@ public class FlourishHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(!isLocalPlayer) return;
         initFlourish.Enable();
         initFlourish.started += OnInitFlourish;
         initFlourish.canceled += OnCancelFlourish;
@@ -53,6 +55,7 @@ public class FlourishHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!isLocalPlayer) return;
         if (isFlourishing)
         {
             mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, 90.0f, Time.deltaTime * 10.0f);
@@ -152,6 +155,7 @@ public class FlourishHandler : MonoBehaviour
             StartCoroutine(DisableMouseLock());
             isFlourishing = false;
             flourishControl.Disable();
+            equip.SetTrigger(new string[] { "c" }, equip.currentWeapon);
         }
     }
 

@@ -24,7 +24,7 @@ public class HitscanShoot : NetworkBehaviour
         {
             if(equip.currentWeapon == null) return;
             if(!equip.TryFire()) return;
-            equip.SetTrigger(new string[]{"s"}, equip.currentWeapon);
+            equip.SetTrigger(new string[]{"s", Random.Range(0,1).ToString()}, equip.currentWeapon);
             Debug.Log("Pew!");
 
             RaycastHit hit;
