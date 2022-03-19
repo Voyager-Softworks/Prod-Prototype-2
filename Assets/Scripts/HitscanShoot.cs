@@ -18,8 +18,6 @@ public class HitscanShoot : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log("HitscanShoot");
-
         if (!isLocalPlayer) return;
 
         if (Mouse.current.leftButton.wasPressedThisFrame)
@@ -39,15 +37,11 @@ public class HitscanShoot : NetworkBehaviour
                 if (hit.transform.tag == "Player" && hit.distance < equip.currentWeapon.range)
                 {
                     PlayerHealth.Damage dmg = new PlayerHealth.Damage(equip.currentWeapon.damage, equip.currentWeapon.name, Time.time, hit.distance, Vector3.zero, transform.position, hit.point - transform.position, hit.point, hit.normal, GetComponentInParent<NetworkIdentity>());
-                    CmdSendDamge(hit.transform.root.gameObject, dmg);
+
+                    GameObject player = hit.transform.root.gameObject;
+                    if (player && player.GetComponent<PlayerHealth>()) player.GetComponent<PlayerHealth>().CmdTakeDamage(dmg);
                 }
             }
         }
-    }
-
-    [Command]
-    public void CmdSendDamge(GameObject player, PlayerHealth.Damage _damage)
-    {
-        if (player && player.GetComponent<PlayerHealth>()) player.GetComponent<PlayerHealth>().TakeDamage(_damage);
     }
 }
