@@ -15,6 +15,31 @@ public class Equipment : NetworkBehaviour
     public GameObject thirdPerson;
     public  GameObject currentWeaponObject;
     public Transform firstPersonWeaponAnchor;
+    public FlourishHandler flourishHandler;
+
+    //Weapon Vars
+
+    int currentAmmo;
+
+    public bool TryFire()
+    {
+        if(currentAmmo > 0)
+        {
+            currentAmmo--;
+            return true;
+        }
+        return false;
+    }
+
+    public void AddAmmo(int amount)
+    {
+        currentAmmo += amount;
+    }
+
+    public void ReloadAmmo()
+    {
+        currentAmmo = currentWeapon.clipSize;
+    }
     private bool ArgsContain(string[] args, string arg)
     {
         foreach (string s in args)
@@ -129,12 +154,17 @@ public class Equipment : NetworkBehaviour
             DropWeapon();
         }
 
-        
-
+        currentAmmo = weapon.clipSize;
+        currentWeaponObject = Instantiate(weapon.weaponPrefabFirstPerson, firstPersonWeaponAnchor);
+        firstPersonAnimator = currentWeaponObject.GetComponentInChildren<Animator>();
+        flourishHandler.reloadAnimator = currentWeaponObject.GetComponentInChildren<Animator>();
+        flourishHandler.currentFlourish = weapon.flourish;
         currentWeapon = weapon;
 
         
     }
+
+    
 
     
     [Command]
@@ -150,21 +180,17 @@ public class Equipment : NetworkBehaviour
                     NetworkServer.Spawn(weaponDrop);
                 }
             
-            
+            currentAmmo = 0;
             currentWeapon = null;
             Destroy(currentWeaponObject);
+            flourishHandler.reloadAnimator = null;
+            flourishHandler.currentFlourish = null;
             currentWeaponObject = null;
         }
     }
 
     void Update()
     {
-        if(!isLocalPlayer)
-        {
-            if(currentWeapon != null && currentWeaponObject == null)
-            {
-
-            }
-        }
+        
     }
 }

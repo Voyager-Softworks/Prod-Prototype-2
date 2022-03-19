@@ -19,6 +19,7 @@ public class PlayerMovement : NetworkBehaviour
     public LayerMask groundMask;
 
     public float moveSpeed;
+    public float crouchMoveSpeed;
     public float jumpHeight;
     public float initialSlideSpeed;
     public float maxSlideDuration;
@@ -85,11 +86,25 @@ public class PlayerMovement : NetworkBehaviour
                 if(slideTimer == 0.0f)
                 {
                     slideDirection = move;
+                    if(move.magnitude == 0.0f)
+                    {
+                        slideTimer = maxSlideDuration;
+                    }
                 }
-                float velY = velocity.y;
-                velocity = (1.0f - Mathf.Clamp(slideTimer, 0, maxSlideDuration) / maxSlideDuration) * initialSlideSpeed * slideDirection;
-                velocity.y = velY;
-                slideTimer += Time.deltaTime;
+                if(slideTimer > maxSlideDuration)
+                {
+                    velocity.x = 0.0f;
+                    velocity.z = 0.0f;
+                    controller.Move(move * Time.deltaTime * crouchMoveSpeed);
+                }
+                else
+                {
+                    float velY = velocity.y;
+                    velocity = (1.0f - Mathf.Clamp(slideTimer, 0, maxSlideDuration) / maxSlideDuration) * initialSlideSpeed * slideDirection;
+                    velocity.y = velY;
+                    slideTimer += Time.deltaTime;
+                    
+                }
                 cameraTransform.position = Vector3.Lerp(cameraTransform.position, transform.position + (transform.up * 0.1f), Time.deltaTime * 10.0f);
             }
             else

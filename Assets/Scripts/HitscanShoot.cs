@@ -16,7 +16,7 @@ public class HitscanShoot : NetworkBehaviour
     }
 
     // Update is called once per frame
-    async void Update()
+    void Update()
     {
         //Debug.Log("HitscanShoot");
 
@@ -25,6 +25,7 @@ public class HitscanShoot : NetworkBehaviour
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
             if(equip.currentWeapon == null) return;
+            if(!equip.TryFire()) return;
             equip.SetTrigger(new string[]{"s"}, equip.currentWeapon);
             Debug.Log("Pew!");
 
