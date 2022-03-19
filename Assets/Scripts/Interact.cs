@@ -39,7 +39,7 @@ public class Interact : NetworkBehaviour
             {
                 if(interactable.interactionType == Interactible.InteractionType.Pickup)
                 {
-                    GetComponent<Equipment>().EquipWeapon(interactable.weaponData);
+                    GetComponent<Equipment>().EquipWeapon(Instantiate(interactable.weaponData));
                     if(interactable.destroyOnInteract)
                     {
                         NetworkServer.Destroy(interactable.gameObject);
