@@ -1932,7 +1932,7 @@ MonoBehaviour:
   initialSlideSpeed: 26
   maxSlideDuration: 1
   slideTimer: 0
-  gravity: -19.62
+  gravity: -50
   velocity: {x: 0, y: 0, z: 0}
   cameraTransform: {fileID: 2205569994440830870}
 --- !u!114 &7215557956273298196
@@ -1957,6 +1957,7 @@ MonoBehaviour:
   bodyObject: {fileID: 2205569993732024471}
   fpBodyObject: {fileID: 2994283939927811625}
   tpBodyObject: {fileID: 7888028895520280208}
+  damageLog: []
 --- !u!114 &6204742410832865321
 MonoBehaviour:
   m_ObjectHideFlags: 0
