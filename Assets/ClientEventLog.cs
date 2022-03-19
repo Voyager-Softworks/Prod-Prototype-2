@@ -28,7 +28,7 @@ public class ClientEventLog : MonoBehaviour
 
         if (_eventLogger != null && _networkIdentity && _networkIdentity.isLocalPlayer)
         {
-            _eventLogger.CmdLogEvent("ClientEventLog: Start");
+            //_eventLogger.CmdLogEvent(GetComponent<PlayerStats>().username + " has joined the game.");
         }
     }
 

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class KillsManager : NetworkBehaviour
+public class StatsManager : NetworkBehaviour
 {
     [Serializable]
     public class Player

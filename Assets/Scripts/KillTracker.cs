@@ -5,7 +5,7 @@ using Mirror;
 
 public class KillTracker : NetworkBehaviour
 {
-    public KillsManager _killsManager;
+    public StatsManager _statsManager;
 
     // Start is called before the first frame update
     void Start()
@@ -26,18 +26,18 @@ public class KillTracker : NetworkBehaviour
     private void CmdDoConnectStuff(){
         Debug.Log("DoConnectStuff");
 
-        if (_killsManager == null)
+        if (_statsManager == null)
         {
             GameObject _killsManagerObject = GameObject.Find("KillsManager");
             if (_killsManagerObject != null)
             {
-                _killsManager = _killsManagerObject.GetComponent<KillsManager>();
+                _statsManager = _killsManagerObject.GetComponent<StatsManager>();
             }
         }
 
-        if (_killsManager)
+        if (_statsManager)
         {
-            _killsManager.RpcAddPlayer(GetComponent<NetworkIdentity>());
+            _statsManager.RpcAddPlayer(GetComponent<NetworkIdentity>());
         }
     }
 }

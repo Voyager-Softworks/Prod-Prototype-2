@@ -29,11 +29,13 @@ public class Interact : NetworkBehaviour
     [Command]
     void OnInteract()
     {
-        
+        Debug.Log("Interact");
 
         RaycastHit hit;
         if (Physics.Raycast(camTransform.position, camTransform.forward, out hit, 2))
         {
+            Debug.Log("Hit: " + hit.transform.name);
+            
             Interactible interactable = hit.transform.GetComponent<Interactible>();
             if (interactable != null)
             {

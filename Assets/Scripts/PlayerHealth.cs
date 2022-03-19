@@ -203,8 +203,20 @@ public class PlayerHealth : NetworkBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
 
+            PlayerStats ps = GetComponent<PlayerStats>();
+            Damage lastDamage = new Damage();
+            string lastDamageName = "unknown";
+            if (damageLog.Count > 0)
+            {
+                lastDamage = damageLog[damageLog.Count - 1];
+                if (lastDamage.m_originNetId != null && lastDamage.m_originNetId.GetComponent<PlayerStats>())
+                {
+                    lastDamageName = lastDamage.m_originNetId.GetComponent<PlayerStats>().username;
+                }
+            }
+
             //death event
-            FindObjectOfType<EventLogger>().CmdLogEvent("Player Died");
+            FindObjectOfType<EventLogger>().CmdLogEvent(ps.username + " died to " + lastDamageName + " with " + lastDamage.m_damageName + "!");
         }
 
         GetComponentInChildren<PlayerMovement>().enabled = false;
