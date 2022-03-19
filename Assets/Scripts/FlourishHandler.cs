@@ -71,7 +71,7 @@ public class FlourishHandler : NetworkBehaviour
         }
         if (isFlourishing)
         {
-            mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, 70.0f, Time.deltaTime * 10.0f);
+            mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, 60.0f, Time.deltaTime * 10.0f);
             chromaticAberrationIntensity = Mathf.Lerp(chromaticAberrationIntensity, 1.0f, Time.deltaTime * 10.0f);
             flourishIndicator.SetActive(true);
             Vector3 newPos = flourishIndicator.transform.localPosition;
@@ -98,7 +98,7 @@ public class FlourishHandler : NetworkBehaviour
         }
         else
         {
-            mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, 60.0f, Time.deltaTime * 10.0f);
+            mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, 50.0f, Time.deltaTime * 10.0f);
             flourishIndicator.SetActive(false);
             chromaticAberrationIntensity = Mathf.Lerp(chromaticAberrationIntensity, 0.0f, Time.deltaTime * 10.0f);
         }
