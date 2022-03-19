@@ -16,11 +16,6 @@ public class MouseLook : MonoBehaviour
 
     float xRoation;
 
-    private void OnLevelWasLoaded(int level)
-    {
-
-    }
-
     // Start is called before the first frame update
     void Start()
     {

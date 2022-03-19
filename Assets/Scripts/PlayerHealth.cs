@@ -35,16 +35,14 @@ public class PlayerHealth : NetworkBehaviour
         }
     }
 
-    [SyncVar(hook = "OnChangeHealth")]
-    [SerializeField] int currentHealth = 100;
-    [SerializeField] int maxHealth = 100;
-
-    [SerializeField] bool isDead = false;
+    [SyncVar] [SerializeField] int currentHealth = 100;
+    [SyncVar] [SerializeField] int maxHealth = 100;
+    
+    [SyncVar] [SerializeField] bool isDead = false;
 
     public MenuCamScript _menuCamera;
 
     public Image _healthBar;
-
     public GameObject bodyObject;
     public GameObject fpBodyObject;
     public GameObject tpBodyObject;
@@ -108,11 +106,6 @@ public class PlayerHealth : NetworkBehaviour
     void OnChangeHealth(int oldHealth, int newHealth)
     {
         currentHealth = newHealth;
-
-        if (!isDead && currentHealth <= 0)
-        {
-            Die();
-        }
     }
 
 
@@ -121,33 +114,25 @@ public class PlayerHealth : NetworkBehaviour
     [ClientRpc]
     private void RpcTakeDamage(Damage _damage)
     {
+        TakeDamage(_damage);
+    }
+
+    [Command(requiresAuthority = false)]
+    public void CmdTakeDamage(Damage _damage)
+    {
+        RpcTakeDamage(_damage);
+    }
+
+    private void TakeDamage(Damage _damage){
         if (isDead) return;
 
         damageLog.Add(_damage);
 
         currentHealth -= _damage.m_damageAmount;
 
-        if (currentHealth <= 0)
+        if (isLocalPlayer && currentHealth <= 0)
         {
-            Die();
-        }
-    }
-
-    [Command]
-    private void CmdTakeDamage(Damage _damage)
-    {
-        RpcTakeDamage(_damage);
-    }
-
-    public void TakeDamage(Damage _damage){
-        if (isServer) {
-            RpcTakeDamage(_damage);
-        }
-        else if (hasAuthority) {
-            CmdTakeDamage(_damage);
-        }
-        else{
-            Debug.LogWarning("Something isnt quite right!");
+            CmdDie();
         }
     }
 
