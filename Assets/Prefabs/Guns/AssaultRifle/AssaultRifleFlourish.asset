@@ -13,3 +13,7 @@ MonoBehaviour:
   m_Name: AssaultRifleFlourish
   m_EditorClassIdentifier: 
   Moves: 020000000300000002000000
+  flourishActivateDelay: 3
+  effectDuration: 10
+  flourishFireDelayMod: -0.1
+  flourishMoveSpeedMod: 0
