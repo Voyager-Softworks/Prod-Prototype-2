@@ -30,6 +30,9 @@ public class FlourishHandler : NetworkBehaviour
     public float chromaticAberrationIntensity = 0.0f;
 
     HitscanShoot hitscanShoot;
+
+    float flourishTimer = 0.0f;
+    bool flourishActive = false;
     
     
 
@@ -49,16 +52,26 @@ public class FlourishHandler : NetworkBehaviour
 
     float GetCurrMovePercentage()
     {
-        return (currentMoveAmount / moveAmountReqiured) * 200.0f;
+        return (currentMoveAmount / moveAmountReqiured) * 300.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
         if(!isLocalPlayer) return;
+        if(flourishActive)
+        {
+            flourishTimer -= Time.deltaTime;
+            if(flourishTimer <= 0.0f)
+            {
+                flourishActive = false;
+                hitscanShoot.isFlourishing = false;
+                equip.currentWeaponObject.GetComponent<WeaponFX>().SetFlourishActive(false);
+            }
+        }
         if (isFlourishing)
         {
-            mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, 90.0f, Time.deltaTime * 10.0f);
+            mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, 70.0f, Time.deltaTime * 10.0f);
             chromaticAberrationIntensity = Mathf.Lerp(chromaticAberrationIntensity, 1.0f, Time.deltaTime * 10.0f);
             flourishIndicator.SetActive(true);
             Vector3 newPos = flourishIndicator.transform.localPosition;
@@ -85,7 +98,7 @@ public class FlourishHandler : NetworkBehaviour
         }
         else
         {
-            mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, 80.0f, Time.deltaTime * 10.0f);
+            mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, 60.0f, Time.deltaTime * 10.0f);
             flourishIndicator.SetActive(false);
             chromaticAberrationIntensity = Mathf.Lerp(chromaticAberrationIntensity, 0.0f, Time.deltaTime * 10.0f);
         }
@@ -144,6 +157,7 @@ public class FlourishHandler : NetworkBehaviour
             isFlourishing = true;
             flourishControl.Enable();
             equip.SetTrigger(new string[] { "r", "0" }, equip.currentWeapon);
+            hitscanShoot.canFire = false;
         }
     }
 
@@ -156,6 +170,7 @@ public class FlourishHandler : NetworkBehaviour
             isFlourishing = false;
             flourishControl.Disable();
             equip.SetTrigger(new string[] { "c" }, equip.currentWeapon);
+            hitscanShoot.canFire = true;
         }
     }
 
@@ -163,15 +178,28 @@ public class FlourishHandler : NetworkBehaviour
     {
         //Cursor.lockState = CursorLockMode.Locked;
         StartCoroutine(DisableMouseLock());
+        StartCoroutine(FlourishEffectAfterDelay(equip.currentWeapon.flourish.flourishActivateDelay));
         flourishControl.Disable();
         equip.ReloadAmmo();
+        
     }
 
     
     IEnumerator DisableMouseLock()
     {
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.5f);
         mouselook.lockMouse = false;
+    }
+
+    IEnumerator FlourishEffectAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        hitscanShoot.canFire = true;
+        flourishActive = true;
+        flourishTimer = equip.currentWeapon.flourish.effectDuration;
+        hitscanShoot.isFlourishing = true;
+        equip.currentWeaponObject.GetComponent<WeaponFX>().SetFlourishActive(true);
+        
     }
     
 }
