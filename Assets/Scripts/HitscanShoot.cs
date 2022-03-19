@@ -16,7 +16,7 @@ public class HitscanShoot : NetworkBehaviour
     }
 
     // Update is called once per frame
-    async void Update()
+    void Update()
     {
         //Debug.Log("HitscanShoot");
 

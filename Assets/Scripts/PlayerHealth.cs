@@ -59,7 +59,7 @@ public class PlayerHealth : NetworkBehaviour
             _menuCamera = GameObject.FindObjectOfType<MenuCamScript>();
         }
 
-        if (_menuCamera != null)
+        if (isLocalPlayer && _menuCamera != null)
         {
             _menuCamera.Disable();
         }
@@ -92,7 +92,7 @@ public class PlayerHealth : NetworkBehaviour
         //if dead and press f5, respawn
         if (isDead && Keyboard.current.f5Key.wasPressedThisFrame)
         {
-            Respawn();
+            CmdRespawn();
         }
 
         UpdateUI();
@@ -109,7 +109,7 @@ public class PlayerHealth : NetworkBehaviour
     {
         currentHealth = newHealth;
 
-        if (currentHealth <= 0)
+        if (!isDead && currentHealth <= 0)
         {
             Die();
         }
@@ -192,11 +192,34 @@ public class PlayerHealth : NetworkBehaviour
     [ClientRpc]
     private void RpcDie()
     {
+        Die();
+    }
+
+    [Command]
+    private void CmdDie()
+    {
+        RpcDie();
+
+        if (isServerOnly) Die();
+    }
+
+    private void Die()
+    {
+        if (isDead) return;
+
         isDead = true;
         currentHealth = 0;
+
+        transform.position = new Vector3(0, 0, 0);
         
-        if (isLocalPlayer && _menuCamera) {
-            _menuCamera.Enable();
+        if (isLocalPlayer) {
+            if (_menuCamera) _menuCamera.Enable();
+            //unclock mouse
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
+            //death event
+            FindObjectOfType<EventLogger>().CmdLogEvent("Player Died");
         }
 
         GetComponentInChildren<PlayerMovement>().enabled = false;
@@ -206,33 +229,24 @@ public class PlayerHealth : NetworkBehaviour
         tpBodyObject.SetActive(false);
     }
 
-    [Command]
-    private void CmdDie()
-    {
-        RpcDie();
-    }
-
-    void Die()
-    {
-        if (isServer)
-        {
-            RpcDie();
-        }
-        else if (hasAuthority)
-        {
-            CmdDie();
-        }
-        else
-        {
-            Debug.LogWarning("Something isnt quite right!");
-        }
-    }
-
 
 
     //RESPAWN FUNCTIONS
     [ClientRpc]
     private void RpcRespawn()
+    {
+        Respawn();
+    }
+
+    [Command]
+    private void CmdRespawn()
+    {
+        RpcRespawn();
+
+        if (isServerOnly) Respawn();
+    }
+
+    private void Respawn()
     {
         isDead = false;
         currentHealth = maxHealth;
@@ -243,32 +257,11 @@ public class PlayerHealth : NetworkBehaviour
         fpBodyObject.SetActive(true);
         tpBodyObject.SetActive(true);
 
-        transform.position = new Vector3(0, 0, 0);
-
         if (isLocalPlayer && _menuCamera) {
             _menuCamera.Disable();
-        }
-    }
-
-    [Command]
-    private void CmdRespawn()
-    {
-        RpcRespawn();
-    }
-
-    public void Respawn()
-    {
-        if (isServer)
-        {
-            RpcRespawn();
-        }
-        else if (isClient)
-        {
-            CmdRespawn();
-        }
-        else
-        {
-            Debug.LogWarning("Something isnt quite right!");
+            //lock mouse
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 }
