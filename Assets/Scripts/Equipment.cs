@@ -119,6 +119,34 @@ public class Equipment : NetworkBehaviour
         else if(ArgsContain(args, "s"))
         {
             paramStr += "_SHOOT";
+            if(ArgsContain(args,"0"))
+            {
+                paramStr += "_0";
+            }
+            else if(ArgsContain(args,"1"))
+            {
+                paramStr += "_1";
+            }
+            else if(ArgsContain(args,"2"))
+            {
+                paramStr += "_2";
+            }
+            else if(ArgsContain(args,"3"))
+            {
+                paramStr += "_3";
+            }
+            else if(ArgsContain(args,"4"))
+            {
+                paramStr += "_4";
+            }
+            else if(ArgsContain(args,"5"))
+            {
+                paramStr += "_5";
+            }
+            else if(ArgsContain(args,"6"))
+            {
+                paramStr += "_6";
+            }
         }
         else if(ArgsContain(args, "d"))
         {
@@ -127,6 +155,10 @@ public class Equipment : NetworkBehaviour
         else if(ArgsContain(args, "p"))
         {
             paramStr += "_PICKUP";
+        }
+        else if(ArgsContain(args, "c"))
+        {
+            paramStr += "_CANCEL";
         }
 
 
