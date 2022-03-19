@@ -55,6 +55,9 @@ namespace Mirror
         {
             if (!NetworkClient.active)
             {
+                //username
+                manager.username = GUILayout.TextField(manager.username);
+
                 // Server + Client
                 if (Application.platform != RuntimePlatform.WebGLPlayer)
                 {

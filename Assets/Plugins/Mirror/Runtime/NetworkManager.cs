@@ -61,6 +61,8 @@ namespace Mirror
         [Tooltip("Network Address where the client should connect to the server. Server does not use this for anything.")]
         public string networkAddress = "localhost";
 
+        public string username = "DefaultName";
+
         /// <summary>The maximum number of concurrent network connections to support.</summary>
         [FormerlySerializedAs("m_MaxConnections")]
         [Tooltip("Maximum number of concurrent connections.")]
