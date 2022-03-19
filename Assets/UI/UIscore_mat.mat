@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1101122076843666115
+--- !u!114 &-5087336829364332512
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: UI_holo
-  m_Shader: {fileID: -6465566751694194690, guid: 0a27976012bff74409af37ada055c735, type: 3}
+  m_Name: UIscore_mat
+  m_Shader: {fileID: -6465566751694194690, guid: b4ac5e4eb912ae74d96e096b5f6a0084, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -32,8 +32,20 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_d43de97b445c446b89a2ee13721d900e:
-        m_Texture: {fileID: 2800000, guid: 8aee3e326b9ffd74fb8b01ac51d6b1ab, type: 3}
+    - Texture2D_15b2152932024ce1b222a1e12c435d05:
+        m_Texture: {fileID: 2800000, guid: 1308af3b0efa814468dae29ac9082cae, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_507a0ade35e14d7bb120934fb43e3225:
+        m_Texture: {fileID: 2800000, guid: 134243c300d2c0844b3f592000f8b624, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_99cf7948ab704f3aa5510ce94aa52955:
+        m_Texture: {fileID: 2800000, guid: 8a38fbf0fc12e0844b06ad2a9672b5b8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_b6520217411c41389e4671055f56e98b:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -42,6 +54,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _CurrentTexture:
+        m_Texture: {fileID: 2800000, guid: 7ced78b89f02fce4a82176101a61180c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -60,12 +76,8 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _HoloScanlines:
-        m_Texture: {fileID: 2800000, guid: d2169cfe66cc1974fa1de78004530669, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 31ac77b900559e6428c357da7eb5632d, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -80,12 +92,8 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _RunesGradient:
-        m_Texture: {fileID: 2800000, guid: 1308af3b0efa814468dae29ac9082cae, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _RunesTexture:
-        m_Texture: {fileID: 2800000, guid: 134243c300d2c0844b3f592000f8b624, type: 3}
+    - _ScanlineTexture:
+        m_Texture: {fileID: 2800000, guid: d2169cfe66cc1974fa1de78004530669, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -105,9 +113,6 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Boolean_c58d2413a98a4800b3789fcf5e8f87d5: 1
-    - Boolean_ef9bf8a38de84e568cd7be8218eb9e48: 0
-    - Vector1_3bb3274598684d1e946fad3d1c399251: 2
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -122,12 +127,12 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _HoloScrollSpeed: 0.05
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _ScrollingSpeed: 0.15
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -136,15 +141,11 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Vector2_e49233ee51804dbe94962297aca18fb9: {r: 0, g: -0.2, b: 0, a: 0}
+    - Color_373f394a64534d3792ac3520a35bfb9e: {r: 0, g: 0.038024556, b: 0.033246603, a: 1}
+    - Color_ff865a42c86b4614a1b85ec61dd52352: {r: 1.9502074, g: 6.4222345, b: 6.2877374, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FresnelHoloColor: {r: 0.078431375, g: 0.1882353, b: 2.9960785, a: 0}
-    - _HologramTiling: {r: 1, g: 0.2, b: 0, a: 0}
-    - _MainScreenColor: {r: 0.61450624, g: 0.35504806, b: 2.5672705, a: 0}
-    - _RunesColor: {r: 0.9206253, g: 1.6748725, b: 1.7081482, a: 1}
-    - _RunesScrolling: {r: 0, g: 0.05, b: 0, a: 0}
-    - _RunesTiling: {r: 1, g: 1, b: 0, a: 0}
+    - _ScreenColor: {r: 0.19117972, g: 0.5735392, b: 5.2164755, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
