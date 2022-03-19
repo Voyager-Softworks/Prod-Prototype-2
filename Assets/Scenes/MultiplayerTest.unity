@@ -24621,6 +24621,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b7e1be6c8f5bb45a4951bed915e76e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  _clientEventLog: {fileID: 0}
+  events: []
 --- !u!114 &2137974150
 MonoBehaviour:
   m_ObjectHideFlags: 0

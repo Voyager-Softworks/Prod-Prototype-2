@@ -9,6 +9,11 @@ public class HitscanShoot : NetworkBehaviour
     public GameObject _playerRoot;
     Equipment equip;
 
+    float fireDelayTimer;
+
+    public bool canFire = true;
+    public bool isFlourishing = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +24,21 @@ public class HitscanShoot : NetworkBehaviour
     void Update()
     {
         if (!isLocalPlayer) return;
+        fireDelayTimer -= Time.deltaTime;
 
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        if (((Mouse.current.leftButton.isPressed && equip.currentWeapon.automatic) || Mouse.current.leftButton.wasPressedThisFrame) && fireDelayTimer <= 0.0f && canFire)
         {
             if(equip.currentWeapon == null) return;
-            if(!equip.TryFire()) return;
+            
+            if(isFlourishing)
+            {
+                fireDelayTimer = equip.currentWeapon.fireDelay + equip.currentWeapon.flourish.flourishFireDelayMod;
+            }
+            else
+            {
+                if(!equip.TryFire()) return;
+                fireDelayTimer = equip.currentWeapon.fireDelay;
+            }
             equip.SetTrigger(new string[]{"s", Random.Range(0,1).ToString()}, equip.currentWeapon);
             Debug.Log("Pew!");
 
@@ -43,5 +58,6 @@ public class HitscanShoot : NetworkBehaviour
                 }
             }
         }
+        
     }
 }

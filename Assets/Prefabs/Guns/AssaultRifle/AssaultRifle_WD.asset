@@ -15,7 +15,7 @@ MonoBehaviour:
   weaponPrefabFirstPerson: {fileID: 8273122148400739408, guid: 7fa6bfbe1f96fcd6bb214a8281241049, type: 3}
   weaponDropPrefab: {fileID: 6200753133096948438, guid: 3eff4119edc27767bb57dda3ac4eba8c, type: 3}
   weaponName: AssaultRifle
-  fireDelay: 0.1
+  fireDelay: 0.15
   automatic: 1
   damage: 10
   range: 100

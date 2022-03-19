@@ -72,10 +72,7 @@ public class Equipment : NetworkBehaviour
         {
             SetTrigger(new string[] {"p"}, currentWeapon);
         }
-        else
-        {
-            SetTrigger(new string[] {"d"}, oldValue);
-        }
+        
     }
     
     [Command]
