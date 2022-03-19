@@ -79,12 +79,12 @@ public class PlayerHealth : NetworkBehaviour
 
         if (Keyboard.current.f3Key.wasPressedThisFrame)
         {
-            TakeDamage(new Damage(10, "Self"));
+            TakeDamage(new Damage(10, "pure willpower", _originNetId: GetComponent<NetworkIdentity>()));
         }
 
         if (Keyboard.current.f4Key.wasPressedThisFrame)
         {
-            Die();
+            TakeDamage(new Damage(int.MaxValue, "pure willpower", _originNetId: GetComponent<NetworkIdentity>()));
         }
 
         //if dead and press f5, respawn
@@ -205,18 +205,20 @@ public class PlayerHealth : NetworkBehaviour
 
             PlayerStats ps = GetComponent<PlayerStats>();
             Damage lastDamage = new Damage();
-            string lastDamageName = "unknown";
+            string lastDamageSourceName = "someone";
+            string lastDamageName = "something";
             if (damageLog.Count > 0)
             {
                 lastDamage = damageLog[damageLog.Count - 1];
+                lastDamageName = lastDamage.m_damageName;
                 if (lastDamage.m_originNetId != null && lastDamage.m_originNetId.GetComponent<PlayerStats>())
                 {
-                    lastDamageName = lastDamage.m_originNetId.GetComponent<PlayerStats>().username;
+                    lastDamageSourceName = lastDamage.m_originNetId.GetComponent<PlayerStats>().username;
                 }
             }
 
             //death event
-            FindObjectOfType<EventLogger>().CmdLogEvent(ps.username + " died to " + lastDamageName + " with " + lastDamage.m_damageName + "!");
+            FindObjectOfType<EventLogger>().CmdLogEvent(ps.username + " died to " + lastDamageSourceName + " with " + lastDamageName + "!");
         }
 
         GetComponentInChildren<PlayerMovement>().enabled = false;
