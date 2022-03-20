@@ -174,33 +174,48 @@ public class Equipment : NetworkBehaviour
         }
     }
 
+    [Command]
+    public void CmdEquipWeapon(WeaponData _weapon)
+    {
+        
+    }
+
+    [ClientRpc]
+    private void RpcEquipWeapon(WeaponData _weapon)
+    {
+        EquipWeapon(_weapon);
+
+        if (isServerOnly) EquipWeapon(_weapon);
+    }
+
     public void EquipWeapon(WeaponData weapon)
+    {
+        if (isLocalPlayer && currentWeapon != null)
+        {
+            DropWeapon();
+        }
+
+        currentWeapon = weapon;
+        currentAmmo = weapon.clipSize;
+
+        if (isLocalPlayer) {
+            currentWeaponObject = Instantiate(weapon.weaponPrefabFirstPerson, firstPersonWeaponAnchor);
+            firstPersonAnimator = currentWeaponObject.GetComponentInChildren<Animator>();
+            flourishHandler.reloadAnimator = currentWeaponObject.GetComponentInChildren<Animator>();
+            flourishHandler.currentFlourish = weapon.flourish;
+        }
+    }
+
+    public void DropWeapon()
     {
         if (!isLocalPlayer) return;
 
         if (currentWeapon != null)
         {
-            DropWeapon();
-        }
-
-        currentAmmo = weapon.clipSize;
-        currentWeaponObject = Instantiate(weapon.weaponPrefabFirstPerson, firstPersonWeaponAnchor);
-        firstPersonAnimator = currentWeaponObject.GetComponentInChildren<Animator>();
-        flourishHandler.reloadAnimator = currentWeaponObject.GetComponentInChildren<Animator>();
-        flourishHandler.currentFlourish = weapon.flourish;
-        currentWeapon = weapon;
-    }
-
-    public void DropWeapon()
-    {
-        if (currentWeapon != null)
-        {
-            
             if (currentWeapon.weaponDropPrefab != null)
             {
-                GameObject weaponDrop = Instantiate(currentWeapon.weaponDropPrefab, firstPersonWeaponAnchor.position, firstPersonWeaponAnchor.rotation);
-                weaponDrop.GetComponent<Rigidbody>().velocity = transform.forward * 1;
-                NetworkServer.Spawn(weaponDrop);
+                Debug.Log("Dropping weapon: " + currentWeapon.weaponDropPrefab);
+                CmdSpawnCurrentWeapon(firstPersonWeaponAnchor.position, firstPersonWeaponAnchor.rotation, transform.forward);
             }
             
             currentAmmo = 0;
@@ -210,6 +225,16 @@ public class Equipment : NetworkBehaviour
             flourishHandler.currentFlourish = null;
             currentWeaponObject = null;
         }
+    }
+
+    //drop weapon on server
+    [Command]
+    public void CmdSpawnCurrentWeapon(Vector3 _position, Quaternion _rotation, Vector3 _velocity)
+    {
+        Debug.Log("Spawning Weapon: " + currentWeapon.weaponDropPrefab);
+        GameObject weaponDrop = Instantiate(currentWeapon.weaponDropPrefab, _position, _rotation);
+        weaponDrop.GetComponent<Rigidbody>().velocity = _velocity;
+        NetworkServer.Spawn(weaponDrop);
     }
 
     void Update()
