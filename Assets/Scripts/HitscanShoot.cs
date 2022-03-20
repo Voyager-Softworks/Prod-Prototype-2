@@ -23,9 +23,11 @@ public class HitscanShoot : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
+        //locally do the raycast
         if (!isLocalPlayer) return;
         fireDelayTimer -= Time.deltaTime;
 
+        //mouse click + weapon equipped
         if (((Mouse.current.leftButton.isPressed && equip.currentWeapon && equip.currentWeapon.automatic ) || Mouse.current.leftButton.wasPressedThisFrame) && fireDelayTimer <= 0.0f && canFire)
         {
             if(equip.currentWeapon == null) return;
@@ -51,7 +53,7 @@ public class HitscanShoot : NetworkBehaviour
 
                 if (hit.transform.tag == "Player" && hit.distance < equip.currentWeapon.range)
                 {
-                    PlayerHealth.Damage dmg = new PlayerHealth.Damage(equip.currentWeapon.damage, equip.currentWeapon.name, Time.time, hit.distance, Vector3.zero, transform.position, hit.point - transform.position, hit.point, hit.normal, GetComponentInParent<NetworkIdentity>());
+                    PlayerHealth.Damage dmg = new PlayerHealth.Damage(equip.currentWeapon.damage, equip.currentWeapon.weaponName, Time.time, hit.distance, Vector3.zero, transform.position, hit.point - transform.position, hit.point, hit.normal, GetComponentInParent<NetworkIdentity>());
 
                     GameObject player = hit.transform.root.gameObject;
                     if (player && player.GetComponent<PlayerHealth>()) player.GetComponent<PlayerHealth>().CmdTakeDamage(dmg);
