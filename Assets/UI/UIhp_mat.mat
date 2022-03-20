@@ -80,7 +80,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ScanlineTexture:
-        m_Texture: {fileID: 2800000, guid: d2169cfe66cc1974fa1de78004530669, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3e4ca7fb04a144742b2be0ba51c39214, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -129,7 +129,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Color_373f394a64534d3792ac3520a35bfb9e: {r: 0, g: 0.0009765625, b: 0.00078125, a: 1}
-    - Color_ff865a42c86b4614a1b85ec61dd52352: {r: 0.1723756, g: 0.56765074, b: 0.55576277, a: 0}
+    - Color_ff865a42c86b4614a1b85ec61dd52352: {r: 1, g: 0, b: 0.76862746, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
