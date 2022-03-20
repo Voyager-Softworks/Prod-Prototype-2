@@ -61,7 +61,7 @@ public class MouseLook : MonoBehaviour
                 Cursor.visible = false;
                 if(!lockMouse)
                 {
-                    mouseInput = Vector2.Lerp(mouseInput, Mouse.current.delta.ReadValue(), Time.deltaTime * 40.0f);
+                    mouseInput = Vector2.Lerp(mouseInput, Mouse.current.delta.ReadValue(), Time.deltaTime * 20.0f);
                     float mouseX = mouseInput.x * mouseSensitivity;
                     float mouseY = mouseInput.y * mouseSensitivity;
 
