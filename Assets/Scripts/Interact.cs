@@ -32,7 +32,7 @@ public class Interact : NetworkBehaviour
         Debug.Log("Interact");
 
         RaycastHit hit;
-        if (Physics.Raycast(camTransform.position, camTransform.forward, out hit, 2))
+        if (Physics.Raycast(camTransform.position, camTransform.forward, out hit, 3))
         {
             Debug.Log("Hit: " + hit.transform.name);
             
