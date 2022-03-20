@@ -6,8 +6,7 @@ using UnityEngine;
 
 public class Equipment : NetworkBehaviour
 {
-    [SyncVar (hook = "OnChangeWeapon")]
-    public WeaponData currentWeapon;
+    [SyncVar] public WeaponData currentWeapon;
     public Animator firstPersonAnimator;
     public Animator thirdPersonAnimator;
 
@@ -19,7 +18,7 @@ public class Equipment : NetworkBehaviour
 
     //Weapon Vars
 
-    int currentAmmo;
+    [SyncVar] int currentAmmo;
 
     public bool TryFire()
     {
@@ -175,14 +174,11 @@ public class Equipment : NetworkBehaviour
         }
     }
 
-    [ClientRpc]
     public void EquipWeapon(WeaponData weapon)
     {
-        if(!isLocalPlayer)
-        {
-            return;
-        }
-        if (currentWeapon != null && isLocalPlayer)
+        if (!isLocalPlayer) return;
+
+        if (currentWeapon != null)
         {
             DropWeapon();
         }
@@ -193,25 +189,19 @@ public class Equipment : NetworkBehaviour
         flourishHandler.reloadAnimator = currentWeaponObject.GetComponentInChildren<Animator>();
         flourishHandler.currentFlourish = weapon.flourish;
         currentWeapon = weapon;
-
-        
     }
 
-    
-
-    
-    [Command]
     public void DropWeapon()
     {
         if (currentWeapon != null)
         {
             
-                if (currentWeapon.weaponDropPrefab != null)
-                {
-                    GameObject weaponDrop = Instantiate(currentWeapon.weaponDropPrefab, firstPersonWeaponAnchor.position, firstPersonWeaponAnchor.rotation);
-                    weaponDrop.GetComponent<Rigidbody>().velocity = transform.forward * 1;
-                    NetworkServer.Spawn(weaponDrop);
-                }
+            if (currentWeapon.weaponDropPrefab != null)
+            {
+                GameObject weaponDrop = Instantiate(currentWeapon.weaponDropPrefab, firstPersonWeaponAnchor.position, firstPersonWeaponAnchor.rotation);
+                weaponDrop.GetComponent<Rigidbody>().velocity = transform.forward * 1;
+                NetworkServer.Spawn(weaponDrop);
+            }
             
             currentAmmo = 0;
             currentWeapon = null;

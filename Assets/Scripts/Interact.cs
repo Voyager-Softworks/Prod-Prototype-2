@@ -26,7 +26,6 @@ public class Interact : NetworkBehaviour
         dropItemAction.Disable();
     }
 
-    [Command]
     void OnInteract()
     {
         Debug.Log("Interact");
@@ -42,9 +41,10 @@ public class Interact : NetworkBehaviour
                 if(interactable.interactionType == Interactible.InteractionType.Pickup)
                 {
                     GetComponent<Equipment>().EquipWeapon(Instantiate(interactable.weaponData));
+                    
                     if(interactable.destroyOnInteract)
                     {
-                        NetworkServer.Destroy(interactable.gameObject);
+                        interactable.CmdDestroy();
                     }
                 }
                 else if(interactable.interactionType == Interactible.InteractionType.Use)
