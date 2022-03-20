@@ -28,11 +28,7 @@ public class KillTracker : NetworkBehaviour
 
         if (_statsManager == null)
         {
-            GameObject _killsManagerObject = GameObject.Find("KillsManager");
-            if (_killsManagerObject != null)
-            {
-                _statsManager = _killsManagerObject.GetComponent<StatsManager>();
-            }
+            _statsManager = FindObjectOfType<StatsManager>();
         }
 
         if (_statsManager)
