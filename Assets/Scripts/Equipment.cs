@@ -74,7 +74,25 @@ public class Equipment : NetworkBehaviour
         }
         
     }
-    
+    [Command]
+    public void SetSprinting(bool value)
+    {
+        SetSprintingRPC(value);
+    }
+
+    [ClientRpc]
+    public void SetSprintingRPC(bool value)
+    {
+        if(isLocalPlayer)
+        {
+            firstPersonAnimator.SetBool("SPRINTING", value);
+        }
+        else
+        {
+            thirdPersonAnimator.SetBool("SPRINTING", value);
+        }
+    }
+
     [Command]
     public void SetTrigger(string[] args, WeaponData dat)
     {
@@ -157,6 +175,7 @@ public class Equipment : NetworkBehaviour
         {
             paramStr += "_CANCEL";
         }
+        
 
 
         RpcSetTrigger(paramStr);
@@ -175,7 +194,7 @@ public class Equipment : NetworkBehaviour
         }
     }
 
-    [ClientRpc]
+    
     public void EquipWeapon(WeaponData weapon)
     {
         if(!isLocalPlayer)
@@ -208,8 +227,8 @@ public class Equipment : NetworkBehaviour
             
                 if (currentWeapon.weaponDropPrefab != null)
                 {
-                    GameObject weaponDrop = Instantiate(currentWeapon.weaponDropPrefab, firstPersonWeaponAnchor.position, firstPersonWeaponAnchor.rotation);
-                    weaponDrop.GetComponent<Rigidbody>().velocity = transform.forward * 1;
+                    GameObject weaponDrop = Instantiate(currentWeapon.weaponDropPrefab, firstPersonWeaponAnchor.position + transform.forward, firstPersonWeaponAnchor.rotation);
+                    weaponDrop.GetComponent<Rigidbody>().velocity = transform.forward * 2;
                     NetworkServer.Spawn(weaponDrop);
                 }
             

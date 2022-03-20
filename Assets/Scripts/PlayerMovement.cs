@@ -13,6 +13,8 @@ public class PlayerMovement : NetworkBehaviour
     public InputAction jumpAction;
     public InputAction slideAction;
 
+    public InputAction sprintAction;
+
     public CharacterController controller;
     public Transform groundCheck;
     public Transform body;
@@ -20,6 +22,7 @@ public class PlayerMovement : NetworkBehaviour
     public LayerMask groundMask;
 
     public float moveSpeed;
+    public float sprintMoveSpeed;
     public float crouchMoveSpeed;
     public float jumpHeight;
     public float initialSlideSpeed;
@@ -31,6 +34,8 @@ public class PlayerMovement : NetworkBehaviour
     public Vector3 velocity;
     bool isGrounded;
 
+    Equipment equip;
+
     public Transform cameraTransform;
 
 
@@ -39,7 +44,12 @@ public class PlayerMovement : NetworkBehaviour
         moveAction.Enable();
         jumpAction.Enable();
         slideAction.Enable();
+        sprintAction.Enable();
+        equip = GetComponent<Equipment>();
     }
+
+    
+    
 
     // Update is called once per frame
     void Update()
@@ -84,6 +94,7 @@ public class PlayerMovement : NetworkBehaviour
             
             if(slideAction.ReadValue<float>() > 0.0f)
             {
+                equip.SetSprinting(false);
                 if(slideTimer == 0.0f)
                 {
                     slideDirection = move;
@@ -110,10 +121,25 @@ public class PlayerMovement : NetworkBehaviour
             }
             else
             {
+
                 slideTimer = 0.0f;
                 velocity.x = 0.0f;
                 velocity.z = 0.0f;
-                controller.Move(move * Time.deltaTime * moveSpeed);
+                if(move.magnitude > 0.0f)
+                {
+                    if(sprintAction.ReadValue<float>() > 0)
+                    {
+                        
+                        controller.Move(move * Time.deltaTime * sprintMoveSpeed);
+                        equip.SetSprinting(true);
+                    }
+                    else
+                    {
+                        
+                        controller.Move(move * Time.deltaTime * moveSpeed);
+                        equip.SetSprinting(false);
+                    }
+                }
                 cameraTransform.position = Vector3.Lerp(cameraTransform.position, transform.position + (transform.up * 1.0f), Time.deltaTime * 10.0f);
             }
 
