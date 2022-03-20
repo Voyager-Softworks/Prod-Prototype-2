@@ -175,9 +175,13 @@ public class Equipment : NetworkBehaviour
         }
     }
 
-
+    [ClientRpc]
     public void EquipWeapon(WeaponData weapon)
     {
+        if(!isLocalPlayer)
+        {
+            return;
+        }
         if (currentWeapon != null && isLocalPlayer)
         {
             DropWeapon();
