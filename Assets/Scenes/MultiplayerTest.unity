@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18353516, g: 0.22907741, b: 0.30563292, a: 1}
+  m_IndirectSpecularColor: {r: 0.1835351, g: 0.22907737, b: 0.30563283, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10474,7 +10474,7 @@ GameObject:
   - component: {fileID: 956875737}
   - component: {fileID: 956875736}
   m_Layer: 0
-  m_Name: KillsManager
+  m_Name: StatsManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10503,12 +10503,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 956875734}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02dbf2939bcd8f04a9a73780d5edb009, type: 3}
+  m_Script: {fileID: 11500000, guid: a7f389a6e713e52439241f95c9c738b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncMode: 0
   syncInterval: 0.1
-  _networkManager: {fileID: 1877705524}
+  _networkManager: {fileID: 0}
   players: []
   _clientPlayerCanvas: {fileID: 0}
 --- !u!114 &956875737
@@ -21071,17 +21071,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 23000f7c34dc15b4c822b314018bd5a4, type: 3}
---- !u!114 &1877705524 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 489085545484430813, guid: 0a6bb2f08dfb347429a804f70c8d70e7, type: 3}
-  m_PrefabInstance: {fileID: 489085544832904937}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8aab4c8111b7c411b9b92cf3dbc5bd4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1884486624
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -10,10 +10,9 @@ public class StatsManager : NetworkBehaviour
     public class Player
     {
         public NetworkIdentity _player;
-        public string name;
+        public string _username;
         public int kills;
         public int deaths;
-        public int score;
     }
 
     public NetworkManager _networkManager;
@@ -31,6 +30,11 @@ public class StatsManager : NetworkBehaviour
             if (_networkManagerObject != null) _networkManager = _networkManagerObject.GetComponent<NetworkManager>();
         }
 
+        FindPlayerCanvas();
+    }
+
+    private void FindPlayerCanvas()
+    {
         if (_clientPlayerCanvas == null)
         {
             _clientPlayerCanvas = GameObject.FindObjectOfType<PlayerCanvas>();
@@ -48,7 +52,12 @@ public class StatsManager : NetworkBehaviour
     {
         if (_clientPlayerCanvas != null)
         {
-            
+            _clientPlayerCanvas.scorebaordText.text = "";
+
+            foreach (Player player in players)
+            {
+                _clientPlayerCanvas.scorebaordText.text += player._username + " [" + player.kills + " kills]  [" + player.deaths + " deaths]\n";
+            }
         }
     }
 
@@ -65,6 +74,30 @@ public class StatsManager : NetworkBehaviour
         }
     }
 
+    [Command(requiresAuthority = false)]
+    public void CmdUpdateStats(){
+        RpcUpdateStats();
+
+        if (isServerOnly) UpdateStats();
+    }
+
+    [ClientRpc]
+    private void RpcUpdateStats(){
+        UpdateStats();
+    }
+
+    private void UpdateStats(){
+        foreach (Player player in players)
+        {
+            if (player == null) continue;
+            if (player._player == null) continue;
+            if (player._player.GetComponent<PlayerStats>() == null) continue;
+
+            player.kills = player._player.GetComponent<PlayerStats>()._kills.Count;
+            player.deaths = player._player.GetComponent<PlayerStats>()._deaths.Count;
+        }
+    }
+
     [ClientRpc]
     private void RpcUpdateList(List<Player> _players)
     {
@@ -78,17 +111,18 @@ public class StatsManager : NetworkBehaviour
     public void RpcAddPlayer(NetworkIdentity player)
     {
         Player p = new Player();
-        p.name = player.name;
         p.kills = 0;
         p.deaths = 0;
-        p.score = 0;
         p._player = player;
+        p._username = (player.GetComponent<PlayerStats>() ? player.GetComponent<PlayerStats>().username : "Unknown");
         players.Add(p);
 
         if (isServer)
         {
             RpcUpdateList(players);
         }
+
+        FindPlayerCanvas();
     }
 
     [ClientRpc]

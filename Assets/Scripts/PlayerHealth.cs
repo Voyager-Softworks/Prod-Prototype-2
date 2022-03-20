@@ -219,6 +219,19 @@ public class PlayerHealth : NetworkBehaviour
 
             //death event
             FindObjectOfType<EventLogger>().CmdLogEvent(ps.username + " died to " + lastDamageSourceName + " with " + lastDamageName + "!");
+
+            //give kill to killer
+            if (lastDamage.m_originNetId != null)
+            {
+                PlayerStats killerStats = lastDamage.m_originNetId.GetComponent<PlayerStats>();
+                if (killerStats != null)
+                {
+                    killerStats.CmdAddKill(lastDamage);
+                }
+            }
+
+            //give death to self
+            GetComponent<PlayerStats>().CmdAddDeath(lastDamage);
         }
 
         GetComponentInChildren<PlayerMovement>().enabled = false;
