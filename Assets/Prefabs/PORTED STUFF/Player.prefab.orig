@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8180538357260610263
 RectTransform:
   m_ObjectHideFlags: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5883425816463471382}
   m_HandleRect: {fileID: 6506065571931828353}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -1549,7 +1549,7 @@ MonoBehaviour:
   sceneId: 0
   serverOnly: 0
   visible: 0
-  m_AssetId: 56ca6b9d999d9a04086f1d1ea054be1e
+  m_AssetId: c295da0b03a7efd45b0618308b26af66
   hasSpawned: 0
 --- !u!114 &7913499010788841412
 MonoBehaviour:
@@ -1717,23 +1717,6 @@ MonoBehaviour:
       m_Action: Slide
       m_Flags: 0
     m_Flags: 0
-  sprintAction:
-    m_Name: Sprint
-    m_Type: 0
-    m_ExpectedControlType: 
-    m_Id: 9b404801-6435-4997-840b-29b254b38b3d
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: eadf1c89-69f3-4038-bee4-f669fe92b4cb
-      m_Path: <Keyboard>/shift
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Sprint
-      m_Flags: 0
-    m_Flags: 0
   controller: {fileID: 2205569993557986911}
   groundCheck: {fileID: 2205569994412432078}
   body: {fileID: 2205569993732024468}
@@ -1742,7 +1725,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   moveSpeed: 13
-  sprintMoveSpeed: 20
   crouchMoveSpeed: 5
   jumpHeight: 2
   initialSlideSpeed: 35
@@ -1966,9 +1948,6 @@ MonoBehaviour:
   syncInterval: 0.1
   username: 
   _eventLogger: {fileID: 0}
-  _statsManager: {fileID: 0}
-  _kills: []
-  _deaths: []
 --- !u!1 &2205569993732024471
 GameObject:
   m_ObjectHideFlags: 0
@@ -2185,7 +2164,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79e7c143b9a9b0f44bad534071547ee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scorebaordText: {fileID: 0}
 --- !u!1 &2205569993859628273
 GameObject:
   m_ObjectHideFlags: 0
@@ -2210,7 +2188,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2205569993859628273}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2205569994440830870}
@@ -2276,7 +2254,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2205569994440830867}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.4, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2770201324125466604}
@@ -2308,7 +2286,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 1000
-  field of view: 90
+  field of view: 80
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -2768,11 +2746,11 @@ RectTransform:
   m_Father: {fileID: 2425976797239571849}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &4467304362402921042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2958,7 +2936,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3403208757322216120}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.9, z: 0}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2205569993557986910}
@@ -2977,7 +2955,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2205569994440830870}
+<<<<<<< HEAD
   speed: 150
+=======
+  speed: 50
+>>>>>>> Nerys
 --- !u!1 &3409045388824280881
 GameObject:
   m_ObjectHideFlags: 0
@@ -4170,7 +4152,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}

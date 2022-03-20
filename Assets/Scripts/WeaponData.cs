@@ -13,6 +13,7 @@ public class WeaponData : ScriptableObject
     public float fireDelay = 0.0f;
 
     public bool automatic = false;
+    public bool cycleAnimations = true;
 
     public int damage = 10;
 

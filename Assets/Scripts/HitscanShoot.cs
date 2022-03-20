@@ -14,6 +14,10 @@ public class HitscanShoot : NetworkBehaviour
     public bool canFire = true;
     public bool isFlourishing = false;
 
+    bool altAnim = false;
+
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +45,23 @@ public class HitscanShoot : NetworkBehaviour
                 if(!equip.TryFire()) return;
                 fireDelayTimer = equip.currentWeapon.fireDelay;
             }
-            equip.SetTrigger(new string[]{"s", Random.Range(0,1).ToString()}, equip.currentWeapon);
+            if(equip.currentWeapon.cycleAnimations)
+            {
+                if(altAnim) 
+                {
+                    altAnim = false;
+                    equip.SetTrigger(new string[]{"s", "0"}, equip.currentWeapon);
+                }
+                else
+                {
+                    altAnim = true;
+                    equip.SetTrigger(new string[]{"s", "1"}, equip.currentWeapon);
+                }
+            }
+            else
+            {
+                equip.SetTrigger(new string[]{"s", Random.Range(0,1).ToString()}, equip.currentWeapon);
+            }
             Debug.Log("Pew!");
 
             RaycastHit hit;
