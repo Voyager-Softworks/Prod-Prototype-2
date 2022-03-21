@@ -85,7 +85,10 @@ public class Equipment : NetworkBehaviour
     {
         if(isLocalPlayer && firstPersonAnimator)
         {
-            firstPersonAnimator.SetBool("SPRINTING", value);
+            if(currentWeapon != null)
+            {
+                firstPersonAnimator.SetBool("SPRINTING", value);
+            }
         }
         else if (thirdPersonAnimator)
         {

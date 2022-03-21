@@ -17,6 +17,8 @@ MonoBehaviour:
   weaponName: AssaultRifle
   fireDelay: 0.15
   automatic: 1
+  cycleAnimations: 0
+  isShotgun: 0
   damage: 10
   range: 100
   accuracyJitter: 1
