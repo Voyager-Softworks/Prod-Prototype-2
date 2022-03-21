@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 using Mirror;
 
 
@@ -124,6 +125,15 @@ public class FlourishHandler : NetworkBehaviour
                     break;
             }
             flourishIndicator.transform.localPosition = Vector3.Lerp(flourishIndicator.transform.localPosition, newPos, Time.deltaTime * 20.0f);
+
+            //change colour based on if waiting or not
+            if (equip.IsWaiting()){
+                if (flourishIndicator.GetComponent<Image>()) flourishIndicator.GetComponent<Image>().color = Color.green;
+            }
+            else
+            {
+                if (flourishIndicator.GetComponent<Image>()) flourishIndicator.GetComponent<Image>().color = Color.white;
+            }
         }
         else
         {
