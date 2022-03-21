@@ -9,12 +9,17 @@ public class WeaponFX : MonoBehaviour
     public AudioSource flourishLoopSource;
     public AudioSource weaponSoundSource;
 
-    public AudioClip flourishLoopClip, fireClip, reloadClip, equipClip;
+    public AudioClip flourishLoopClip, fireClip, reloadClip, equipClip, hitClip;
     public AudioClip[] flourishClips;
 
     public void PlayMuzzleFlash(int index = 0)
     {
         muzzleParticles[index].Play();
+    }
+
+    public void PlayHit()
+    {
+        weaponSoundSource.PlayOneShot(hitClip);
     }
 
     void Start()

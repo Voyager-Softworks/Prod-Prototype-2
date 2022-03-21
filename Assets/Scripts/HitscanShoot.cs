@@ -87,6 +87,22 @@ public class HitscanShoot : NetworkBehaviour
                         GameObject player = hit.transform.root.gameObject;
                         if (player && player.GetComponent<PlayerHealth>()) player.GetComponent<PlayerHealth>().CmdTakeDamage(dmg);
                     }
+                    if(equip.currentWeapon.isMelee && hit.distance < equip.currentWeapon.range)
+                    {
+                        equip.SetTrigger(new string[]{"h"}, equip.currentWeapon);
+                        equip.currentWeaponObject.GetComponent<WeaponFX>().PlayHit();
+                        equip.DumpAmmo();
+                    }
+                    else if(equip.currentWeapon.isMelee)
+                    {
+                        equip.SetTrigger(new string[]{"m"}, equip.currentWeapon);
+                        equip.AddAmmo(1);
+                    }
+                }
+                else if(equip.currentWeapon.isMelee)
+                {
+                    equip.SetTrigger(new string[]{"m"}, equip.currentWeapon);
+                    equip.AddAmmo(1);
                 }
             }
         }
