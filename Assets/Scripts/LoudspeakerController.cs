@@ -5,6 +5,7 @@ using Mirror;
 
 public class LoudspeakerController : NetworkBehaviour
 {
+    public 
     List<Loudspeaker> loudspeakers = new List<Loudspeaker>();
 
     AudioClip currentClip;

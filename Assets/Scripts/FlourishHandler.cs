@@ -72,7 +72,7 @@ public class FlourishHandler : NetworkBehaviour
         if (isFlourishing)
         {
             mainCamera.fieldOfView = Mathf.Lerp(mainCamera.fieldOfView, 60.0f, Time.deltaTime * 10.0f);
-            chromaticAberrationIntensity = Mathf.Lerp(chromaticAberrationIntensity, 1.0f, Time.deltaTime * 10.0f);
+            
             flourishIndicator.SetActive(true);
             Vector3 newPos = flourishIndicator.transform.localPosition;
             switch (currentFlourish.Moves[currentMoveIndex])
@@ -109,7 +109,7 @@ public class FlourishHandler : NetworkBehaviour
 
     void OnMouseMove(InputAction.CallbackContext context)
     {
-        if (isFlourishing)
+        if (isFlourishing && equip.IsWaiting())
         {
             
             switch (currentFlourish.Moves[currentMoveIndex])
@@ -135,6 +135,9 @@ public class FlourishHandler : NetworkBehaviour
             {
                 currentMoveAmount = 0.0f;
                 equip.SetTrigger(new string[] {"r", (currentMoveIndex+1).ToString()}, equip.currentWeapon);
+                
+                equip.currentWeaponObject.GetComponent<WeaponFX>().PlayFlourish(currentMoveIndex);
+                
                 currentMoveIndex++;
                 if (currentMoveIndex >= currentFlourish.Moves.Count)
                 {
