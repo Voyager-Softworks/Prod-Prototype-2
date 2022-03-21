@@ -16,6 +16,7 @@ public class WeaponData : ScriptableObject
     public bool cycleAnimations = true;
 
     public bool isShotgun = false;
+    public bool isMelee = false;
 
     public int damage = 10;
 

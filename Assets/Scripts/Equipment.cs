@@ -36,6 +36,11 @@ public class Equipment : NetworkBehaviour
         currentAmmo += amount;
     }
 
+    public void DumpAmmo()
+    {
+        currentAmmo = 0;
+    }
+
     public void ReloadAmmo()
     {
         currentAmmo = currentWeapon.clipSize;
@@ -186,6 +191,14 @@ public class Equipment : NetworkBehaviour
         else if(ArgsContain(args, "c"))
         {
             paramStr += "_CANCEL";
+        }
+        else if(ArgsContain(args, "h"))
+        {
+            paramStr += "_HIT";
+        }
+        else if(ArgsContain(args, "m"))
+        {
+            paramStr += "_MISS";
         }
         
 
