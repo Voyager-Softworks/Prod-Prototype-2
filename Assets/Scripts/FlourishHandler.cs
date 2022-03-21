@@ -12,6 +12,8 @@ public class FlourishHandler : NetworkBehaviour
     public Animator reloadAnimator;
     public InputAction initFlourish;
     public InputAction flourishControl;
+
+    public InputAction normalReloadControl;
     Equipment equip;
 
     public int currentMoveIndex = 0;
@@ -21,6 +23,8 @@ public class FlourishHandler : NetworkBehaviour
 
     float currentMoveAmount = 0.0f;
     bool isFlourishing = false;
+    bool isReloading = false;
+    float reloadTimer = 0.0f;
 
     MouseLook mouselook;
 
@@ -43,11 +47,25 @@ public class FlourishHandler : NetworkBehaviour
         initFlourish.Enable();
         initFlourish.started += OnInitFlourish;
         initFlourish.canceled += OnCancelFlourish;
+        normalReloadControl.Enable();
+        normalReloadControl.started += BeginReload;
         flourishControl.performed += OnMouseMove;
         mouselook = GetComponentInChildren<MouseLook>();
         mainCamera = Camera.main;
         equip = GetComponent<Equipment>();
         hitscanShoot = GetComponent<HitscanShoot>();
+    }
+
+    void BeginReload(InputAction.CallbackContext ctx)
+    {
+        if(!isLocalPlayer) return;
+        if(equip.currentWeapon == null) return;
+        
+        equip.SetTrigger(new string[]{"r"}, equip.currentWeapon);
+        equip.currentWeaponObject.GetComponent<WeaponFX>().PlayReload();
+        isReloading = true;
+        hitscanShoot.canFire = false;
+        
     }
 
     float GetCurrMovePercentage()
@@ -59,6 +77,17 @@ public class FlourishHandler : NetworkBehaviour
     void Update()
     {
         if(!isLocalPlayer) return;
+        if(isReloading)
+        {
+            reloadTimer += Time.deltaTime;
+            if(reloadTimer >= equip.currentWeapon.reloadTime)
+            {
+                reloadTimer = 0.0f;
+                isReloading = false;
+                equip.ReloadAmmo();
+                hitscanShoot.canFire = true;
+            }
+        }
         if(flourishActive)
         {
             flourishTimer -= Time.deltaTime;
@@ -151,7 +180,7 @@ public class FlourishHandler : NetworkBehaviour
 
     void OnInitFlourish(InputAction.CallbackContext context)
     {
-        if (currentFlourish != null)
+        if (currentFlourish != null && !isReloading)
         {
             //Cursor.lockState = CursorLockMode.Confined;
             mouselook.lockMouse = true;

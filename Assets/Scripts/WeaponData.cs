@@ -25,6 +25,8 @@ public class WeaponData : ScriptableObject
 
     public int clipSize;
 
+    public float reloadTime = 0.0f;
+
     public Flourish flourish;
 
     

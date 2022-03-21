@@ -120,7 +120,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5883425816463471382}
   m_HandleRect: {fileID: 6506065571931828353}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2515,6 +2515,23 @@ MonoBehaviour:
       m_Processors: 
       m_Groups: 
       m_Action: Flourish Control
+      m_Flags: 0
+    m_Flags: 0
+  normalReloadControl:
+    m_Name: Normal Reload Control
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: bda212ce-b20c-4d59-a9fa-ff91c9dc36b0
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 51b4ad66-084f-4707-ae71-fec27c9bdd22
+      m_Path: <Keyboard>/r
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Normal Reload Control
       m_Flags: 0
     m_Flags: 0
   currentMoveIndex: 0

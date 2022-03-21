@@ -23,4 +23,5 @@ MonoBehaviour:
   range: 100
   accuracyJitter: 1
   clipSize: 30
+  reloadTime: 2
   flourish: {fileID: 11400000, guid: 8fc3f93cae5191fcdb6f54ca509a1b45, type: 2}
