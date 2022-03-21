@@ -83,11 +83,11 @@ public class Equipment : NetworkBehaviour
     [ClientRpc]
     public void SetSprintingRPC(bool value)
     {
-        if(isLocalPlayer)
+        if(isLocalPlayer && firstPersonAnimator)
         {
             firstPersonAnimator.SetBool("SPRINTING", value);
         }
-        else
+        else if (thirdPersonAnimator)
         {
             thirdPersonAnimator.SetBool("SPRINTING", value);
         }
