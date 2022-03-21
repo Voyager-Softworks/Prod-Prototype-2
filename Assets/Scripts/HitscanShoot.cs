@@ -25,7 +25,7 @@ public class HitscanShoot : NetworkBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    async void Update()
     {
         //locally do the raycast
         if (!isLocalPlayer) return;
@@ -65,7 +65,7 @@ public class HitscanShoot : NetworkBehaviour
             Debug.Log("Pew!");
             if(equip.currentWeapon.isShotgun)
             {
-                RaycastHit[] hits = ConeCast(equip.currentWeapon.range, equip.currentWeapon.accuracyJitter, transform.position, transform.forward, LayerMask.GetMask("Default"));
+                RaycastHit[] hits = ConeCast(equip.currentWeapon.range, equip.currentWeapon.accuracyJitter, transform.position, Camera.main.transform.forward, LayerMask.GetMask("Default"));
                 foreach(RaycastHit hit in hits)
                 {
                     if (hit.transform.tag == "Player" && hit.distance < equip.currentWeapon.range)
