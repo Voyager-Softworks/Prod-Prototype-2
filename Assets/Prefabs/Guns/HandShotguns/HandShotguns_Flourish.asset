@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HandShotguns_Flourish
   m_EditorClassIdentifier: 
   Moves: 010000000000000001000000
-  flourishActivateDelay: 3
+  flourishActivateDelay: 1
   effectDuration: 10
   flourishFireDelayMod: 0
   flourishMoveSpeedMod: 0

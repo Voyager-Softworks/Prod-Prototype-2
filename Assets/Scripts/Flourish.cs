@@ -14,6 +14,8 @@ public class Flourish : ScriptableObject
     }
 
     public List<FlourishDir> Moves;
+
+    
     public float flourishActivateDelay = 0.0f;
     public float effectDuration = 2.0f;
 

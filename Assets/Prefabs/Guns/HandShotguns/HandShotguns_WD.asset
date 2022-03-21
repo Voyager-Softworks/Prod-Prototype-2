@@ -19,8 +19,8 @@ MonoBehaviour:
   automatic: 0
   cycleAnimations: 1
   isShotgun: 1
-  damage: 20
-  range: 40
-  accuracyJitter: 20
+  damage: 1
+  range: 30
+  accuracyJitter: 0.5
   clipSize: 6
   flourish: {fileID: 11400000, guid: dfb5d3dbe0187edfaae80ed695f1340c, type: 2}

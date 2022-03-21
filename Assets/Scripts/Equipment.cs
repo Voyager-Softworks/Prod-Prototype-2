@@ -96,6 +96,15 @@ public class Equipment : NetworkBehaviour
         }
     }
 
+    public bool IsWaiting()
+    {
+        if(!isLocalPlayer) return false;
+
+        if(!currentWeapon) return false;
+
+        return firstPersonAnimator.GetCurrentAnimatorStateInfo(0).loop;
+    }
+
     [Command]
     public void SetTrigger(string[] args, WeaponData dat)
     {

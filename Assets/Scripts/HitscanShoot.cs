@@ -45,37 +45,31 @@ public class HitscanShoot : NetworkBehaviour
                 if(!equip.TryFire()) return;
                 fireDelayTimer = equip.currentWeapon.fireDelay;
             }
+            equip.currentWeaponObject.GetComponent<WeaponFX>().PlayFire();
             if(equip.currentWeapon.cycleAnimations)
             {
                 if(altAnim) 
                 {
                     altAnim = false;
                     equip.SetTrigger(new string[]{"s", "0"}, equip.currentWeapon);
+                    equip.currentWeaponObject.GetComponent<WeaponFX>().PlayMuzzleFlash(1);
                 }
                 else
                 {
                     altAnim = true;
                     equip.SetTrigger(new string[]{"s", "1"}, equip.currentWeapon);
+                    equip.currentWeaponObject.GetComponent<WeaponFX>().PlayMuzzleFlash(0);
                 }
             }
             else
             {
                 equip.SetTrigger(new string[]{"s", Random.Range(0,1).ToString()}, equip.currentWeapon);
+                equip.currentWeaponObject.GetComponent<WeaponFX>().PlayMuzzleFlash(0);
             }
             Debug.Log("Pew!");
             if(equip.currentWeapon.isShotgun)
             {
-                RaycastHit[] hits = ConeCast(equip.currentWeapon.range, equip.currentWeapon.accuracyJitter, transform.position, transform.forward, LayerMask.GetMask("Default"));
-                foreach(RaycastHit hit in hits)
-                {
-                    if (hit.transform.tag == "Player" && hit.distance < equip.currentWeapon.range)
-                    {
-                        PlayerHealth.Damage dmg = new PlayerHealth.Damage(equip.currentWeapon.damage, equip.currentWeapon.weaponName, Time.time, hit.distance, Vector3.zero, transform.position, hit.point - transform.position, hit.point, hit.normal, GetComponentInParent<NetworkIdentity>());
-
-                        GameObject player = hit.transform.root.gameObject;
-                        if (player && player.GetComponent<PlayerHealth>()) player.GetComponent<PlayerHealth>().CmdTakeDamage(dmg);
-                    }
-                }
+                ShotgunRaycast(equip.currentWeapon.range, new Vector2(equip.currentWeapon.accuracyJitter, equip.currentWeapon.accuracyJitter), Camera.main.transform.position, Camera.main.transform.forward, 50);
             }
             else
             {
@@ -99,21 +93,51 @@ public class HitscanShoot : NetworkBehaviour
     }
 
     //ConeCast
-    public RaycastHit[] ConeCast(float range, float angle, Vector3 origin, Vector3 direction, int layerMask)
+    // public RaycastHit[] ConeCast(float range, float angle, Vector3 origin, Vector3 direction, int layerMask)
+    // {
+    //     //Cursor.lockState = CursorLockMode.None;
+    //     //Cursor.visible = true;
+    //     RaycastHit[] sphereHits = Physics.SphereCastAll(origin, range, Vector3.up, range, layerMask);
+    //     List<RaycastHit> hits = new List<RaycastHit>();
+    //     foreach (RaycastHit hit in sphereHits)
+    //     {
+    //         if (Vector3.Angle(hit.point - origin, direction) < angle / 2.0f)
+    //         {
+    //             if(!Physics.Raycast(origin, hit.point - origin, out RaycastHit rayHit, range, LayerMask.GetMask("Default")))
+    //             {
+    //                 if(hit.transform != transform)
+    //                 {
+    //                     hits.Add(hit);
+    //                 }
+                    
+                    
+    //             }
+    //         }
+    //     }
+    //     return hits.ToArray();
+    // }
+
+    public void ShotgunRaycast(float range, Vector2 jitter, Vector3 origin, Vector3 direction, int pellets)
     {
-        RaycastHit[] sphereHits = Physics.SphereCastAll(origin, range, direction, angle, layerMask);
-        List<RaycastHit> hits = new List<RaycastHit>();
-        foreach (RaycastHit hit in sphereHits)
+        for(int i = 0; i < pellets; i++)
         {
-            if (Vector3.Angle(hit.normal, direction) < angle / 2.0f)
+            float jitterX = Random.Range(-jitter.x, jitter.x);
+            float jitterY = Random.Range(-jitter.y, jitter.y);
+            Vector3 jitterVector = new Vector3(jitterX, jitterY, 0);
+            Vector3 jitteredDirection = direction + jitterVector;
+            RaycastHit hit;
+            if (Physics.Raycast(origin, jitteredDirection, out hit, range))
             {
-                if(Physics.Raycast(hit.point, transform.position - hit.point, range, layerMask))
+                Debug.Log("Hit: " + hit.transform.name);
+                if (hit.transform.tag == "Player" && hit.distance < range)
                 {
-                    hits.Add(hit);
+                    PlayerHealth.Damage dmg = new PlayerHealth.Damage(equip.currentWeapon.damage, equip.currentWeapon.weaponName, Time.time, hit.distance, Vector3.zero, transform.position, hit.point - transform.position, hit.point, hit.normal, GetComponentInParent<NetworkIdentity>());
+
+                    GameObject player = hit.transform.root.gameObject;
+                    if (player && player.GetComponent<PlayerHealth>()) player.GetComponent<PlayerHealth>().CmdTakeDamage(dmg);
                 }
             }
         }
-        return hits.ToArray();
     }
 
     void OnDrawGizmosSelected()
@@ -123,12 +147,12 @@ public class HitscanShoot : NetworkBehaviour
             if(equip.currentWeapon.isShotgun)
             {
                 Gizmos.color = Color.red;
-                ConeGizmo(equip.currentWeapon.range, equip.currentWeapon.accuracyJitter, transform.position, Camera.main.transform.forward);
+                ConeGizmo(equip.currentWeapon.range, equip.currentWeapon.accuracyJitter, Camera.main.transform.position, Camera.main.transform.forward);
             }
             else
             {
                 Gizmos.color = Color.red;
-                Gizmos.DrawRay(transform.position, Camera.main.transform.forward * equip.currentWeapon.range);
+                Gizmos.DrawRay(Camera.main.transform.position, Camera.main.transform.forward * equip.currentWeapon.range);
             }
         }
     }
