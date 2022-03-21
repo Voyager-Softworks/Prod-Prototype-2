@@ -15,6 +15,8 @@ public class WeaponData : ScriptableObject
     public bool automatic = false;
     public bool cycleAnimations = true;
 
+    public bool isShotgun = false;
+
     public int damage = 10;
 
     public float range = 100.0f;
