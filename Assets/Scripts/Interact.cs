@@ -40,7 +40,8 @@ public class Interact : NetworkBehaviour
             {
                 if(interactable.interactionType == Interactible.InteractionType.Pickup)
                 {
-                    GetComponent<Equipment>().EquipWeapon(Instantiate(interactable.weaponData));
+                    Debug.Log("Picking up: " + interactable.weaponData);
+                    GetComponent<Equipment>().CmdTryEquipWeapon(hit.transform.gameObject);
                     
                     if(interactable.destroyOnInteract)
                     {
@@ -58,6 +59,7 @@ public class Interact : NetworkBehaviour
 
     void OnDropItem()
     {
-        GetComponent<Equipment>().DropWeapon();
+        Debug.Log("Press DropItem");
+        GetComponent<Equipment>().CmdDropWeapon();
     }
 }
