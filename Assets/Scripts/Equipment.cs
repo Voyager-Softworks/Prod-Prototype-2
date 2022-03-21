@@ -199,9 +199,14 @@ public class Equipment : NetworkBehaviour
         WeaponData weaponData = interactible.weaponData;
         if (weaponData == null) return;
 
-        if (isLocalPlayer && currentWeapon != null)
+        if (currentWeapon != null)
         {
-            CmdDropWeapon();
+            if (isLocalPlayer){
+                CmdDropWeapon();
+                CmdTryEquipWeapon(_weapon);
+            }
+            
+            return;
         }
 
         currentWeapon = weaponData;
@@ -213,6 +218,17 @@ public class Equipment : NetworkBehaviour
             flourishHandler.reloadAnimator = currentWeaponObject.GetComponentInChildren<Animator>();
             flourishHandler.currentFlourish = weaponData.flourish;
         }
+
+        if(interactible.destroyOnInteract)
+        {
+            interactible.CmdDestroy();
+        }
+    }
+
+    [Command(requiresAuthority = false)]
+    private void CmdDoBoth(GameObject _weapon){
+        RpcDropWeapon();
+        RpcEquipWeapon(_weapon);
     }
 
     [Command(requiresAuthority = false)]

@@ -183,6 +183,10 @@ public class PlayerHealth : NetworkBehaviour
     [Command]
     private void CmdDie()
     {
+        //drop weapon
+        Equipment eq = GetComponent<Equipment>();
+        if (eq) eq.CmdDropWeapon();
+        
         RpcDie();
 
         if (isServerOnly) Die();

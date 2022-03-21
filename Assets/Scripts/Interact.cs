@@ -42,11 +42,6 @@ public class Interact : NetworkBehaviour
                 {
                     Debug.Log("Picking up: " + interactable.weaponData);
                     GetComponent<Equipment>().CmdTryEquipWeapon(hit.transform.gameObject);
-                    
-                    if(interactable.destroyOnInteract)
-                    {
-                        interactable.CmdDestroy();
-                    }
                 }
                 else if(interactable.interactionType == Interactible.InteractionType.Use)
                 {
