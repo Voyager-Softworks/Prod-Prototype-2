@@ -12,6 +12,8 @@ public class ClientEventLog : MonoBehaviour
     public GameObject contentBox;
     public List<GameObject> entires = new List<GameObject>();
 
+    public EventLogAnim _eventLogAnim;
+
     public EventLogger _eventLogger;
 
     public GameObject eventLogEntryPrefab;
@@ -43,5 +45,8 @@ public class ClientEventLog : MonoBehaviour
         GameObject newEntry = Instantiate(eventLogEntryPrefab, contentBox.transform);
         newEntry.GetComponent<TextMeshProUGUI>().SetText(eventText);
         entires.Add(newEntry);
+
+        //open anim
+        _eventLogAnim.Open();
     }
 }

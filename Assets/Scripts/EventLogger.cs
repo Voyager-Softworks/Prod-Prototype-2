@@ -23,12 +23,6 @@ public class EventLogger : NetworkBehaviour
         {
             _clientEventLog = GameObject.FindObjectOfType<ClientEventLog>();
         }
-
-        //if k is pressed, add an event
-        if (Keyboard.current.kKey.wasPressedThisFrame && !isLocalPlayer)
-        {
-            CmdLogEvent("ClientEventLog: k pressed");
-        }
     }
 
     [ClientRpc]

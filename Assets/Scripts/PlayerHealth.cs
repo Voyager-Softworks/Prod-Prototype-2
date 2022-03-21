@@ -43,6 +43,7 @@ public class PlayerHealth : NetworkBehaviour
     public MenuCamScript _menuCamera;
 
     public Image _healthBar;
+    private float healthBarStartWidth = 0;
     public GameObject bodyObject;
     public GameObject fpBodyObject;
     public GameObject tpBodyObject;
@@ -61,6 +62,8 @@ public class PlayerHealth : NetworkBehaviour
         {
             _menuCamera.Disable();
         }
+
+        healthBarStartWidth = _healthBar.rectTransform.sizeDelta.x;
     }
 
     // Update is called once per frame
@@ -100,7 +103,7 @@ public class PlayerHealth : NetworkBehaviour
     {
         if (!isLocalPlayer) return;
 
-        _healthBar.rectTransform.sizeDelta = new Vector2(((float)currentHealth) / ((float)maxHealth) * 400.0f, _healthBar.rectTransform.sizeDelta.y);
+        _healthBar.rectTransform.sizeDelta = new Vector2(((float)currentHealth) / ((float)maxHealth) * healthBarStartWidth, _healthBar.rectTransform.sizeDelta.y);
     }
 
     void OnChangeHealth(int oldHealth, int newHealth)

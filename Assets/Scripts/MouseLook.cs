@@ -11,6 +11,7 @@ public class MouseLook : MonoBehaviour
     public Transform playerTorso;
     public GameObject head;
     public PlayerCanvas playerCanvas;
+    public EventLogAnim eventLogAnim;
 
     public bool lockMouse = false;
     Vector2 mouseInput;
@@ -48,10 +49,13 @@ public class MouseLook : MonoBehaviour
                 if (Cursor.lockState == CursorLockMode.Locked)
                 {
                     Cursor.lockState = CursorLockMode.None;
+                    
+                    if (eventLogAnim != null) eventLogAnim.KeepOpen();
                 }
                 else
                 {
                     Cursor.lockState = CursorLockMode.Locked;
+                    if (eventLogAnim != null) eventLogAnim.Release();
                 }
             }
 
