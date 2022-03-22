@@ -3,8 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI;
-using TMPro;
+
 
 public class HitscanShoot : NetworkBehaviour
 {
@@ -18,7 +17,7 @@ public class HitscanShoot : NetworkBehaviour
 
     bool altAnim = false;
 
-    public TMP_Text _ammoText;
+    
 
     
 
@@ -36,10 +35,7 @@ public class HitscanShoot : NetworkBehaviour
         //locally do the raycast
         if (!isLocalPlayer) return;
         fireDelayTimer -= Time.deltaTime;
-        if(_ammoText != null)
-        {
-            _ammoText.text = equip.currentWeapon.clipSize.ToString();
-        }
+        
 
         //mouse click + weapon equipped
         if (((Mouse.current.leftButton.isPressed && equip.currentWeapon && equip.currentWeapon.automatic ) || Mouse.current.leftButton.wasPressedThisFrame) && fireDelayTimer <= 0.0f && canFire)
