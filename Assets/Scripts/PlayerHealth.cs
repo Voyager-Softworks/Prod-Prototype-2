@@ -239,6 +239,8 @@ public class PlayerHealth : NetworkBehaviour
 
             //give death to self
             GetComponent<PlayerStats>().CmdAddDeath(lastDamage);
+
+            FindObjectOfType<LoudspeakerController>().Cmd_Play(LoudspeakerController.AnnouncementType.KILL);
         }
 
         GetComponentInChildren<PlayerMovement>().enabled = false;

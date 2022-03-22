@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using Mirror;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 
 public class Equipment : NetworkBehaviour
@@ -16,6 +18,8 @@ public class Equipment : NetworkBehaviour
     public  GameObject currentWeaponObject;
     public Transform firstPersonWeaponAnchor;
     public FlourishHandler flourishHandler;
+
+    public TMP_Text ammoText;
 
     //Weapon Vars
 
@@ -342,6 +346,16 @@ public class Equipment : NetworkBehaviour
 
     void Update()
     {
-        
+        if(ammoText != null)
+        {
+            if(currentWeapon != null)
+            {
+                ammoText.text = currentAmmo.ToString() + " / " + currentWeapon.clipSize.ToString();
+            }
+            else
+            {
+                ammoText.text = "";
+            }
+        }
     }
 }

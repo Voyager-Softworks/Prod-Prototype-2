@@ -14,6 +14,8 @@ public class PlayerStats : NetworkBehaviour
 
     public StatsManager _statsManager;
 
+    LoudspeakerController announcer;
+
     [SyncVar]
     public List<PlayerHealth.Damage> _kills = new List<PlayerHealth.Damage>();
 
@@ -41,6 +43,8 @@ public class PlayerStats : NetworkBehaviour
 
             CmdHookStatsManager();
         }
+
+        announcer = GameObject.FindObjectOfType<LoudspeakerController>();
     }
 
     // Update is called once per frame
