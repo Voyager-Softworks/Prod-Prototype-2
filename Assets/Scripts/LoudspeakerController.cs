@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mirror;
+using UnityEngine.InputSystem;
 
 public class LoudspeakerController : NetworkBehaviour
 {
@@ -10,7 +11,9 @@ public class LoudspeakerController : NetworkBehaviour
 
     AudioClip currentClip;
 
-    public AudioClip[] killAnnouncements, deathAnnouncements, gameStartAnnouncements, gameEndAnnouncements;
+    public InputAction testAction;
+
+    public AudioClip[] killAnnouncements, gameStartAnnouncements, gameEndAnnouncements;
 
     public void RegisterLoudspeaker(Loudspeaker loudspeaker)
     {
@@ -20,7 +23,6 @@ public class LoudspeakerController : NetworkBehaviour
     public enum AnnouncementType
     {
         KILL,
-        DEATH,
         GAMESTART,
         GAMEEND
     }
@@ -28,22 +30,25 @@ public class LoudspeakerController : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        testAction.Enable();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(testAction.triggered)
+        {
+            Cmd_Play(AnnouncementType.KILL);
+        }
     }
 
-    [Command]
+    [Command(requiresAuthority = false)]
     public void Cmd_Play(AnnouncementType type)
     {
         Play(type);
     }
 
-    [Command]
+    [Command(requiresAuthority = false)]
     public void Cmd_Stop()
     {
         Stop();
@@ -56,9 +61,6 @@ public class LoudspeakerController : NetworkBehaviour
         {
             case AnnouncementType.KILL:
                 currentClip = killAnnouncements[Random.Range(0, killAnnouncements.Length)];
-                break;
-            case AnnouncementType.DEATH:
-                currentClip = deathAnnouncements[Random.Range(0, deathAnnouncements.Length)];
                 break;
             case AnnouncementType.GAMESTART:
                 currentClip = gameStartAnnouncements[Random.Range(0, gameStartAnnouncements.Length)];
