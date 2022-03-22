@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Announcer
+  - SceneBarrierController
   layers:
   - Default
   - TransparentFX

@@ -10,7 +10,9 @@ public class Interactible : NetworkBehaviour
     {
         None,
         Pickup,
-        Use
+        Use,
+
+        SwitchBarriers,
     }
 
     public InteractionType interactionType;

@@ -2461,6 +2461,7 @@ MonoBehaviour:
   moveSpeed: 13
   sprintMoveSpeed: 20
   crouchMoveSpeed: 5
+  unarmedModifier: 1.2
   jumpHeight: 2
   initialSlideSpeed: 26
   maxSlideDuration: 1

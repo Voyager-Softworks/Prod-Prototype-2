@@ -24,6 +24,7 @@ public class PlayerMovement : NetworkBehaviour
     public float moveSpeed;
     public float sprintMoveSpeed;
     public float crouchMoveSpeed;
+    public float unarmedModifier;
     public float jumpHeight;
     public float initialSlideSpeed;
     public float maxSlideDuration;
@@ -125,6 +126,7 @@ public class PlayerMovement : NetworkBehaviour
                 slideTimer = 0.0f;
                 velocity.x = 0.0f;
                 velocity.z = 0.0f;
+                if(equip.currentWeapon == null) move *= unarmedModifier;
                 if(move.magnitude > 0.0f)
                 {
                     if(sprintAction.ReadValue<float>() > 0)

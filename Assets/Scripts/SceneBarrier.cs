@@ -63,7 +63,7 @@ public class SceneBarrier : MonoBehaviour
         {
             elapsedTime += Time.deltaTime;
             float t = elapsedTime / duration;
-            meshRenderer.material.SetFloat("_Opacity", t);
+            meshRenderer.material.SetFloat("Vector1_44b3cfe10c90461db535d05b0d2b3d3e", t);
             yield return null;
         }
     }
@@ -78,7 +78,7 @@ public class SceneBarrier : MonoBehaviour
         {
             elapsedTime += Time.deltaTime;
             float t = elapsedTime / duration;
-            meshRenderer.material.SetFloat("_Opacity", 1 - t);
+            meshRenderer.material.SetFloat("Vector1_44b3cfe10c90461db535d05b0d2b3d3e", 1 - t);
             yield return null;
         }
 
