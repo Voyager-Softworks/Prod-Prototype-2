@@ -66,12 +66,11 @@ public class Equipment : NetworkBehaviour
         if(isLocalPlayer)
         {
             firstPerson.SetActive(true);
-            thirdPerson.SetActive(false);
+            thirdPerson.GetComponentInChildren<SkinnedMeshRenderer>().enabled = false;
         }
         else
         {
             firstPerson.SetActive(false);
-            thirdPerson.SetActive(true);
         }
     }
 
