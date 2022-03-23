@@ -202,7 +202,7 @@ public class PlayerHealth : NetworkBehaviour
         isDead = true;
         currentHealth = 0;
 
-        transform.position = new Vector3(0, 0, 0);
+        if (FindObjectOfType<NetworkManager>()) transform.position = FindObjectOfType<NetworkManager>().transform.position;
         
         if (isLocalPlayer) {
             if (_menuCamera) _menuCamera.Enable();
@@ -245,9 +245,9 @@ public class PlayerHealth : NetworkBehaviour
 
         GetComponentInChildren<PlayerMovement>().enabled = false;
         GetComponentInChildren<HitscanShoot>().enabled = false;
-        bodyObject.SetActive(false);
-        fpBodyObject.SetActive(false);
-        tpBodyObject.SetActive(false);
+        if (bodyObject) bodyObject.SetActive(false);
+        if (fpBodyObject) fpBodyObject.SetActive(false);
+        if (tpBodyObject) tpBodyObject.SetActive(false);
     }
 
 
@@ -274,9 +274,9 @@ public class PlayerHealth : NetworkBehaviour
 
         GetComponentInChildren<PlayerMovement>().enabled = true;
         GetComponentInChildren<HitscanShoot>().enabled = true;
-        bodyObject.SetActive(true);
-        fpBodyObject.SetActive(true);
-        tpBodyObject.SetActive(true);
+        if (bodyObject) bodyObject.SetActive(true);
+        if (fpBodyObject) fpBodyObject.SetActive(true);
+        if (tpBodyObject) tpBodyObject.SetActive(true);
 
         if (isLocalPlayer && _menuCamera) {
             _menuCamera.Disable();

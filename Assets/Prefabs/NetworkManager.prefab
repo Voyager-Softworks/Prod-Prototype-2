@@ -54,6 +54,7 @@ MonoBehaviour:
   onlineScene: 
   transport: {fileID: 489085545484430810}
   networkAddress: localhost
+  username: DefaultName
   maxConnections: 100
   authenticator: {fileID: 0}
   playerPrefab: {fileID: 2205569993557986906, guid: c295da0b03a7efd45b0618308b26af66, type: 3}
@@ -61,6 +62,7 @@ MonoBehaviour:
   playerSpawnMethod: 0
   spawnPrefabs:
   - {fileID: 6200753133096948438, guid: 3eff4119edc27767bb57dda3ac4eba8c, type: 3}
+  - {fileID: 6200753133096948438, guid: 2f63ec418186417f9a855d796084dd12, type: 3}
 --- !u!114 &489085545484430810
 MonoBehaviour:
   m_ObjectHideFlags: 0
