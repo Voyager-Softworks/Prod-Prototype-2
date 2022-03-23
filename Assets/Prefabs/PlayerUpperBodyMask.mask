@@ -1,0 +1,461 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PlayerUpperBodyMask
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Character_Armature
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_ElbowIK.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_ElbowIK.L/Character_ElbowIK.L_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_ElbowIK.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_ElbowIK.R/Character_ElbowIK.R_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_HeelIK.L
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_HeelIK.L/Character_HeelIK.L_end
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_HeelIK.R
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_HeelIK.R/Character_HeelIK.R_end
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_KneeIK.L
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_KneeIK.L/Character_KneeIK.L_end
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_KneeIK.R
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_KneeIK.R/Character_KneeIK.R_end
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_Root
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_Root/Character_Spine
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Spine01
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Spine01/Character_Spine01_end
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Spine02
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Spine02/Character_Spine02_end
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Spine03
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Spine03/Character_Spine03_end
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/Character_FingerIndex01.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/Character_FingerIndex01.L/Character_FingerIndex02.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/Character_FingerIndex01.L/Character_FingerIndex02.L/Character_FingerIndex03.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/Character_FingerIndex01.L/Character_FingerIndex02.L/Character_FingerIndex03.L/Character_FingerIndex03.L_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/Character_FingerMiddle01.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/Character_FingerMiddle01.L/Character_FingerMiddle02.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/Character_FingerMiddle01.L/Character_FingerMiddle02.L/Character_FingerMiddle03.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/Character_FingerMiddle01.L/Character_FingerMiddle02.L/Character_FingerMiddle03.L/Character_FingerMiddle03.L_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/Character_FingerPinky01.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/Character_FingerPinky01.L/Character_FingerPinky02.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/Character_FingerPinky01.L/Character_FingerPinky02.L/Character_FingerPinky03.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/Character_FingerPinky01.L/Character_FingerPinky02.L/Character_FingerPinky03.L/Character_FingerPinky03.L_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/Character_FingerRing01.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/Character_FingerRing01.L/Character_FingerRing02.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/Character_FingerRing01.L/Character_FingerRing02.L/Character_FingerRing03.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/Character_FingerRing01.L/Character_FingerRing02.L/Character_FingerRing03.L/Character_FingerRing03.L_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/Character_Thumb01.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/Character_Thumb01.L/Character_Thumb02.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/Character_Thumb01.L/Character_Thumb02.L/Character_Thumb02.L_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001/ShotgunLeft_Barrel.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001/ShotgunLeft_Barrel.L/ShotgunLeft_Shell.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001/ShotgunLeft_Barrel.L/ShotgunLeft_Shell.L/ShotgunLeft_Shell.L_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001/ShotgunLeft_Barrel.L/ShotgunLeft_Wing.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001/ShotgunLeft_Barrel.L/ShotgunLeft_Wing.L/ShotgunLeft_RunesParent.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001/ShotgunLeft_Barrel.L/ShotgunLeft_Wing.L/ShotgunLeft_RunesParent.L/Rune01.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001/ShotgunLeft_Barrel.L/ShotgunLeft_Wing.L/ShotgunLeft_RunesParent.L/Rune01.L/Rune01.L_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001/ShotgunLeft_Barrel.L/ShotgunLeft_Wing.L/ShotgunLeft_RunesParent.L/Rune02.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001/ShotgunLeft_Barrel.L/ShotgunLeft_Wing.L/ShotgunLeft_RunesParent.L/Rune02.L/Rune02.L_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001/ShotgunLeft_Barrel.L/ShotgunLeft_Wing.L/ShotgunLeft_RunesParent.L/Rune03.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001/ShotgunLeft_Barrel.L/ShotgunLeft_Wing.L/ShotgunLeft_RunesParent.L/Rune03.L/Rune03.L_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001/ShotgunLeft_Barrel.L/ShotgunLeft_Wing.L/ShotgunLeft_Wing02.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001/ShotgunLeft_Barrel.L/ShotgunLeft_Wing.L/ShotgunLeft_Wing02.L/ShotgunLeft_Wing02.L_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001/ShotgunLeft_Barrel.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001/ShotgunLeft_Barrel.R/ShotgunLeft_Shell.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001/ShotgunLeft_Barrel.R/ShotgunLeft_Shell.R/ShotgunLeft_Shell.R_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001/ShotgunLeft_Barrel.R/ShotgunLeft_Wing.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001/ShotgunLeft_Barrel.R/ShotgunLeft_Wing.R/ShotgunLeft_RunesParent.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001/ShotgunLeft_Barrel.R/ShotgunLeft_Wing.R/ShotgunLeft_RunesParent.R/Rune01.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001/ShotgunLeft_Barrel.R/ShotgunLeft_Wing.R/ShotgunLeft_RunesParent.R/Rune01.R/Rune01.R_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001/ShotgunLeft_Barrel.R/ShotgunLeft_Wing.R/ShotgunLeft_RunesParent.R/Rune02.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001/ShotgunLeft_Barrel.R/ShotgunLeft_Wing.R/ShotgunLeft_RunesParent.R/Rune02.R/Rune02.R_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001/ShotgunLeft_Barrel.R/ShotgunLeft_Wing.R/ShotgunLeft_RunesParent.R/Rune03.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001/ShotgunLeft_Barrel.R/ShotgunLeft_Wing.R/ShotgunLeft_RunesParent.R/Rune03.R/Rune03.R_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001/ShotgunLeft_Barrel.R/ShotgunLeft_Wing.R/ShotgunLeft_Wing02.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Handle.001/ShotgunLeft_Barrel.R/ShotgunLeft_Wing.R/ShotgunLeft_Wing02.R/ShotgunLeft_Wing02.R_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Trigger
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.L/Character_Arm02.L/Character_Hand.L/ShotgunLeft_Handle/ShotgunLeft_Trigger/ShotgunLeft_Trigger_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_Cell01
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_Cell01/AssaultRifle_Cell02
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_Cell01/AssaultRifle_Cell02/AssaultRifle_Cell02_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_CellCover
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_CellCover/AssaultRifle_CellCover_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_CellReceiver01
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_CellReceiver01/AssaultRifle_CellReceiver01_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_CellReceiver02
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_CellReceiver02/AssaultRifle_CellReceiver02_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontBottom
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontBottom/AssaultRifle_FrontBottom_Cylinder01
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontBottom/AssaultRifle_FrontBottom_Cylinder01/AssaultRifle_FrontBottom_Cylinder01_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontBottom/AssaultRifle_FrontBottom_Cylinder02
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontBottom/AssaultRifle_FrontBottom_Cylinder02/AssaultRifle_FrontBottom_Cylinder02_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontBottom/AssaultRifle_FrontBottom_Cylinder03
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontBottom/AssaultRifle_FrontBottom_Cylinder03/AssaultRifle_FrontBottom_Cylinder03_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontBottom/AssaultRifle_RuneParent
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontBottom/AssaultRifle_RuneParent/AssaultRifle_Rune01.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontBottom/AssaultRifle_RuneParent/AssaultRifle_Rune01.L/AssaultRifle_Rune01.L_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontBottom/AssaultRifle_RuneParent/AssaultRifle_Rune01.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontBottom/AssaultRifle_RuneParent/AssaultRifle_Rune01.R/AssaultRifle_Rune01.R_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontBottom/AssaultRifle_RuneParent/AssaultRifle_Rune02.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontBottom/AssaultRifle_RuneParent/AssaultRifle_Rune02.L/AssaultRifle_Rune02.L_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontBottom/AssaultRifle_RuneParent/AssaultRifle_Rune02.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontBottom/AssaultRifle_RuneParent/AssaultRifle_Rune02.R/AssaultRifle_Rune02.R_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontBottom/AssaultRifle_RuneParent/AssaultRifle_Rune03.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontBottom/AssaultRifle_RuneParent/AssaultRifle_Rune03.L/AssaultRifle_Rune03.L_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontBottom/AssaultRifle_RuneParent/AssaultRifle_Rune03.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontBottom/AssaultRifle_RuneParent/AssaultRifle_Rune03.R/AssaultRifle_Rune03.R_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontBottom/AssaultRifle_WingBottom.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontBottom/AssaultRifle_WingBottom.L/AssaultRifle_WingBottom.L_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontBottom/AssaultRifle_WingBottom.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontBottom/AssaultRifle_WingBottom.R/AssaultRifle_WingBottom.R_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontTop
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontTop/AssaultRifle_FrontTop_Cylinder01
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontTop/AssaultRifle_FrontTop_Cylinder01/AssaultRifle_FrontTop_Cylinder01_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontTop/AssaultRifle_FrontTop_Cylinder02
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontTop/AssaultRifle_FrontTop_Cylinder02/AssaultRifle_FrontTop_Cylinder02_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontTop/AssaultRifle_FrontTop_Cylinder03
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontTop/AssaultRifle_FrontTop_Cylinder03/AssaultRifle_FrontTop_Cylinder03_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontTop/AssaultRifle_WingTop.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontTop/AssaultRifle_WingTop.L/AssaultRifle_WingTop.L_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontTop/AssaultRifle_WingTop.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_FrontTop/AssaultRifle_WingTop.R/AssaultRifle_WingTop.R_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_Root.001
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_Root.001/AssaultRifle_Root.001_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_Stock
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/AssaultRifle_Root/AssaultRifle_Stock/AssaultRifle_Stock_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/Bottle
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/Bottle/Bottle_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/Character_FingerIndex01.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/Character_FingerIndex01.R/Character_FingerIndex02.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/Character_FingerIndex01.R/Character_FingerIndex02.R/Character_FingerIndex03.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/Character_FingerIndex01.R/Character_FingerIndex02.R/Character_FingerIndex03.R/Character_FingerIndex03.R_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/Character_FingerMiddle01.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/Character_FingerMiddle01.R/Character_FingerMiddle02.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/Character_FingerMiddle01.R/Character_FingerMiddle02.R/Character_FingerMiddle03.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/Character_FingerMiddle01.R/Character_FingerMiddle02.R/Character_FingerMiddle03.R/Character_FingerMiddle03.R_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/Character_FingerPinky01.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/Character_FingerPinky01.R/Character_FingerPinky02.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/Character_FingerPinky01.R/Character_FingerPinky02.R/Character_FingerPinky03.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/Character_FingerPinky01.R/Character_FingerPinky02.R/Character_FingerPinky03.R/Character_FingerPinky03.R_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/Character_FingerRing01.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/Character_FingerRing01.R/Character_FingerRing02.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/Character_FingerRing01.R/Character_FingerRing02.R/Character_FingerRing03.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/Character_FingerRing01.R/Character_FingerRing02.R/Character_FingerRing03.R/Character_FingerRing03.R_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/Character_Thumb01.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/Character_Thumb01.R/Character_Thumb02.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/Character_Thumb01.R/Character_Thumb02.R/Character_Thumb02.R_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001/ShotgunRight_Barrel.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001/ShotgunRight_Barrel.L/ShotgunRight_Shell.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001/ShotgunRight_Barrel.L/ShotgunRight_Shell.L/ShotgunRight_Shell.L_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001/ShotgunRight_Barrel.L/ShotgunRight_Wing.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001/ShotgunRight_Barrel.L/ShotgunRight_Wing.L/ShotgunRight_RunesParent.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001/ShotgunRight_Barrel.L/ShotgunRight_Wing.L/ShotgunRight_RunesParent.L/Rune01.L.001
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001/ShotgunRight_Barrel.L/ShotgunRight_Wing.L/ShotgunRight_RunesParent.L/Rune01.L.001/Rune01.L.001_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001/ShotgunRight_Barrel.L/ShotgunRight_Wing.L/ShotgunRight_RunesParent.L/Rune02.L.001
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001/ShotgunRight_Barrel.L/ShotgunRight_Wing.L/ShotgunRight_RunesParent.L/Rune02.L.001/Rune02.L.001_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001/ShotgunRight_Barrel.L/ShotgunRight_Wing.L/ShotgunRight_RunesParent.L/Rune03.L.001
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001/ShotgunRight_Barrel.L/ShotgunRight_Wing.L/ShotgunRight_RunesParent.L/Rune03.L.001/Rune03.L.001_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001/ShotgunRight_Barrel.L/ShotgunRight_Wing.L/ShotgunRight_Wing02.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001/ShotgunRight_Barrel.L/ShotgunRight_Wing.L/ShotgunRight_Wing02.L/ShotgunRight_Wing02.L_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001/ShotgunRight_Barrel.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001/ShotgunRight_Barrel.R/ShotgunRight_Shell.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001/ShotgunRight_Barrel.R/ShotgunRight_Shell.R/ShotgunRight_Shell.R_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001/ShotgunRight_Barrel.R/ShotgunRight_Wing.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001/ShotgunRight_Barrel.R/ShotgunRight_Wing.R/ShotgunRight_RunesParent.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001/ShotgunRight_Barrel.R/ShotgunRight_Wing.R/ShotgunRight_RunesParent.R/Rune01.R.001
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001/ShotgunRight_Barrel.R/ShotgunRight_Wing.R/ShotgunRight_RunesParent.R/Rune01.R.001/Rune01.R.001_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001/ShotgunRight_Barrel.R/ShotgunRight_Wing.R/ShotgunRight_RunesParent.R/Rune02.R.001
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001/ShotgunRight_Barrel.R/ShotgunRight_Wing.R/ShotgunRight_RunesParent.R/Rune02.R.001/Rune02.R.001_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001/ShotgunRight_Barrel.R/ShotgunRight_Wing.R/ShotgunRight_RunesParent.R/Rune03.R.001
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001/ShotgunRight_Barrel.R/ShotgunRight_Wing.R/ShotgunRight_RunesParent.R/Rune03.R.001/Rune03.R.001_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001/ShotgunRight_Barrel.R/ShotgunRight_Wing.R/ShotgunRight_Wing02.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Handle.001/ShotgunRight_Barrel.R/ShotgunRight_Wing.R/ShotgunRight_Wing02.R/ShotgunRight_Wing02.R_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Trigger
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Arm01.R/Character_Arm02.R/Character_Hand.R/ShotgunRight_Handle/ShotgunRight_Trigger/ShotgunRight_Trigger_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Cell01a.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Cell01a.L/Character_Cell01b.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Cell01a.L/Character_Cell01b.L/Character_Cell01c.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Cell01a.L/Character_Cell01b.L/Character_Cell01c.L/Character_Cell01c.L_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Cell01a.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Cell01a.R/Character_Cell01b.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Cell01a.R/Character_Cell01b.R/Character_Cell01c.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Cell01a.R/Character_Cell01b.R/Character_Cell01c.R/Character_Cell01c.R_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Cell02a.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Cell02a.L/Character_Cell02b.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Cell02a.L/Character_Cell02b.L/Character_Cell02c.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Cell02a.L/Character_Cell02b.L/Character_Cell02c.L/Character_Cell02c.L_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Cell02a.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Cell02a.R/Character_Cell02b.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Cell02a.R/Character_Cell02b.R/Character_Cell02c.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Cell02a.R/Character_Cell02b.R/Character_Cell02c.R/Character_Cell02c.R_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Cell03a.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Cell03a.L/Character_Cell03b.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Cell03a.L/Character_Cell03b.L/Character_Cell03c.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Cell03a.L/Character_Cell03b.L/Character_Cell03c.L/Character_Cell03c.L_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Cell03a.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Cell03a.R/Character_Cell03b.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Cell03a.R/Character_Cell03b.R/Character_Cell03c.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Cell03a.R/Character_Cell03b.R/Character_Cell03c.R/Character_Cell03c.R_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Neck
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Neck/Character_Head
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Neck/Character_Head/Character_Visor
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Neck/Character_Head/Character_Visor/Character_Visor_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Ribs.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Ribs.L/Character_Ribs.L_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Ribs.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Spine/Character_Torso/Character_Ribs.R/Character_Ribs.R_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_Root/Character_Thigh.L
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_Root/Character_Thigh.L/Character_Shin.L
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_Root/Character_Thigh.L/Character_Shin.L/Character_Foot.L
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_Root/Character_Thigh.L/Character_Shin.L/Character_Foot.L/Character_Toes.L
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_Root/Character_Thigh.L/Character_Shin.L/Character_Foot.L/Character_Toes.L/Character_Toes.L_end
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_Root/Character_Thigh.R
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_Root/Character_Thigh.R/Character_Shin.R
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_Root/Character_Thigh.R/Character_Shin.R/Character_Foot.R
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_Root/Character_Thigh.R/Character_Shin.R/Character_Foot.R/Character_Toes.R
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_Root/Character_Thigh.R/Character_Shin.R/Character_Foot.R/Character_Toes.R/Character_Toes.R_end
+    m_Weight: 0
+  - m_Path: Character_Armature/Character_WristIK.L
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_WristIK.L/Character_WristIK.L_end
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_WristIK.R
+    m_Weight: 1
+  - m_Path: Character_Armature/Character_WristIK.R/Character_WristIK.R_end
+    m_Weight: 1
+  - m_Path: Character_Mesh
+    m_Weight: 0

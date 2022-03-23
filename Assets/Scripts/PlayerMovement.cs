@@ -88,6 +88,8 @@ public class PlayerMovement : NetworkBehaviour
                 velocity.y = -2f;
             }
 
+            thirdPersonAnimator.SetBool("Jump", !isGrounded);
+
             Vector2 moveInput = moveAction.ReadValue<Vector2>();
             float x = moveInput.x;
             float z = moveInput.y;
@@ -121,7 +123,7 @@ public class PlayerMovement : NetworkBehaviour
                     slideTimer += Time.deltaTime;
                     
                 }
-                if(!isLocalPlayer) thirdPersonAnimator.SetBool("Crouching", true);
+                thirdPersonAnimator.SetBool("Crouching", true);
                 cameraTransform.position = Vector3.Lerp(cameraTransform.position, transform.position + (transform.up * 0.1f), Time.deltaTime * 10.0f);
             }
             else
@@ -159,8 +161,10 @@ public class PlayerMovement : NetworkBehaviour
             if (jumpAction.ReadValue<float>() > 0 && isGrounded)
             {
                 velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-                //thirdPersonAnimator.SetTrigger("Jump");
+                
             }
+            
+            
 
             velocity.y += gravity * Time.deltaTime;
 
