@@ -15,5 +15,5 @@ MonoBehaviour:
   Moves: 010000000000000001000000
   flourishActivateDelay: 1
   effectDuration: 10
-  flourishFireDelayMod: 0
+  flourishFireDelayMod: -0.05
   flourishMoveSpeedMod: 0

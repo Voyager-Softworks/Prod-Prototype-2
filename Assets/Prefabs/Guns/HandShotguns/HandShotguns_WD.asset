@@ -15,13 +15,14 @@ MonoBehaviour:
   weaponPrefabFirstPerson: {fileID: 5962400605370859065, guid: 52bd31de963f35549b8b39b7e9f18a3d, type: 3}
   weaponDropPrefab: {fileID: 6200753133096948438, guid: 2f63ec418186417f9a855d796084dd12, type: 3}
   weaponName: HandShotguns
-  fireDelay: 0.4
+  fireDelay: 0.3
   automatic: 0
   cycleAnimations: 1
   isShotgun: 1
+  isMelee: 0
   damage: 1
-  range: 30
-  accuracyJitter: 0.5
+  range: 60
+  accuracyJitter: 0.3
   clipSize: 6
   reloadTime: 2
   flourish: {fileID: 11400000, guid: dfb5d3dbe0187edfaae80ed695f1340c, type: 2}
