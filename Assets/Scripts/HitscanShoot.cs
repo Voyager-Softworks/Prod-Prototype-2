@@ -79,7 +79,7 @@ public class HitscanShoot : NetworkBehaviour
             Debug.Log("Pew!");
             if(equip.currentWeapon.isShotgun)
             {
-                ShotgunRaycast(equip.currentWeapon.range, new Vector2(equip.currentWeapon.accuracyJitter, equip.currentWeapon.accuracyJitter), Camera.main.transform.position, Camera.main.transform.forward, 50);
+                ShotgunRaycast(equip.currentWeapon.range, new Vector2(equip.currentWeapon.accuracyJitter, equip.currentWeapon.accuracyJitter), Camera.main.transform.position, Camera.main.transform.forward, 100);
             }
             else
             {
