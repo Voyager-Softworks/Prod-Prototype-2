@@ -7,7 +7,7 @@ public class SceneBarrierController : NetworkBehaviour
 {
     public bool testSwitch = false;
     public bool testSwitch2 = false;
-
+    bool init = false;
     public float cooldown = 1f;
     float cooldownTimer = 0f;
 
@@ -30,12 +30,18 @@ public class SceneBarrierController : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+    
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(!init)
+        {
+            currentBarrierType = Random.Range(0, 2) == 0 ? SceneBarrier.BarrierType.GROUP_A : SceneBarrier.BarrierType.GROUP_B;
+            CmdSwitchBarriers();
+            init = true;
+        }
         cooldownTimer -= Time.deltaTime;
         if(cooldownTimer < 0) cooldownTimer = 0;
         if(testSwitch)
