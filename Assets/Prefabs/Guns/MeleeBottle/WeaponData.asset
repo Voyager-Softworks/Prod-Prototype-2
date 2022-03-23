@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: WeaponData
   m_EditorClassIdentifier: 
   weaponPrefabFirstPerson: {fileID: 4473406522962215312, guid: 1ec6184daf7f6d1b69a864469066cb2d, type: 3}
-  weaponDropPrefab: {fileID: 6200753133096948438, guid: 68e6bc56a9a18c4ada350e9396e40324, type: 3}
+  weaponDropPrefab: {fileID: 6200753133096948438, guid: 3eff4119edc27767bb57dda3ac4eba8c, type: 3}
   weaponName: Bottle
   fireDelay: 1
   automatic: 0
   cycleAnimations: 0
   isShotgun: 0
+  isMelee: 0
   damage: 10
   range: 10
   accuracyJitter: 0

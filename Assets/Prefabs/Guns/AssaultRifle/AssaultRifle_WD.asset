@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: AssaultRifle_WD
   m_EditorClassIdentifier: 
   weaponPrefabFirstPerson: {fileID: 8273122148400739408, guid: 7fa6bfbe1f96fcd6bb214a8281241049, type: 3}
-  weaponDropPrefab: {fileID: 6200753133096948438, guid: 3eff4119edc27767bb57dda3ac4eba8c, type: 3}
+  weaponDropPrefab: {fileID: 4042786109545910800, guid: 4e6909e5223eb1149a74484c2f606612, type: 3}
   weaponName: AssaultRifle
   fireDelay: 0.15
   automatic: 1
   cycleAnimations: 0
   isShotgun: 0
+  isMelee: 0
   damage: 10
   range: 100
   accuracyJitter: 1
