@@ -209,13 +209,14 @@ public class Equipment : NetworkBehaviour
 
 
         CmdSetTrigger(paramStr);
-        networkAnimator.SetTrigger(paramStr);
+        
     }
 
     [Command]
     void CmdSetTrigger(string paramStr)
     {
         RpcSetTrigger(paramStr);
+        networkAnimator.SetTrigger(paramStr);
     }
 
     [ClientRpc]
