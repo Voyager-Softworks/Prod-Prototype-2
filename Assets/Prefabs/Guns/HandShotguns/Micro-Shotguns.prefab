@@ -7530,14 +7530,14 @@ MonoBehaviour:
   flourishLoopSource: {fileID: 5439732854323324510}
   weaponSoundSource: {fileID: 6334474861551266007}
   flourishLoopClip: {fileID: 8300000, guid: b14100107d985c317928c997cb948405, type: 3}
-  fireClip: {fileID: 8300000, guid: d5103d136aa7201028a276351a13078a, type: 3}
+  fireClip: {fileID: 8300000, guid: 51ccf8ae49915b2488ac0867f59fd435, type: 3}
   reloadClip: {fileID: 8300000, guid: 26f29e159bf9d5e6f942c43f3269b51e, type: 3}
   equipClip: {fileID: 8300000, guid: e111b191d54734b23af7cc132bd6180f, type: 3}
   hitClip: {fileID: 0}
   flourishClips:
-  - {fileID: 8300000, guid: 2207f48f74a8d1d068a3906954d5a2ff, type: 3}
-  - {fileID: 8300000, guid: 2ece76c7b9e19cd9eaedfc2474362afe, type: 3}
-  - {fileID: 8300000, guid: da281ecac6c69097d83fb0540781f49b, type: 3}
+  - {fileID: 8300000, guid: 5ea7f0a202e75254088a0a36b2d07e29, type: 3}
+  - {fileID: 8300000, guid: 6e8c4213645904f4bb94d2e239df1884, type: 3}
+  - {fileID: 8300000, guid: 4a23d38e3b70c9d4595b61dd831e268f, type: 3}
 --- !u!82 &5439732854323324510
 AudioSource:
   m_ObjectHideFlags: 0

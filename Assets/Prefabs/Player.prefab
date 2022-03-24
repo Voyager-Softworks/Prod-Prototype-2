@@ -3360,7 +3360,7 @@ MonoBehaviour:
     m_SingletonActionBindings:
     - m_Name: 
       m_Id: 4558728c-042f-48bf-a457-4be7aaf7ac7c
-      m_Path: <Keyboard>/f
+      m_Path: <Mouse>/rightButton
       m_Interactions: 
       m_Processors: 
       m_Groups: 
