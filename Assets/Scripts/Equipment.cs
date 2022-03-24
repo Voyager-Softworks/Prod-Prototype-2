@@ -114,7 +114,7 @@ public class Equipment : NetworkBehaviour
         return firstPersonAnimator.GetCurrentAnimatorStateInfo(0).loop;
     }
 
-    [Command]
+    
     public void SetTrigger(string[] args, WeaponData dat)
     {
         if (dat == null) return;
@@ -208,6 +208,13 @@ public class Equipment : NetworkBehaviour
         
 
 
+        CmdSetTrigger(paramStr);
+        networkAnimator.SetTrigger(paramStr);
+    }
+
+    [Command]
+    void CmdSetTrigger(string paramStr)
+    {
         RpcSetTrigger(paramStr);
     }
 
@@ -221,7 +228,7 @@ public class Equipment : NetworkBehaviour
         else
         {
             thirdPersonAnimator.SetTrigger(paramStr);
-            networkAnimator.SetTrigger(paramStr);
+            
         }
     }
 
