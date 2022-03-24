@@ -44,7 +44,7 @@ public class PlayerMovement : NetworkBehaviour
 
     public Transform cameraTransform;
 
-    float jumpcoolDown = 0.4f;
+    float jumpcoolDown = 0.3f;
     float jumpTimer = 0.0f;
 
 
