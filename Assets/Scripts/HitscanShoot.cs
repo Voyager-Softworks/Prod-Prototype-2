@@ -20,6 +20,12 @@ public class HitscanShoot : NetworkBehaviour
 
     public TMP_Text _ammoText;
 
+    public Image _hitmarker;
+
+    public AudioClip _hitSound;
+    public float hitmarkerFadeTime = 1.25f;
+    private float hitmarkerFadeTimer = 0;
+
     
 
     
@@ -39,6 +45,18 @@ public class HitscanShoot : NetworkBehaviour
         if(_ammoText != null)
         {
             _ammoText.text = equip.currentWeapon.clipSize.ToString();
+        }
+
+        if (_hitmarker != null){
+            if (hitmarkerFadeTimer > 0)
+            {
+                hitmarkerFadeTimer -= Time.deltaTime;
+                _hitmarker.color = new Color(_hitmarker.color.r, _hitmarker.color.g, _hitmarker.color.b, hitmarkerFadeTimer / hitmarkerFadeTime);
+            }
+            else
+            {
+                _hitmarker.color = new Color(_hitmarker.color.r, _hitmarker.color.g, _hitmarker.color.b, 0);
+            }
         }
 
         //mouse click + weapon equipped
@@ -96,6 +114,7 @@ public class HitscanShoot : NetworkBehaviour
 
                         GameObject player = hit.transform.root.gameObject;
                         if (player && player.GetComponent<PlayerHealth>()) player.GetComponent<PlayerHealth>().CmdTakeDamage(dmg);
+                        DoHitMarker();
                     }
                     if(equip.currentWeapon.isMelee && hit.distance < equip.currentWeapon.range)
                     {
@@ -145,6 +164,7 @@ public class HitscanShoot : NetworkBehaviour
 
     public void ShotgunRaycast(float range, Vector2 jitter, Vector3 origin, Vector3 direction, int pellets)
     {
+        bool didHit = false;
         for(int i = 0; i < pellets; i++)
         {
             float jitterX = Random.Range(-jitter.x, jitter.x);
@@ -161,9 +181,19 @@ public class HitscanShoot : NetworkBehaviour
 
                     GameObject player = hit.transform.root.gameObject;
                     if (player && player.GetComponent<PlayerHealth>()) player.GetComponent<PlayerHealth>().CmdTakeDamage(dmg);
+                    didHit = true;
                 }
             }
         }
+        if (didHit){
+            DoHitMarker();
+        }
+    }
+
+    private void DoHitMarker(){
+        GetComponent<AudioSource>().PlayOneShot(_hitSound);
+        if (_hitmarker) _hitmarker.color = new Color(1, 1, 1, 1);
+        hitmarkerFadeTimer = hitmarkerFadeTime;
     }
 
     void OnDrawGizmosSelected()
