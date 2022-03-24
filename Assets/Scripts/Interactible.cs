@@ -23,7 +23,7 @@ public class Interactible : NetworkBehaviour
 
     public void Interact()
     {
-        
+        onInteract.Invoke();
     }
 
     

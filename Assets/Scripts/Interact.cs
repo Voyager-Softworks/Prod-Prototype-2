@@ -52,6 +52,7 @@ public class Interact : NetworkBehaviour
                     Debug.Log("Switching barriers");
                     FindObjectOfType<SceneBarrierController>().CmdSwitchBarriers();
                 }
+                interactable.Interact();
                 
             }
         }
