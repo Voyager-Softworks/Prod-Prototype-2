@@ -7,7 +7,7 @@ public class Expression : NetworkBehaviour
 {
     public SkinnedMeshRenderer meshrenderer;
     public Material happyMat, defaultMat, sadMat, deadMat;
-    [SyncVar]
+    
     public ExpressionType currentExpression;
 
     public enum ExpressionType
@@ -22,7 +22,7 @@ public class Expression : NetworkBehaviour
     {
         
     }
-    [Command]
+    [Command(requiresAuthority = false)]
     public void CmdSetExpression(ExpressionType expression)
     {
         RpcSetExpression(expression);
@@ -32,6 +32,21 @@ public class Expression : NetworkBehaviour
     void RpcSetExpression(ExpressionType expression)
     {
         currentExpression = expression;
+        switch(currentExpression)
+        {
+            case ExpressionType.Default:
+                meshrenderer.materials[2].mainTexture = defaultMat.mainTexture;
+                break;
+            case ExpressionType.Happy:
+                meshrenderer.materials[2].mainTexture = happyMat.mainTexture;
+                break;
+            case ExpressionType.Sad:
+                meshrenderer.materials[2].mainTexture = sadMat.mainTexture;
+                break;
+            case ExpressionType.Dead:
+                meshrenderer.materials[2].mainTexture = deadMat.mainTexture;
+                break;
+        }
     }
 
     // Update is called once per frame

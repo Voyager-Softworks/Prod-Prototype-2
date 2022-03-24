@@ -16,6 +16,7 @@ public class ExpressionController : MonoBehaviour
     void Start()
     {
         exp = GetComponentInChildren<Expression>();
+        currentExpression = Expression.ExpressionType.Default;
     }
 
     // Update is called once per frame
