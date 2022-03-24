@@ -168,7 +168,7 @@ public class HitscanShoot : NetworkBehaviour
 
     void OnDrawGizmosSelected()
     {
-        if(equip.currentWeapon)
+        if(equip && equip.currentWeapon)
         {
             if(equip.currentWeapon.isShotgun)
             {
