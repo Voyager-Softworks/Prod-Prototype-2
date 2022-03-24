@@ -48,6 +48,11 @@ public class PlayerHealth : NetworkBehaviour
     public GameObject fpBodyObject;
     public GameObject tpBodyObject;
 
+    public AudioClip damageSound;
+    public Image _damageImage;
+    public float flashDuration = 1.0f;
+    private float flashFadeTimer = 0.0f;
+
     public List<Damage> damageLog = new List<Damage>();
 
     // Start is called before the first frame update
@@ -72,6 +77,17 @@ public class PlayerHealth : NetworkBehaviour
         if (!isLocalPlayer)
         {
             return;
+        }
+
+        if (_damageImage){
+            if (flashFadeTimer > 0.0f)
+            {
+                flashFadeTimer -= Time.deltaTime;
+                _damageImage.color = new Color(_damageImage.color.r, _damageImage.color.g, _damageImage.color.b, (flashFadeTimer / flashDuration) * 0.5f);
+            }
+            else{
+                _damageImage.color = new Color(_damageImage.color.r, _damageImage.color.g, _damageImage.color.b, 0.0f);
+            }
         }
 
         //if press f2, heal, if press f3, damage, if press f4, die
@@ -130,6 +146,9 @@ public class PlayerHealth : NetworkBehaviour
         if (isDead) return;
 
         damageLog.Add(_damage);
+
+        flashFadeTimer = flashDuration;
+        GetComponent<AudioSource>().PlayOneShot(damageSound);
 
         currentHealth -= _damage.m_damageAmount;
         if(isLocalPlayer) GetComponent<ExpressionController>().SetExpression(Expression.ExpressionType.Sad);
