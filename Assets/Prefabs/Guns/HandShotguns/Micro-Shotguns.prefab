@@ -175,7 +175,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.7
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -7533,6 +7533,7 @@ MonoBehaviour:
   fireClip: {fileID: 8300000, guid: d5103d136aa7201028a276351a13078a, type: 3}
   reloadClip: {fileID: 8300000, guid: 26f29e159bf9d5e6f942c43f3269b51e, type: 3}
   equipClip: {fileID: 8300000, guid: e111b191d54734b23af7cc132bd6180f, type: 3}
+  hitClip: {fileID: 0}
   flourishClips:
   - {fileID: 8300000, guid: 2207f48f74a8d1d068a3906954d5a2ff, type: 3}
   - {fileID: 8300000, guid: 2ece76c7b9e19cd9eaedfc2474362afe, type: 3}
