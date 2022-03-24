@@ -25,6 +25,12 @@ public class Expression : NetworkBehaviour
     [Command]
     public void CmdSetExpression(ExpressionType expression)
     {
+        RpcSetExpression(expression);
+    }
+
+    [ClientRpc]
+    void RpcSetExpression(ExpressionType expression)
+    {
         currentExpression = expression;
     }
 
