@@ -116,6 +116,7 @@ public class Equipment : NetworkBehaviour
     [Command]
     public void SetTrigger(string[] args, WeaponData dat)
     {
+        if (dat == null) return;
         string paramStr = dat.weaponName.ToUpper();
         if(ArgsContain(args, "r"))
         {
