@@ -2040,6 +2040,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7862192557087859752}
   - component: {fileID: 4750551049690412543}
+  - component: {fileID: 9003454412635994016}
   m_Layer: 0
   m_Name: Character_Mesh
   m_TagString: Untagged
@@ -2082,7 +2083,7 @@ SkinnedMeshRenderer:
   m_Materials:
   - {fileID: 2100000, guid: 11a298d580aade949a21860dc44cb8c9, type: 2}
   - {fileID: 2100000, guid: 540117d9d1522d443b42dd49b915fc0b, type: 2}
-  - {fileID: 2100000, guid: 047ad02108d6b094286baf82df4f9ed2, type: 2}
+  - {fileID: 2100000, guid: 0451aeea5fda9e2efbbe797f52a21e54, type: 2}
   - {fileID: 2100000, guid: 418b56602dcf8024083520d2c565c979, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -2261,6 +2262,26 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.05825293, y: 0.021481067, z: 0.19437295}
     m_Extent: {x: 0.71462166, y: 0.8664783, z: 0.8104122}
   m_DirtyAABB: 0
+--- !u!114 &9003454412635994016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1586349143671007782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c6249c06cf8d8bafa9cb78719634ac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+  meshrenderer: {fileID: 0}
+  happyMat: {fileID: 2100000, guid: 42408a15250b3e7cd8f61dfa0f1cd89f, type: 2}
+  defaultMat: {fileID: 2100000, guid: 78c1453b37bac89b3b964cd0b2900bcf, type: 2}
+  sadMat: {fileID: 2100000, guid: e76397d5048ffb60b98f25ed635e577b, type: 2}
+  deadMat: {fileID: 2100000, guid: 0451aeea5fda9e2efbbe797f52a21e54, type: 2}
+  currentExpression: 0
 --- !u!1 &1637093490743731576
 GameObject:
   m_ObjectHideFlags: 0
@@ -2889,6 +2910,7 @@ GameObject:
   - component: {fileID: 7263556354890976360}
   - component: {fileID: 8452987737568011287}
   - component: {fileID: 882782690214177393}
+  - component: {fileID: 3260352447246706674}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -3463,6 +3485,25 @@ MonoBehaviour:
   syncInterval: 0.01
   clientAuthority: 1
   animator: {fileID: 7239759309617559834}
+--- !u!114 &3260352447246706674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2205569993557986906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aa3170d99fd980f2a2e55b6ec776f93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  happySprite: {fileID: 21300000, guid: 2db23673ef0587247aa83d463c52e9d8, type: 3}
+  sadSprite: {fileID: 21300000, guid: 6a224dc3cccf4374cb5520a8505468a2, type: 3}
+  deadSprite: {fileID: 21300000, guid: 30afa1a968b306c4992cd8f2cea9fce4, type: 3}
+  defaultSprite: {fileID: 21300000, guid: 7577d8f0609ac294f9432c0c083df479, type: 3}
+  expressionImage: {fileID: 8474293527943315049}
+  currentExpression: 0
+  expressionTime: 1
 --- !u!1 &2205569993732024471
 GameObject:
   m_ObjectHideFlags: 0
@@ -11350,7 +11391,7 @@ MonoBehaviour:
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
-  m_ClearDepth: 0
+  m_ClearDepth: 1
   m_AllowXRRendering: 1
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
