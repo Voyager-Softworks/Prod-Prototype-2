@@ -40,7 +40,12 @@ public class PlayerMovement : NetworkBehaviour
 
     Equipment equip;
 
+    bool hasDoubleJumped;
+
     public Transform cameraTransform;
+
+    float jumpcoolDown = 0.4f;
+    float jumpTimer = 0.0f;
 
 
     private void Start() {
@@ -50,6 +55,7 @@ public class PlayerMovement : NetworkBehaviour
         slideAction.Enable();
         sprintAction.Enable();
         equip = GetComponent<Equipment>();
+        hasDoubleJumped = false;
     }
 
     
@@ -82,6 +88,7 @@ public class PlayerMovement : NetworkBehaviour
                 }
 
                 isGrounded = true;
+                hasDoubleJumped = false;
                 break;
             }
 
@@ -98,6 +105,9 @@ public class PlayerMovement : NetworkBehaviour
 
             Vector3 move = Vector3.ClampMagnitude((body.right * x) + (body.forward * z), 1.0f);
             animationVelocity = Vector3.Lerp(animationVelocity, moveInput, Time.deltaTime * 10.0f);
+
+            
+            
             
             if(slideAction.ReadValue<float>() > 0.0f)
             {
@@ -142,10 +152,13 @@ public class PlayerMovement : NetworkBehaviour
                         
                         controller.Move(move * Time.deltaTime * sprintMoveSpeed);
                         equip.SetSprinting(true);
+                        //tilt camera based on movement
+                        cameraTransform.localRotation = Quaternion.Lerp(cameraTransform.localRotation, Quaternion.Euler(moveInput.y * 1.0f, 0.0f, moveInput.x * -4.0f), Time.deltaTime * 10.0f);
                     }
                     else
                     {
-                        
+                        //tilt camera based on movement
+            cameraTransform.localRotation = Quaternion.Lerp(cameraTransform.localRotation, Quaternion.Euler(0.0f, 0.0f, moveInput.x * -2.0f), Time.deltaTime * 10.0f);
                         controller.Move(move * Time.deltaTime * moveSpeed);
                         equip.SetSprinting(false);
                     }
@@ -159,11 +172,15 @@ public class PlayerMovement : NetworkBehaviour
             }
 
             
-
-            if (jumpAction.ReadValue<float>() > 0 && isGrounded)
+            jumpTimer -= Time.deltaTime;
+            if (jumpAction.ReadValue<float>() > 0 && (isGrounded || !hasDoubleJumped) && jumpTimer <= 0.0f)
             {
                 velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
-                
+                jumpTimer = jumpcoolDown;
+                if (!isGrounded)
+                {
+                    hasDoubleJumped = true;
+                }
             }
             
             

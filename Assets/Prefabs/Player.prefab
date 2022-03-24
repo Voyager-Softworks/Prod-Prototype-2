@@ -3212,8 +3212,8 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  moveSpeed: 13
-  sprintMoveSpeed: 20
+  moveSpeed: 12
+  sprintMoveSpeed: 18
   crouchMoveSpeed: 5
   unarmedModifier: 1.2
   jumpHeight: 2
