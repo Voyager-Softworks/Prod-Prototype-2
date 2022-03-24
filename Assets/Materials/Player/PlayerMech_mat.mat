@@ -45,7 +45,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_e49b11e0750848538242344aced0654e:
-        m_Texture: {fileID: 2800000, guid: 5a41963549c36c44da027b34676da8cc, type: 3}
+        m_Texture: {fileID: 2800000, guid: 71bc811a73687554cb5dd02f4fe85d2d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -109,7 +109,7 @@ Material:
     - Vector1_4165674555ef465494c36379088acab8: 0.1
     - Vector1_4462ccd4d5d44bc5a41fcb2e981ec0c5: 10
     - Vector1_47934ab36636482698161d6f197d8890: 1
-    - Vector1_48917d6951a8454294f598eb074dd7ea: 3
+    - Vector1_48917d6951a8454294f598eb074dd7ea: 100
     - Vector1_49921959d89c420b87da6d30edd9e11f: 1
     - Vector1_59f414757c3f4dd9b5d855cc308b295d: 1
     - Vector1_78c9f11ff35048ad90a78dd21e048eee: 2
@@ -150,7 +150,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Color_08337fbdfaf947e2b490612f21283a94: {r: 0, g: 0, b: 0, a: 1}
-    - Color_43d0d7ed78664ee9a35bbb7ce955b114: {r: 0.254717, g: 0.254717, b: 0.254717, a: 1}
+    - Color_43d0d7ed78664ee9a35bbb7ce955b114: {r: 1, g: 1, b: 1, a: 1}
     - Color_943979783df84f65b317696e3df7959a: {r: 1, g: 1, b: 1, a: 1}
     - Color_fc7e7dc2bfa24e849099b01e9d21fdc4: {r: 0, g: 0, b: 0, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
