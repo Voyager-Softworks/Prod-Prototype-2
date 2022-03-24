@@ -1007,7 +1007,7 @@ MonoBehaviour:
   flourishLoopClip: {fileID: 0}
   fireClip: {fileID: 8300000, guid: 418535e4713770a66991328099212b22, type: 3}
   reloadClip: {fileID: 8300000, guid: ee4f31852f24fe629b21092a4f1ab333, type: 3}
-  equipClip: {fileID: 8300000, guid: ee4f31852f24fe629b21092a4f1ab333, type: 3}
+  equipClip: {fileID: 8300000, guid: 313879788890be54e8984ad2687a1815, type: 3}
   hitClip: {fileID: 8300000, guid: 0d88663fb9a842000a12b4b3af164b98, type: 3}
   flourishClips: []
 --- !u!82 &2432079314828208638
@@ -1023,7 +1023,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.5
-  m_Pitch: 1
+  m_Pitch: 1.25
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -1544,7 +1544,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 0
   useUnscaledTime: 0
@@ -1553,7 +1553,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0
+    scalar: 0.15
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -1718,8 +1718,8 @@ ParticleSystem:
         m_RotationOrder: 4
     startColor:
       serializedVersion: 2
-      minMaxState: 0
-      minColor: {r: 1, g: 1, b: 1, a: 1}
+      minMaxState: 2
+      minColor: {r: 0.10537558, g: 0.47766212, b: 0.6037736, a: 1}
       maxColor: {r: 0.5711552, g: 0.7871498, b: 0.8018868, a: 0.25490198}
       maxGradient:
         serializedVersion: 2
@@ -1782,8 +1782,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.06
-      minScalar: 0.02
+      scalar: 0.0075
+      minScalar: 0.002
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2163,8 +2163,8 @@ ParticleSystem:
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
-    m_Position: {x: 0, y: 0, z: 0}
-    m_Rotation: {x: 0, y: 0, z: 0}
+    m_Position: {x: 0.000000020388448, y: 0.024728872, z: -0.000000019362457}
+    m_Rotation: {x: -0.00007680012, y: -0.00004909424, z: -0.00020664535}
     m_Scale: {x: 0.01, y: 0.01, z: 0.01}
     placementMode: 0
     m_MeshMaterialIndex: 0
@@ -2473,7 +2473,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 30
+        scalar: 45
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -2538,22 +2538,13 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0
-          inSlope: 5.5360627
-          outSlope: 5.5360627
+          value: 1
+          inSlope: 0.00001521667
+          outSlope: 0.00001521667
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
-          outWeight: 0.05652133
-        - serializedVersion: 3
-          time: 0.47882098
-          value: 0.836136
-          inSlope: -1.191706
-          outSlope: -1.191706
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.11203723
+          outWeight: 0.088887334
         - serializedVersion: 3
           time: 1
           value: 0
@@ -6364,7 +6355,7 @@ ParticleSystemRenderer:
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
   m_VertexStreams: 00010304
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -8727771570816503437, guid: 4cff0d349dc3a9e4f8bca0210bcb7623, type: 3}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
