@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f823815484fe75a349c421098dc81155, type: 3}
   m_Name: HandShotguns_Flourish
   m_EditorClassIdentifier: 
-  Moves: 010000000000000001000000
+  Moves: 000000000100000003000000
   flourishActivateDelay: 1
   effectDuration: 10
   flourishFireDelayMod: -0.05
