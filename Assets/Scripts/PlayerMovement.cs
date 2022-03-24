@@ -21,6 +21,8 @@ public class PlayerMovement : NetworkBehaviour
     public float groundDistance;
     public LayerMask groundMask;
 
+    
+
     public float moveSpeed;
     public float sprintMoveSpeed;
     public float crouchMoveSpeed;

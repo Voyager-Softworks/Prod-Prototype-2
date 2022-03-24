@@ -12,6 +12,7 @@ public class Equipment : NetworkBehaviour
     private GameObject tempSpawnPrefab = null;
     public Animator firstPersonAnimator;
     public Animator thirdPersonAnimator;
+    public NetworkAnimator networkAnimator;
 
     public GameObject firstPerson;
     public GameObject thirdPerson;
@@ -220,6 +221,7 @@ public class Equipment : NetworkBehaviour
         else
         {
             thirdPersonAnimator.SetTrigger(paramStr);
+            networkAnimator.SetTrigger(paramStr);
         }
     }
 
