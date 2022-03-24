@@ -209,14 +209,15 @@ public class Equipment : NetworkBehaviour
 
 
         CmdSetTrigger(paramStr);
+        networkAnimator.SetTrigger(paramStr);
         
     }
 
-    [Command(requiresAuthority = false)]
+    [Command]
     void CmdSetTrigger(string paramStr)
     {
         RpcSetTrigger(paramStr);
-        networkAnimator.SetTrigger(paramStr);
+        
     }
 
     [ClientRpc]
@@ -228,7 +229,7 @@ public class Equipment : NetworkBehaviour
         }
         else
         {
-            thirdPersonAnimator.SetTrigger(paramStr);
+            //thirdPersonAnimator.SetTrigger(paramStr);
             
         }
     }
