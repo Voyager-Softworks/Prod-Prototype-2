@@ -41,7 +41,7 @@ public class ExpressionController : MonoBehaviour
                 expressionImage.sprite = deadSprite;
                 break;
         }
-        exp.currentExpression = currentExpression;
+        exp.CmdSetExpression(currentExpression);
     }
 
     public void SetExpression(Expression.ExpressionType expression)

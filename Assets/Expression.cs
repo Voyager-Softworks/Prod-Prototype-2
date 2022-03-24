@@ -22,6 +22,11 @@ public class Expression : NetworkBehaviour
     {
         
     }
+    [Command]
+    public void CmdSetExpression(ExpressionType expression)
+    {
+        currentExpression = expression;
+    }
 
     // Update is called once per frame
     void Update()
