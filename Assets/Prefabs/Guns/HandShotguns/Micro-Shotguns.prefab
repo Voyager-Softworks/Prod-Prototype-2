@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6211589983304373177}
   - component: {fileID: 2429506897106638750}
   - component: {fileID: 6334474861551266007}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shotguns_Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -268,7 +268,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 609530788667335975}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Thumb02.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -298,7 +298,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 146504827256217288}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Thumb02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -329,7 +329,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2626017779659554787}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune02.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,7 +359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2190307723668879422}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Index02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -390,7 +390,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9219055728082071126}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune02.R.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,7 +420,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6970123419217915693}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunLeft_Barrel.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,7 +452,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1834256965638507079}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunLeft_Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -483,7 +483,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5055241143555773240}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Hand01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -514,7 +514,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2708325455430313671}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunLeft_Trigger_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -544,7 +544,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7119080475719204534}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunRight_Wing02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -575,7 +575,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 880794168664998268}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Ring03.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -605,7 +605,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8239118073758342546}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune02.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -636,7 +636,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8172693766902338570}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunRight_Shell.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -667,7 +667,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5100337880413978201}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Thumb01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -698,7 +698,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2882409721885174215}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunRight_Trigger_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -728,7 +728,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3597706381169881726}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Index03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -759,7 +759,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4501379951286004136}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune01.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -789,7 +789,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4474787908935421739}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune02.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -820,7 +820,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7950766604223291372}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -852,7 +852,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6031497933437858790}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Middle03.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -882,7 +882,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3962995449322094071}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunLeft_RunesParent.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -915,7 +915,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5501352393221640446}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunLeft_Wing02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -946,7 +946,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9011708777198947015}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Thumb01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -977,7 +977,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1796081414968824481}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune02.L.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1007,7 +1007,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8206603907196328111}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Middle03.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1037,7 +1037,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 953441565660351852}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune02.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1067,7 +1067,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 379756945523712248}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1098,7 +1098,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6766278627533986762}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune01.L.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1128,7 +1128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 671602837900405602}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunRight_Wing02.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1158,7 +1158,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3145389082247004321}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Hand01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1189,7 +1189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3475015594158060772}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune01.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1220,7 +1220,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2755219327781311921}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Ring01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1251,7 +1251,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 138239694406785978}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Pinky02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1282,7 +1282,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1460969916050378346}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_AltRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1313,7 +1313,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4480410570929439150}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Pinky01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1344,7 +1344,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7322795961188586395}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Ring03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1375,7 +1375,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4891436231689026179}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Index01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1406,7 +1406,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3932641068677327061}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunRight_Shell.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1436,7 +1436,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7876055549268038009}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1467,7 +1467,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4342066156729649633}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunLeft_Wing02.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1497,7 +1497,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6503784825556506628}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunRight_Wing.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1529,7 +1529,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2682482012522050140}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunLeft_Wing.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1561,7 +1561,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4108186934201317297}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_LowerArm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1592,7 +1592,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8600667801164774837}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunRight_RunesParent.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1625,7 +1625,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5752853976442676161}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_LowerArm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1656,7 +1656,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4743422422757923911}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunRight_Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1687,7 +1687,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3346576853269542891}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Middle02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1718,7 +1718,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3982885032591726453}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Pinky03.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1748,7 +1748,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1619278817766133043}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1779,7 +1779,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 188675355080568424}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune03.R.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1812,7 +1812,7 @@ GameObject:
   - component: {fileID: 2932084366928304482}
   - component: {fileID: 8450447634523763965}
   - component: {fileID: 6096030433625955048}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6614,7 +6614,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 897751171944314199}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Middle02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6645,7 +6645,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8854717231924261474}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunLeft_Wing.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6677,7 +6677,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 242953148991044396}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune03.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6708,7 +6708,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1685693533399565713}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Middle01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6739,7 +6739,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5955583205788935595}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune03.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6769,7 +6769,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8992679421909649820}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_UpperArm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6800,7 +6800,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6925532746762352209}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Index03.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6830,7 +6830,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4993802668851392697}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunRight_Wing.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6862,7 +6862,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5718468851455615520}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Ring02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6893,7 +6893,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2681056885533054727}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Middle01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6924,7 +6924,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5529247827278346238}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_UpperArm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6955,7 +6955,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2323286346079211816}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunRight_Barrel.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6987,7 +6987,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7256722055994922462}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunRight_Wing02.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7017,7 +7017,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4004403129316670197}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune03.L.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7047,7 +7047,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4787975746637918981}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune01.R.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7077,7 +7077,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2726960996544227809}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Hand02b.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7108,7 +7108,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6718056963484001714}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Hand02b.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7139,7 +7139,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3530642192178832118}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunRight_Shell.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7169,7 +7169,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 542705085764476439}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Ring03.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7199,7 +7199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1780155187822492431}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunRight_Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7231,7 +7231,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3622546345357717798}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Pinky01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7262,7 +7262,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7675321870611583666}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunLeft_Barrel.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7294,7 +7294,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2407907733765576505}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Pinky03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7325,7 +7325,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7759351618375207051}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Middle03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7356,7 +7356,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8711962241285709113}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunLeft_Shell.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7387,7 +7387,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3952352199934499368}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Index01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7418,7 +7418,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1824733742003570175}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunLeft_Wing02.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7452,7 +7452,7 @@ GameObject:
   - component: {fileID: 2017023503708409724}
   - component: {fileID: 9028949583036827726}
   - component: {fileID: 5439732854323324510}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Micro-Shotguns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7643,7 +7643,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2967240817693028736}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Thumb02.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7673,7 +7673,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8689954360901334941}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7704,7 +7704,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2620677300225340983}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunLeft_Shell.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7734,7 +7734,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7272564804260874436}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune01.L.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7765,7 +7765,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7029583410599014926}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Pinky02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7796,7 +7796,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 357661681136094734}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7827,7 +7827,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4028657603013656687}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_AltRoot_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7857,7 +7857,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4770254991027468727}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune03.R.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7887,7 +7887,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4769644044774971544}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunLeft_Shell.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7918,7 +7918,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2406268218906406292}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7949,7 +7949,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7923720410769138994}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunRight_RunesParent.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7982,7 +7982,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2039997730898672440}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Pinky03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8013,7 +8013,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7612578950303663055}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Index02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8044,7 +8044,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4780062176345497583}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunRight_Handle.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8077,7 +8077,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2747551204957502637}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Ring01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8108,7 +8108,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7785295360420251998}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Index03.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8138,7 +8138,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7105896244055930893}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Index03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8171,7 +8171,7 @@ GameObject:
   - component: {fileID: 5725495986804844407}
   - component: {fileID: 6306656485193709876}
   - component: {fileID: 2851449745450725173}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MuzzleFlash (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12973,7 +12973,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2639535054703171936}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Middle03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13004,7 +13004,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7074214556680807721}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunLeft_Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13036,7 +13036,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7770666631866692616}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune01.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13066,7 +13066,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 833300734770390241}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunLeft_Wing02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13097,7 +13097,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 204393072231994485}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Thumb02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13128,7 +13128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1525148398970386696}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunRight_Barrel.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13160,7 +13160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6672621951804309647}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Hand02a.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13196,7 +13196,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 116005442652233988}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Ring03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13227,7 +13227,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2283329330857211908}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Hand02a.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13263,7 +13263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 653705574179155163}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunLeft_Shell.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13293,7 +13293,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1273536785323756808}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Pinky03.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13323,7 +13323,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8599528556604359892}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunLeft_Handle.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13356,7 +13356,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2673830086870934980}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Rune03.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13386,7 +13386,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5199768158202068348}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunRight_Shell.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13417,7 +13417,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4438902129021036795}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunRight_Wing02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13448,7 +13448,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5723796152652745327}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Ring02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13479,7 +13479,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1268474667883223771}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunLeft_RunesParent.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13514,7 +13514,7 @@ GameObject:
   - component: {fileID: 6980815145300351923}
   - component: {fileID: 5148814221092430999}
   - component: {fileID: 3595728301465754875}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shotguns_Rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}

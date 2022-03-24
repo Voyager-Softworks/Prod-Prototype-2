@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1578950243603679569}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Pinky02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8214920789109919118}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Pinky01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5339357749216429741}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_Rune02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5290641502583170977}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_FrontTop_Cylinder02_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,7 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5584398538255823049}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_LowerArm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5580407762957059341}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Ring03.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +193,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8884969107697618665}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Thumb02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8697859018165615336}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_Rune01.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1748302605862722562}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_Cell02_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,7 +284,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1145987453178463460}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_Rune01.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,7 +314,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7518576574020298657}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_CellCover_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -344,7 +344,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7237132944568408537}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Hand02a.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -380,7 +380,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2017249430346849515}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Ring03.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -410,7 +410,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 884688441547675154}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Index01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +441,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3750496186522658568}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_FrontTop_Cylinder01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -472,7 +472,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8325568844425601770}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_Rune03.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -502,7 +502,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8408315920628761285}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Middle01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -533,7 +533,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7450222031804005880}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Middle01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -564,7 +564,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1337927670621336767}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_Rune02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -595,7 +595,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2078171565367484763}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Pinky03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -626,7 +626,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 760313004428697722}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_Rune01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -657,7 +657,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6948694679651719985}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_FrontBottom_Cylinder03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -688,7 +688,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9091509258059259404}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Ring01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -719,7 +719,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 722853741692961918}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_Rune03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -750,7 +750,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8350987410671816087}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_WingTop.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -780,7 +780,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7944576162448836950}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_CellReceiver02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -811,7 +811,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1111956108105950692}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_CellReceiver01_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -841,7 +841,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8703963647412222648}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Middle02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -872,7 +872,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4572172653359282001}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Ring02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -903,7 +903,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7430073705917283647}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Thumb01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -934,7 +934,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8479618538133261042}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_FrontBottom_Cylinder01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -965,7 +965,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2959684473685410098}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_LowerArm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -996,7 +996,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5815359625658387984}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Middle03.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1026,7 +1026,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5689583730803637786}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_FrontBottom_Cylinder03_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1056,7 +1056,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7193903373295189292}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_FrontBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1092,7 +1092,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4111657920879355800}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_FrontTop_Cylinder03_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1122,7 +1122,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1836543402062697918}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Middle03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1153,7 +1153,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 715208005724242981}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Index02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1184,7 +1184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3724543553436121901}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_FrontBottom_Cylinder02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1215,7 +1215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7700862885571006788}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_FrontTop_Cylinder03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1246,7 +1246,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4561490462745573244}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_WingBottom.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1277,7 +1277,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5731775808102301503}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_WingTop.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1307,7 +1307,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 811136399914319026}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Thumb02.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1337,7 +1337,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3861147442834455700}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_CellReceiver02_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1367,7 +1367,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2799699431957740376}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_FrontBottom_Cylinder01_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1397,7 +1397,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7083912148120696482}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_WingBottom.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1427,7 +1427,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6889333113708539292}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Pinky02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1458,7 +1458,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1335057633255949776}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_Root.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1489,7 +1489,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1785215681176026329}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Middle03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1520,7 +1520,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5850633646923586365}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_FrontTop_Cylinder02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1551,7 +1551,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3852837373111848516}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_Cell01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1582,7 +1582,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4062848521514005579}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Pinky03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1615,7 +1615,7 @@ GameObject:
   - component: {fileID: 2884033812475884129}
   - component: {fileID: 3388207274542632140}
   - component: {fileID: 5342254836674695263}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1860,7 +1860,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 772020075585052765}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_UpperArm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1891,7 +1891,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4646322859780898489}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Ring01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1922,7 +1922,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6780751442928419051}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_WingTop.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1953,7 +1953,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5076921313427556848}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Pinky03.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1983,7 +1983,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1163174127471223234}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Index03.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2013,7 +2013,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7271296090490272743}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_CellReceiver01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2044,7 +2044,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8182963679599717777}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_Rune03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2075,7 +2075,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2629478239787346768}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Pinky01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2106,7 +2106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5238724156263717200}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_Rig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2137,7 +2137,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5617791333615636911}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Ring03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2168,7 +2168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8064744317937358958}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Thumb02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2199,7 +2199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3898658428207395802}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Pinky03.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2229,7 +2229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 424974139187668035}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_FrontBottom_Cylinder02_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2259,7 +2259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6924851571012229119}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Hand02a.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2294,7 +2294,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8687309921147989182}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Middle02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2325,7 +2325,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6958709412462618654}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Index03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2356,7 +2356,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3623356742797610261}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_Stock_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2386,7 +2386,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2213919203400698042}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2418,7 +2418,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5510813242422065498}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Thumb02.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2448,7 +2448,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6219957293870794109}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_WingBottom.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2479,7 +2479,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5723973723258072888}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Index03.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2512,7 +2512,7 @@ GameObject:
   - component: {fileID: 9087568239724646294}
   - component: {fileID: 1384528561350992191}
   - component: {fileID: 5854321088362648793}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MuzzleFlash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7372,7 +7372,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8426802782644146675}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Hand01.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7403,7 +7403,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7835360507313211675}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_WingTop.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7434,7 +7434,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6905515532610150633}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_Rune02.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7464,7 +7464,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4044496334029470793}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_WingBottom.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7494,7 +7494,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2146939405640626305}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Ring03.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7525,7 +7525,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 86343417006500183}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_FrontTop_Cylinder01_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7555,7 +7555,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8264436716344319325}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_Rune02.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7585,7 +7585,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 585194221540953063}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Ring02.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7616,7 +7616,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8214988884187693587}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Middle03.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7646,7 +7646,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6005405699762387469}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Thumb01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7677,7 +7677,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7901449625939982807}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Hand02b.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7708,7 +7708,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1689582501462734119}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_Rune03.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7740,7 +7740,7 @@ GameObject:
   - component: {fileID: 8054252978615786508}
   - component: {fileID: 4845493287422948058}
   - component: {fileID: 4919669481579340862}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12559,7 +12559,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6905356223953330270}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_Rune01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12590,7 +12590,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3700103161846642229}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Index02.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12625,7 +12625,7 @@ GameObject:
   - component: {fileID: 1527978310799867004}
   - component: {fileID: 3426046193680604470}
   - component: {fileID: 8691531772534068590}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_FP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12705,6 +12705,7 @@ MonoBehaviour:
   fireClip: {fileID: 8300000, guid: de248ca8cf9f0ab468269108506388cf, type: 3}
   reloadClip: {fileID: 8300000, guid: dbda284db4b537b5ea097f77961e6eb4, type: 3}
   equipClip: {fileID: 8300000, guid: e300e91683d85bd70aabb3a5532979f9, type: 3}
+  hitClip: {fileID: 0}
   flourishClips:
   - {fileID: 8300000, guid: a698e285829fdaf22911c364632a5b8a, type: 3}
   - {fileID: 8300000, guid: 39b0cf48d96c8d4c599e8c268a359676, type: 3}
@@ -12814,7 +12815,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4962620369965383067}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Index01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12845,7 +12846,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7476734175824162248}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_Root.001_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12875,7 +12876,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 965958661895163535}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Hand01.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12906,7 +12907,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5983118160557695444}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_UpperArm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12937,7 +12938,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8071342905840572456}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_RuneParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12973,7 +12974,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4462619580306871998}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_Cell02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13004,7 +13005,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6844573673692712676}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_FrontTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13040,7 +13041,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1584523254597874347}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Hand02b.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13071,7 +13072,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4931888569990151850}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_CellCover
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13102,7 +13103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 245727005285740354}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AssaultRifle_Stock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13133,7 +13134,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3123572357850983841}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FPArms_Index03.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
