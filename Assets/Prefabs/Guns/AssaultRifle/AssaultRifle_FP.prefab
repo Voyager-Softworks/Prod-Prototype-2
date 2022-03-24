@@ -22438,7 +22438,7 @@ MonoBehaviour:
   - {fileID: 1384528561350992191}
   flourishLoopSource: {fileID: 8691531772534068590}
   weaponSoundSource: {fileID: 5342254836674695263}
-  flourishLoopClip: {fileID: 8300000, guid: 90ee99e0fae749fd78539f857d20cdb7, type: 3}
+  flourishLoopClip: {fileID: 8300000, guid: b698560573d15f84588d66544fba0061, type: 3}
   fireClip: {fileID: 8300000, guid: de248ca8cf9f0ab468269108506388cf, type: 3}
   reloadClip: {fileID: 8300000, guid: dbda284db4b537b5ea097f77961e6eb4, type: 3}
   equipClip: {fileID: 8300000, guid: e300e91683d85bd70aabb3a5532979f9, type: 3}
