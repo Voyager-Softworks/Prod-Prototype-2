@@ -26,6 +26,7 @@ public class Expression : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(meshrenderer == null || meshrenderer.enabled == false) return;
         switch(currentExpression)
         {
             case ExpressionType.Default:
