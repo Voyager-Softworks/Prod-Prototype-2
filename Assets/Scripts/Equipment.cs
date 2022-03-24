@@ -354,7 +354,7 @@ public class Equipment : NetworkBehaviour
         if (tempSpawnPrefab == null) return;
 
         Debug.Log("Spawning Weapon: " + tempSpawnPrefab);
-        GameObject weaponDrop = Instantiate(tempSpawnPrefab, _position, _rotation);
+        GameObject weaponDrop = Instantiate(tempSpawnPrefab, _position, Quaternion.identity);
         weaponDrop.GetComponent<Rigidbody>().velocity = _velocity;
         NetworkServer.Spawn(weaponDrop);
     }
