@@ -35,12 +35,16 @@ public class WorldNameScript : MonoBehaviour
             _worldName = GetComponent<TextMeshProUGUI>();
         }
 
+        if (_realStats != null && _realStats.isLocalPlayer){
+            _worldName.enabled = false;
+        }
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (_clientPlayer == null) return;
+        if (_clientPlayer == null || !_worldName.enabled) return;
 
         if (_realStats != null && _worldName != null)
         {

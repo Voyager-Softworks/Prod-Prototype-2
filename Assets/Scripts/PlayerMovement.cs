@@ -41,6 +41,7 @@ public class PlayerMovement : NetworkBehaviour
     Equipment equip;
 
     bool hasDoubleJumped;
+    bool canDoubleJump = false;
 
     public Transform cameraTransform;
 
@@ -173,7 +174,7 @@ public class PlayerMovement : NetworkBehaviour
 
             
             jumpTimer -= Time.deltaTime;
-            if (jumpAction.ReadValue<float>() > 0 && (isGrounded || !hasDoubleJumped) && jumpTimer <= 0.0f)
+            if (jumpAction.ReadValue<float>() > 0 && (isGrounded || (!hasDoubleJumped && canDoubleJump)) && jumpTimer <= 0.0f)
             {
                 velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
                 jumpTimer = jumpcoolDown;
@@ -181,6 +182,13 @@ public class PlayerMovement : NetworkBehaviour
                 {
                     hasDoubleJumped = true;
                 }
+            }
+            if (jumpAction.ReadValue<float>() <= 0)
+            {
+                canDoubleJump = true;
+            }
+            else{
+                canDoubleJump = false;
             }
             
             
