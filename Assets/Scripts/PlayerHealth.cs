@@ -132,7 +132,7 @@ public class PlayerHealth : NetworkBehaviour
         damageLog.Add(_damage);
 
         currentHealth -= _damage.m_damageAmount;
-
+        if(isLocalPlayer) GetComponent<ExpressionController>().SetExpression(Expression.ExpressionType.Sad);
         if (isLocalPlayer && currentHealth <= 0)
         {
             CmdDie();

@@ -86,6 +86,7 @@ public class PlayerStats : NetworkBehaviour
     private void AddKill(PlayerHealth.Damage dmg)
     {
         _kills.Add(dmg);
+        GetComponent<ExpressionController>().SetExpression(Expression.ExpressionType.Happy);
 
         if (_statsManager)
         {
