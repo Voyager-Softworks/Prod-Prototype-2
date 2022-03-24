@@ -212,7 +212,7 @@ public class Equipment : NetworkBehaviour
         
     }
 
-    [Command]
+    [Command(requiresAuthority = false)]
     void CmdSetTrigger(string paramStr)
     {
         RpcSetTrigger(paramStr);
