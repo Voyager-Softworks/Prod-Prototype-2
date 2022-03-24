@@ -282,6 +282,8 @@ public class Equipment : NetworkBehaviour
         {
             interactible.CmdDestroy();
         }
+
+        SetTrigger(new string[] {"p"}, currentWeapon);
     }
 
     [Command(requiresAuthority = false)]
@@ -341,6 +343,8 @@ public class Equipment : NetworkBehaviour
 
         currentAmmo = 0;
         currentWeapon = null;
+
+        SetTrigger(new string[] {"p"}, currentWeapon);
     }
 
     //drop weapon on server
