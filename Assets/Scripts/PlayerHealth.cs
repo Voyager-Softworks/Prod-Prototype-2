@@ -148,7 +148,7 @@ public class PlayerHealth : NetworkBehaviour
         damageLog.Add(_damage);
 
         flashFadeTimer = flashDuration;
-        GetComponent<AudioSource>().PlayOneShot(damageSound);
+        if (isLocalPlayer) GetComponent<AudioSource>().PlayOneShot(damageSound);
 
         currentHealth -= _damage.m_damageAmount;
         if(isLocalPlayer) GetComponent<ExpressionController>().SetExpression(Expression.ExpressionType.Sad);
