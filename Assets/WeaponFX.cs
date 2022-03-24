@@ -30,6 +30,8 @@ public class WeaponFX : MonoBehaviour
 
     public void SetFlourishActive(bool active)
     {
+        if (flourishParticles == null) return;
+
         if(active)
         {
             flourishParticles.Play();
