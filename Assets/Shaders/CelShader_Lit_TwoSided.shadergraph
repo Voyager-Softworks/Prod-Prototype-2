@@ -1145,8 +1145,8 @@
     },
     "m_FragmentContext": {
         "m_Position": {
-            "x": 1643.0,
-            "y": 323.9999694824219
+            "x": 1585.0,
+            "y": 324.0000305175781
         },
         "m_Blocks": [
             {
@@ -3727,7 +3727,7 @@
     },
     "m_SurfaceType": 0,
     "m_AlphaMode": 0,
-    "m_TwoSided": false,
+    "m_TwoSided": true,
     "m_AlphaClip": false,
     "m_CustomEditorGUI": ""
 }
