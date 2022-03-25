@@ -104,7 +104,7 @@ public class HitscanShoot : NetworkBehaviour
             }
             else
             {
-                Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+                Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward + (Camera.main.transform.up * UnityEngine.Random.Range(equip.currentWeapon.accuracyJitter, -equip.currentWeapon.accuracyJitter)) + (Camera.main.transform.right * UnityEngine.Random.Range(equip.currentWeapon.accuracyJitter, -equip.currentWeapon.accuracyJitter)));
                 RaycastHit[] hits = Physics.RaycastAll(ray);
 
                 //sort hits by distance
