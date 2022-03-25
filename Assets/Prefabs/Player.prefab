@@ -12653,7 +12653,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.33
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -14135,6 +14135,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02ef11b2361bbde1cba718d3f9c30845, type: 3}
+--- !u!95 &8747575321516111108 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 720611650271026696, guid: 02ef11b2361bbde1cba718d3f9c30845, type: 3}
+  m_PrefabInstance: {fileID: 8315194205070256908}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2770201324125466604 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6130589312163103968, guid: 02ef11b2361bbde1cba718d3f9c30845, type: 3}
@@ -14143,10 +14148,5 @@ Transform:
 --- !u!1 &3259035760289969494 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6800412154814635610, guid: 02ef11b2361bbde1cba718d3f9c30845, type: 3}
-  m_PrefabInstance: {fileID: 8315194205070256908}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &8747575321516111108 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 720611650271026696, guid: 02ef11b2361bbde1cba718d3f9c30845, type: 3}
   m_PrefabInstance: {fileID: 8315194205070256908}
   m_PrefabAsset: {fileID: 0}
