@@ -20,7 +20,7 @@ MonoBehaviour:
   cycleAnimations: 1
   isShotgun: 1
   isMelee: 0
-  damage: 1
+  damage: 3
   range: 60
   accuracyJitter: 0.15
   clipSize: 6
