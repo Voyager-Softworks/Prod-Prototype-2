@@ -39,6 +39,13 @@ public class EventLogAnim : MonoBehaviour
                 Close();
             }
         }
+
+        //if cursor is unlocked, make color full
+        if (Cursor.lockState == CursorLockMode.None) {
+            Color elColor = elImage.color;
+            elColor.a = 1.0f;
+            elImage.color = elColor;
+        }
     }
 
     public void KeepOpen(){
