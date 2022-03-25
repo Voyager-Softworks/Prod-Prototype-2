@@ -221,10 +221,22 @@ public class PlayerMovement : NetworkBehaviour
             if(isGrounded && slideAction.ReadValue<float>() <= 0.0f) distanceSinceLastFootstep += Vector3.Distance(positionCache, transform.position);
             if(isGrounded && slideAction.ReadValue<float>() <= 0.0f && distanceSinceLastFootstep > 4.0f)
             {
-                jumpLandSource.PlayOneShot(footstepSounds[Random.Range(0, footstepSounds.Length)]);
+                CmdPlayFootstepSound();
                 distanceSinceLastFootstep = 0.0f;
             }
             
         }
+
+    }
+    [Command(requiresAuthority = false)]
+    void CmdPlayFootstepSound()
+    {
+        RpcPlayFootstepSound();
+    }
+
+    void RpcPlayFootstepSound()
+    {
+        jumpLandSource.volume = isLocalPlayer ? 0.33f : 0.5f;
+        jumpLandSource.PlayOneShot(footstepSounds[Random.Range(0, footstepSounds.Length)]);
     }
 }
