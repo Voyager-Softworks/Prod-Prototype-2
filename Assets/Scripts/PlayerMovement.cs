@@ -236,7 +236,7 @@ public class PlayerMovement : NetworkBehaviour
 
     void RpcPlayFootstepSound()
     {
-        jumpLandSource.volume = isLocalPlayer ? 0.33f : 0.5f;
+        jumpLandSource.volume = isLocalPlayer ? 0.5f : 1.0f;
         jumpLandSource.PlayOneShot(footstepSounds[Random.Range(0, footstepSounds.Length)]);
     }
 }
