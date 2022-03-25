@@ -80,7 +80,7 @@ public class FlourishHandler : NetworkBehaviour
     void Update()
     {
         if(!isLocalPlayer) return;
-        if(equip && isReloading)
+        if(equip && equip.currentWeapon && isReloading)
         {
             reloadTimer += Time.deltaTime;
             if(reloadTimer >= equip.currentWeapon.reloadTime)
