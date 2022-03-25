@@ -29,6 +29,8 @@ public class HitscanShoot : NetworkBehaviour
 
     public GameObject hitParticleEffect;
 
+    public NetworkGunAudio _networkGunAudio;
+
     
 
     
@@ -37,6 +39,7 @@ public class HitscanShoot : NetworkBehaviour
     void Start()
     {
         equip = GetComponent<Equipment>();
+        _networkGunAudio = GetComponentInChildren<NetworkGunAudio>();
     }
 
     // Update is called once per frame
@@ -77,6 +80,7 @@ public class HitscanShoot : NetworkBehaviour
                 fireDelayTimer = equip.currentWeapon.fireDelay;
             }
             equip.currentWeaponObject.GetComponent<WeaponFX>().PlayFire();
+            _networkGunAudio.CmdPlayShoot(equip.currentWeapon.weaponName);
             if(equip.currentWeapon.cycleAnimations)
             {
                 if(altAnim) 
