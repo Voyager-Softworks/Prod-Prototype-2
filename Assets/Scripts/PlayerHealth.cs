@@ -53,6 +53,13 @@ public class PlayerHealth : NetworkBehaviour
     public float flashDuration = 1.0f;
     private float flashFadeTimer = 0.0f;
 
+    public float healTime = 0.1f;
+    public int healAmount = 1;
+    private float healTimer = 0.0f;
+
+    public float healAfterDamageTime = 2.0f;
+    private float lastDamageTime = 0.0f;
+
     public List<Damage> damageLog = new List<Damage>();
 
     // Start is called before the first frame update
@@ -77,6 +84,16 @@ public class PlayerHealth : NetworkBehaviour
         if (!isLocalPlayer)
         {
             return;
+        }
+
+        if (Time.time - lastDamageTime > healAfterDamageTime)
+        {
+            healTimer += Time.deltaTime;
+            if (healTimer >= healTime)
+            {
+                healTimer = 0.0f;
+                CmdHeal(healAmount);
+            }
         }
 
         if (_damageImage){
@@ -146,6 +163,8 @@ public class PlayerHealth : NetworkBehaviour
         if (isDead) return;
 
         damageLog.Add(_damage);
+
+        lastDamageTime = Time.time;
 
         flashFadeTimer = flashDuration;
         if (isLocalPlayer) GetComponent<AudioSource>().PlayOneShot(damageSound);

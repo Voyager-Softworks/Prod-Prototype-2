@@ -3600,6 +3600,9 @@ MonoBehaviour:
   damageSound: {fileID: 8300000, guid: b1e1cdf6f57510e46821dfd13cb2af5a, type: 3}
   _damageImage: {fileID: 2782190997591886244}
   flashDuration: 1
+  healTime: 0.25
+  healAmount: 1
+  healAfterDamageTime: 7.5
   damageLog: []
 --- !u!114 &6204742410832865321
 MonoBehaviour:
