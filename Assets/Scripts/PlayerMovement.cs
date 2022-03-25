@@ -43,10 +43,17 @@ public class PlayerMovement : NetworkBehaviour
     bool hasDoubleJumped;
     bool canDoubleJump = false;
 
+    public AudioClip jumpSound, landSound;
+    public AudioClip[] footstepSounds;
+    public AudioSource jumpLandSource;
+
     public Transform cameraTransform;
 
     float jumpcoolDown = 0.1f;
     float jumpTimer = 0.0f;
+    float airTime = 0.0f;
+
+    float distanceSinceLastFootstep = 0.0f;
 
 
     private void Start() {
@@ -68,6 +75,7 @@ public class PlayerMovement : NetworkBehaviour
         //only if local player
         if (isLocalPlayer)
         {
+            bool wasGrounded = isGrounded;
             // if (Input.GetKeyDown(KeyCode.Escape))
             // {
             //     Application.Quit();
@@ -77,25 +85,38 @@ public class PlayerMovement : NetworkBehaviour
             // }
 
             isGrounded = false;
-
+            Vector3 positionCache = transform.position;
 
             Collider[] hits = Physics.OverlapSphere(groundCheck.position, groundDistance, groundMask);
-
+            
             foreach (Collider _hit in hits)
             {
                 if (_hit.transform.root == gameObject.transform)
                 {
                     continue;
                 }
-
+                
                 isGrounded = true;
                 hasDoubleJumped = false;
                 break;
+            }
+            if(!wasGrounded && isGrounded && airTime > 0.2f)
+            {
+                jumpLandSource.PlayOneShot(landSound);
+            }
+            if(!isGrounded)
+            {
+                airTime += Time.deltaTime;
+            }
+            else
+            {
+                airTime = 0.0f;
             }
 
             if (isGrounded && velocity.y < 0)
             {
                 velocity.y = -2f;
+                
             }
 
             thirdPersonAnimator.SetBool("Jump", !isGrounded);
@@ -178,6 +199,7 @@ public class PlayerMovement : NetworkBehaviour
             {
                 velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
                 jumpTimer = jumpcoolDown;
+                jumpLandSource.PlayOneShot(jumpSound);
                 if (!isGrounded)
                 {
                     hasDoubleJumped = true;
@@ -196,7 +218,12 @@ public class PlayerMovement : NetworkBehaviour
             velocity.y += gravity * Time.deltaTime;
 
             controller.Move(velocity * Time.deltaTime);
-
+            if(isGrounded && slideAction.ReadValue<float>() <= 0.0f) distanceSinceLastFootstep += Vector3.Distance(positionCache, transform.position);
+            if(isGrounded && slideAction.ReadValue<float>() <= 0.0f && distanceSinceLastFootstep > 4.0f)
+            {
+                jumpLandSource.PlayOneShot(footstepSounds[Random.Range(0, footstepSounds.Length)]);
+                distanceSinceLastFootstep = 0.0f;
+            }
             
         }
     }
