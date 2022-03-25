@@ -232,7 +232,7 @@ public class HitscanShoot : NetworkBehaviour
 
     private void DoHitMarker(){
         GetComponent<AudioSource>().PlayOneShot(_hitSound);
-        if (_hitmarker) _hitmarker.color = new Color(1, 1, 1, 1);
+        if (_hitmarker) _hitmarker.color = new Color(_hitmarker.color.r, _hitmarker.color.g, _hitmarker.color.b, 1);
         hitmarkerFadeTimer = hitmarkerFadeTime;
     }
 

@@ -15,6 +15,8 @@ public class StatsManager : NetworkBehaviour
         public int deaths;
     }
 
+    DateTime _startTime;
+
     public NetworkManager _networkManager;
 
     public List<Player> players = new List<Player>();
@@ -24,6 +26,8 @@ public class StatsManager : NetworkBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _startTime = DateTime.Now;
+
         if (_networkManager == null)
         {
             GameObject _networkManagerObject = GameObject.Find("NetworkManager");
@@ -52,11 +56,42 @@ public class StatsManager : NetworkBehaviour
     {
         if (_clientPlayerCanvas != null)
         {
-            _clientPlayerCanvas.scorebaordText.text = "";
+            _clientPlayerCanvas.time.text = (DateTime.Now - _startTime).ToString("mm\\:ss");
+
+            //if cursor locked
+            if (Cursor.lockState != CursorLockMode.Locked)
+            {
+                _clientPlayerCanvas.scoreboardBG.gameObject.SetActive(true);
+                _clientPlayerCanvas.scorebaordText.text = "SCORES\n";
+
+                //sort players by kills
+                players.Sort((x, y) => y.kills.CompareTo(x.kills));
+
+                foreach (Player player in players)
+                {
+                    if (player._player == null) continue;
+                    _clientPlayerCanvas.scorebaordText.text += player._username + " [" + player.kills + " kills]  [" + player.deaths + " deaths]\n";
+
+                    if (player._player.isLocalPlayer)
+                    {
+                        _clientPlayerCanvas.killsText.text = "Kills: " + player.kills;
+                        _clientPlayerCanvas.deathsText.text = "Deaths: " + player.deaths;
+                    }
+                }
+            }
+            else{
+                _clientPlayerCanvas.scoreboardBG.gameObject.SetActive(false);
+            }
 
             foreach (Player player in players)
             {
-                _clientPlayerCanvas.scorebaordText.text += player._username + " [" + player.kills + " kills]  [" + player.deaths + " deaths]\n";
+                if (player._player == null) continue;
+
+                if (player._player.isLocalPlayer)
+                {
+                    _clientPlayerCanvas.killsText.text = "Kills: " + player.kills;
+                    _clientPlayerCanvas.deathsText.text = "Deaths: " + player.deaths;
+                }
             }
         }
     }
