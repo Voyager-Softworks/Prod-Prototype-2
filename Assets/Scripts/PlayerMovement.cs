@@ -154,12 +154,12 @@ public class PlayerMovement : NetworkBehaviour
                         controller.Move(move * Time.deltaTime * sprintMoveSpeed);
                         equip.SetSprinting(true);
                         //tilt camera based on movement
-                        cameraTransform.localRotation = Quaternion.Lerp(cameraTransform.localRotation, Quaternion.Euler(moveInput.y * 1.0f, 0.0f, moveInput.x * -4.0f), Time.deltaTime * 10.0f);
+                        cameraTransform.localRotation = Quaternion.Lerp(cameraTransform.localRotation, Quaternion.Euler(moveInput.y * 0.25f, 0.0f, moveInput.x * -1.5f), Time.deltaTime * 10.0f);
                     }
                     else
                     {
                         //tilt camera based on movement
-            cameraTransform.localRotation = Quaternion.Lerp(cameraTransform.localRotation, Quaternion.Euler(0.0f, 0.0f, moveInput.x * -2.0f), Time.deltaTime * 10.0f);
+                        cameraTransform.localRotation = Quaternion.Lerp(cameraTransform.localRotation, Quaternion.Euler(0.0f, 0.0f, moveInput.x * -0.75f), Time.deltaTime * 10.0f);
                         controller.Move(move * Time.deltaTime * moveSpeed);
                         equip.SetSprinting(false);
                     }

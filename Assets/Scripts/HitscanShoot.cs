@@ -99,7 +99,7 @@ public class HitscanShoot : NetworkBehaviour
             Debug.Log("Pew!");
             if(equip.currentWeapon.isShotgun)
             {
-                ShotgunRaycast(equip.currentWeapon.range, new Vector2(equip.currentWeapon.accuracyJitter, equip.currentWeapon.accuracyJitter), Camera.main.transform.position, Camera.main.transform.forward, 100);
+                ShotgunRaycast(equip.currentWeapon.range, new Vector2(equip.currentWeapon.accuracyJitter, equip.currentWeapon.accuracyJitter), Camera.main.transform.position, Camera.main.transform.forward, 25);
             }
             else
             {
@@ -129,7 +129,7 @@ public class HitscanShoot : NetworkBehaviour
                         equip.SetTrigger(new string[]{"m"}, equip.currentWeapon);
                         equip.AddAmmo(1);
                     }
-                    Destroy(Instantiate(hitParticleEffect, hit.point, Quaternion.LookRotation(hit.normal)), 10);
+                    if(hit.distance < equip.currentWeapon.range) Destroy(Instantiate(hitParticleEffect, hit.point, Quaternion.LookRotation(hit.normal)), 10);
                 }
                 else if(equip.currentWeapon.isMelee)
                 {
