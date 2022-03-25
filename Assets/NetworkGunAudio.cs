@@ -25,7 +25,7 @@ public class NetworkGunAudio : NetworkBehaviour
             case "HANDSHOTGUNS":
                 audioSource.PlayOneShot(shootShotgun);
                 break;
-            case "RIFLE":
+            case "ASSAULTRIFLE":
                 audioSource.PlayOneShot(shootRifle);
                 break;
             case "BOTTLE":
