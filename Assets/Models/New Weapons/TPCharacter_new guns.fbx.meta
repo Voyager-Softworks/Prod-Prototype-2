@@ -3,7 +3,37 @@ guid: c9f550fa7364c284fb3138f4bdd089a0
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AutoRifle_Mat
+    second: {fileID: 2100000, guid: 83080ef50812cfc4aabf9bdf6f49dee4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bottle_Mat
+    second: {fileID: 2100000, guid: 15376d61d0d546f47a69e6287502e61f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FPSCharacter_Emissive
+    second: {fileID: 2100000, guid: 418b56602dcf8024083520d2c565c979, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FPSCharacter_Mechanical_Mat
+    second: {fileID: 2100000, guid: 11a298d580aade949a21860dc44cb8c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FPSCharacter_Organic_Mat
+    second: {fileID: 2100000, guid: 540117d9d1522d443b42dd49b915fc0b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shotgun_Mat
+    second: {fileID: 2100000, guid: 0956ce8215e75194facedbf2d227381e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

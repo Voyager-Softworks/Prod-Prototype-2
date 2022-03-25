@@ -3,7 +3,22 @@ guid: 5a80c854993585a438dbccd6192c6366
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FPSCharacter_Mechanical_Mat
+    second: {fileID: 2100000, guid: 11a298d580aade949a21860dc44cb8c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FPSCharacter_Organic_Mat
+    second: {fileID: 2100000, guid: 540117d9d1522d443b42dd49b915fc0b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: base_mat
+    second: {fileID: 2100000, guid: 15376d61d0d546f47a69e6287502e61f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

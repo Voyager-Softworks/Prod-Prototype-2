@@ -3,7 +3,22 @@ guid: e19c8ab8f5f3d1847a7e1c888ce80edc
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FPSCharacter_Mechanical_Mat
+    second: {fileID: 2100000, guid: 11a298d580aade949a21860dc44cb8c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FPSCharacter_Organic_Mat
+    second: {fileID: 2100000, guid: 540117d9d1522d443b42dd49b915fc0b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shotgun_Mat
+    second: {fileID: 2100000, guid: 0956ce8215e75194facedbf2d227381e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

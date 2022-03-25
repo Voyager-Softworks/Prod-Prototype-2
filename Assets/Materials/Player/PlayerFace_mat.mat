@@ -20,7 +20,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - Texture2D_0647d714bf2a44aaaec3403c7fe67ef3:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 010ed7661ffa27d49b74db5e448b897d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - Texture2D_d43de97b445c446b89a2ee13721d900e:
@@ -133,10 +133,10 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FresnelHoloColor: {r: 2.4804473, g: 0.10192971, b: 3.2107859, a: 0}
+    - _FresnelHoloColor: {r: 5.723016, g: 5.723016, b: 5.723016, a: 0}
     - _HologramTiling: {r: 1, g: 3, b: 0, a: 0}
-    - _MainScreenColor: {r: 0.8603976, g: 0.25676787, b: 0.66219085, a: 0}
-    - _RunesColor: {r: 750.93335, g: 297.1608, b: 766.9961, a: 1}
+    - _MainScreenColor: {r: 1, g: 1, b: 1, a: 0}
+    - _RunesColor: {r: 1024, g: 1024, b: 1024, a: 1}
     - _RunesScrolling: {r: 0, g: 0.05, b: 0, a: 0}
     - _RunesTiling: {r: 1, g: 1, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
