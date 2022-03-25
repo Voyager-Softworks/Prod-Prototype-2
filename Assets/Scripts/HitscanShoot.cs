@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 using UnityEngine.UI;
 using TMPro;
 
@@ -93,7 +94,7 @@ public class HitscanShoot : NetworkBehaviour
             }
             else
             {
-                equip.SetTrigger(new string[]{"s", Random.Range(0,1).ToString()}, equip.currentWeapon);
+                equip.SetTrigger(new string[]{"s", UnityEngine.Random.Range(0,1).ToString()}, equip.currentWeapon);
                 equip.currentWeaponObject.GetComponent<WeaponFX>().PlayMuzzleFlash(0);
             }
             Debug.Log("Pew!");
@@ -103,10 +104,27 @@ public class HitscanShoot : NetworkBehaviour
             }
             else
             {
-                RaycastHit hit;
-                Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
+                Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+                RaycastHit[] hits = Physics.RaycastAll(ray);
 
-                if (Physics.Raycast(ray, out hit))
+                //sort hits by distance
+                Array.Sort(hits, (x, y) => x.distance.CompareTo(y.distance));
+                
+                bool foundHit = false;
+                RaycastHit hit = new RaycastHit();
+                //find the first hit that is not the player
+                for(int i = 0; i < hits.Length; i++)
+                {
+                    if(hits[i].transform.root != transform)
+                    {
+                        hit = hits[i];
+                        foundHit = true;
+                        break;
+                    }
+                }
+                
+
+                if (foundHit)
                 {
                     Debug.Log("Hit: " + hit.transform.name);
 
@@ -170,12 +188,30 @@ public class HitscanShoot : NetworkBehaviour
         bool didHit = false;
         for(int i = 0; i < pellets; i++)
         {
-            float jitterX = Random.Range(-jitter.x, jitter.x);
-            float jitterY = Random.Range(-jitter.y, jitter.y);
-            Vector3 jitterVector = new Vector3(jitterX, jitterY, 0);
-            Vector3 jitteredDirection = direction + jitterVector;
-            RaycastHit hit;
-            if (Physics.Raycast(origin, jitteredDirection, out hit, range))
+            float jitterX = UnityEngine.Random.Range(-jitter.x, jitter.x);
+            float jitterY = UnityEngine.Random.Range(-jitter.y, jitter.y);
+            Vector3 jitteredDirection = direction + (Camera.main.transform.up * jitterX) + (Camera.main.transform.right * jitterY);
+
+            RaycastHit[] hits = Physics.RaycastAll(origin, jitteredDirection, range);
+
+            //sort hits by distance
+            Array.Sort(hits, (x, y) => x.distance.CompareTo(y.distance));
+            
+            bool foundHit = false;
+            RaycastHit hit = new RaycastHit();
+            //find the first hit that is not the player
+            for(int j = 0; j < hits.Length; j++)
+            {
+                if(hits[j].transform.root != transform)
+                {
+                    hit = hits[j];
+                    foundHit = true;
+                    break;
+                }
+            }
+            
+
+            if (foundHit)
             {
                 Debug.Log("Hit: " + hit.transform.name);
                 if (hit.transform.tag == "Player" && hit.distance < range)
