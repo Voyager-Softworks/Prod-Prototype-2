@@ -186,6 +186,7 @@ public class HitscanShoot : NetworkBehaviour
                     if (player && player.GetComponent<PlayerHealth>()) player.GetComponent<PlayerHealth>().CmdTakeDamage(dmg);
                     didHit = true;
                 }
+                Destroy(Instantiate(hitParticleEffect, hit.point, Quaternion.LookRotation(hit.normal)), 10);
             }
         }
         if (didHit){
