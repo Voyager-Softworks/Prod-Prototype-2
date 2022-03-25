@@ -3270,6 +3270,7 @@ MonoBehaviour:
   _hitmarker: {fileID: 2581769841350991802}
   _hitSound: {fileID: 8300000, guid: b4cc2ca131e5eee4f8d4b2a21ac2c408, type: 3}
   hitmarkerFadeTime: 0.5
+  hitParticleEffect: {fileID: 8369070913840956489, guid: e52534b74fc93d077a7dd564a0b04fad, type: 3}
 --- !u!114 &1178204175246446085
 MonoBehaviour:
   m_ObjectHideFlags: 0

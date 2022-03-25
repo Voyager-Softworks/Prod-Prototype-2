@@ -26,6 +26,8 @@ public class HitscanShoot : NetworkBehaviour
     public float hitmarkerFadeTime = 1.25f;
     private float hitmarkerFadeTimer = 0;
 
+    public GameObject hitParticleEffect;
+
     
 
     
@@ -127,6 +129,7 @@ public class HitscanShoot : NetworkBehaviour
                         equip.SetTrigger(new string[]{"m"}, equip.currentWeapon);
                         equip.AddAmmo(1);
                     }
+                    Destroy(Instantiate(hitParticleEffect, hit.point, Quaternion.LookRotation(hit.normal)), 10);
                 }
                 else if(equip.currentWeapon.isMelee)
                 {
